@@ -1,0 +1,88 @@
+:root {
+  color-scheme: light;
+  font-family: "Segoe UI", Tahoma, sans-serif;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  min-height: 100dvh;
+  color: #202522;
+}
+
+.emergency-banner {
+  z-index: 1000;
+  flex: 0 0 auto;
+  padding: 0.9rem max(1rem, env(safe-area-inset-right)) 0.9rem max(1rem, env(safe-area-inset-left));
+  background: #a51d2d;
+  color: #fff;
+  text-align: center;
+}
+
+.emergency-banner p {
+  max-width: 72rem;
+  margin: 0 auto;
+  font-size: 1rem;
+  line-height: 1.45;
+}
+
+.emergency-banner a {
+  display: inline-block;
+  min-width: 3rem;
+  min-height: 2.75rem;
+  padding: 0.45rem 0.5rem;
+  color: #fff;
+  font-size: 1.2rem;
+  font-weight: 700;
+  text-decoration-thickness: 2px;
+  text-underline-offset: 0.18em;
+  vertical-align: middle;
+}
+
+main {
+  flex: 1 1 auto;
+  min-height: 0;
+}
+
+#map {
+  width: 100%;
+  height: 100%;
+  min-height: 16rem;
+  background: #e7ece7;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+@media (max-width: 30rem) {
+  .emergency-banner {
+    padding-top: 0.65rem;
+    padding-bottom: 0.65rem;
+    text-align: left;
+  }
+}

@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#a51d2d">
+    <title>NH Care Finder</title>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <header class="emergency-banner" role="alert" aria-label="Emergency information">
+      <p>
+        <strong>Medical emergency?</strong>
+        Call <a href="tel:911">911</a> now for chest pain, trouble breathing,
+        stroke symptoms, or another life-threatening emergency.
+      </p>
+    </header>
+
+    <main>
+      <h1 class="visually-hidden">New Hampshire Care Finder map</h1>
+      <div id="map" role="region" aria-label="Map of New Hampshire"></div>
+    </main>
+
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+    <script src="app.js"></script>
+  </body>
+</html>
