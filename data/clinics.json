@@ -1298,5 +1298,44 @@
     "cost": "",
     "source": "https://www.elliothospital.org/locations/elliot-urgent-care-londonderry; coordinates: U.S. Census Geocoder, Public_AR_Current",
     "last_verified": ""
+  },
+  {
+    "name": "Volunteers in Medicine of New Hampshire",
+    "type": "free_clinic",
+    "address": "600 Lafayette Rd, Portsmouth, NH 03801",
+    "lat": 43.053029308731,
+    "lng": -70.770390637722,
+    "phone": "603-436-2218",
+    "hours": "Two evenings per month, typically 6:00 PM-8:00 PM; check schedule with VIM-NH",
+    "website": "https://vimnh.org/",
+    "cost": "Free care for eligible uninsured/underinsured New Hampshire residents; eligibility details are on the provider site.",
+    "source": "https://vimnh.org/patients; direct contact: rjohnson@vimnh.org; host phone 603-436-2218 is Cross Roads House: https://www.crossroadshouse.org/; coordinates: U.S. Census Geocoder, Public_AR_Current",
+    "last_verified": "2026-10-06"
+  },
+  {
+    "name": "Good Neighbor Health Clinic",
+    "type": "free_clinic",
+    "address": "70 North Main Street, White River Junction, VT 05001",
+    "lat": 43.649001211341,
+    "lng": -72.319903142506,
+    "phone": "802-295-1868",
+    "hours": "Monday-Friday 8:30 AM-4:30 PM; by appointment only",
+    "website": "https://goodnhc.org/apply-for-services/medical/",
+    "cost": "Free for eligible patients age 18+ who live within 30 miles and meet the provider's household-income limit; application and approval required.",
+    "source": "https://goodnhc.org/apply-for-services/medical/; contact and hours: https://goodnhc.org/contact/; coordinates: U.S. Census Geocoder, Public_AR_Current",
+    "last_verified": "2026-10-06"
+  },
+  {
+    "name": "Red Logan Dental Clinic",
+    "type": "free_clinic",
+    "address": "70 North Main Street, White River Junction, VT 05001",
+    "lat": 43.649001211341,
+    "lng": -72.319903142506,
+    "phone": "802-295-7573",
+    "hours": "Monday-Thursday 9:00 AM-12:00 PM and 1:00 PM-4:00 PM; by appointment only",
+    "website": "https://goodnhc.org/red-logan-dental-clinic/",
+    "cost": "Free for eligible patients age 18+ who live within 30 miles and meet the provider's household-income limit; dental applications are currently paused.",
+    "source": "https://goodnhc.org/red-logan-dental-clinic/; contact and hours: https://goodnhc.org/contact/; coordinates: U.S. Census Geocoder, Public_AR_Current",
+    "last_verified": "2026-10-06"
   }
 ]
