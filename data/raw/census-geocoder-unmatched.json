@@ -1,73 +1,38 @@
 {
   "source": "U.S. Census Geocoder",
   "benchmark": "Public_AR_Current",
-  "created_at": "2026-10-01T00:30:27.432Z",
-  "unmatched_count": 13,
+  "created_at": "2026-10-01T22:46:01.927Z",
+  "unmatched_count": 5,
   "unmatched": [
     {
-      "name": "CLEARCHOICEMD, PLLC",
-      "address": "798 ROUTE 302, BERLIN, VT, 056412305",
-      "reason": "The Census Geocoder returned no matches."
-    },
-    {
-      "name": "CONVENIENTMD - FFS UC LLC",
+      "name": "ConvenientMD",
       "address": "1 SHARMA WAY, WINDHAM, NH, 03087",
+      "geocoding_address": "1 SHARMA WAY, WINDHAM, NH, 03087",
       "reason": "The Census Geocoder returned no matches."
     },
     {
-      "name": "CONVENIENTMD - FFS UC LLC",
+      "name": "ConvenientMD",
       "address": "49 PLAISTOW RD, PLAISTOW, NH, 038652854",
+      "geocoding_address": "49 PLAISTOW RD, PLAISTOW, NH, 03865",
       "reason": "The Census Geocoder returned no matches."
     },
     {
-      "name": "CONVENIENTMD - FFS UC LLC",
+      "name": "ConvenientMD",
       "address": "2 DOBSON WAY, MERRIMACK, NH, 030544340",
+      "geocoding_address": "2 DOBSON WAY, MERRIMACK, NH, 03054",
       "reason": "The Census Geocoder returned no matches."
     },
     {
-      "name": "CONVENIENTMD - FFS UC LLC",
+      "name": "ConvenientMD",
       "address": "1 INTERCHANGE DR UNIT 2, WEST LEBANON, NH, 037842011",
+      "geocoding_address": "1 INTERCHANGE DR, WEST LEBANON, NH, 03784",
       "reason": "The Census Geocoder returned no matches."
     },
     {
-      "name": "CONVENIENTMD LLC",
-      "address": "49 PLAISTOW RD, PLAISTOW, NH, 038652854",
-      "reason": "The Census Geocoder returned no matches."
-    },
-    {
-      "name": "CONVENIENTMD LLC",
-      "address": "2 DOBSON WAY, MERRIMACK, NH, 03054",
-      "reason": "The Census Geocoder returned no matches."
-    },
-    {
-      "name": "CONVENIENTMD LLC",
-      "address": "2 DOBSON WAY, MERRIMACK, NH, 030544340",
-      "reason": "The Census Geocoder returned no matches."
-    },
-    {
-      "name": "ELLIOT PHYSICIANS NETWORK",
-      "address": "1070 HOLT AVENUE, UNIT 1 SUITE 2200, MANCHESTER, NH, 03109",
-      "reason": "The Census Geocoder returned no matches."
-    },
-    {
-      "name": "FRISBIE MEMORIAL HOSPITAL",
-      "address": "11 WHITEHALL RD, ROCHESTER, NH, 038673226",
-      "reason": "The Census Geocoder returned no matches."
-    },
-    {
-      "name": "HEALTHSTOP, INC.",
-      "address": "228 DW HWY, NASHUA, NH, 030605537",
-      "reason": "The Census Geocoder returned no matches."
-    },
-    {
-      "name": "NEW FOUND EXPRESS CARE LLC",
-      "address": "345 NH-104 UNIT 5, NEW HAMPTON, NH, 03256",
-      "reason": "The Census Geocoder returned no matches."
-    },
-    {
-      "name": "VITALCARE HEALTH SERVICES PC",
-      "address": "3742 W 2150 N STE 150, LEHI, UT, 840487802",
-      "reason": "The Census Geocoder returned no matches."
+      "name": "Elliot Urgent Care at Bedford",
+      "address": "25 Leavy Drive, Bedford, NH 03110",
+      "geocoding_address": "25 Leavy Drive, Bedford, NH 03110",
+      "reason": "The U.S. Census Geocoder returned no matches; coordinates left blank."
     }
   ]
 }

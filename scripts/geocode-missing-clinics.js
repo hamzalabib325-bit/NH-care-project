@@ -13,6 +13,31 @@ function wait(milliseconds) {
   return new Promise((resolve) => setTimeout(resolve, milliseconds));
 }
 
+function normalizeAddressForGeocoder(address) {
+  const parts = address.split(",").map((part) => part.trim()).filter(Boolean);
+  const street = parts.shift() ?? "";
+  const locationParts = parts.filter((part) =>
+    !/^(?:SUITE|STE|UNIT|APARTMENT|APT|#)\b/i.test(part)
+  );
+  const postalIndex = locationParts.length - 1;
+
+  if (postalIndex >= 0) {
+    const postalCode = locationParts[postalIndex].replace(/\D/g, "");
+    if (postalCode.length >= 5) {
+      locationParts[postalIndex] = postalCode.slice(0, 5);
+    }
+  }
+
+  const normalizedStreet = street
+    .replace(/\b(?:SUITE|STE|UNIT|APARTMENT|APT|#)\s*[A-Z0-9-]+\b/gi, "")
+    .replace(/\bDW\s+HWY\b/gi, "Daniel Webster Highway")
+    .replace(/\bNH\s*[- ]\s*104\b/gi, "Route 104")
+    .replace(/\s+/g, " ")
+    .trim();
+
+  return [normalizedStreet, ...locationParts].filter(Boolean).join(", ");
+}
+
 async function findAddressMatch(address) {
   const parameters = new URLSearchParams({
     address,
@@ -55,12 +80,13 @@ async function main() {
     }
 
     try {
-      const matches = await findAddressMatch(address);
+      const geocodingAddress = normalizeAddressForGeocoder(address);
+      const matches = await findAddressMatch(geocodingAddress);
 
       if (matches.length === 0) {
-        unmatched.push({ name: clinic.name, address, reason: "The Census Geocoder returned no matches." });
+        unmatched.push({ name: clinic.name, address, geocoding_address: geocodingAddress, reason: "The Census Geocoder returned no matches." });
       } else if (matches.length > 1) {
-        unmatched.push({ name: clinic.name, address, reason: `The Census Geocoder returned ${matches.length} matches; left unresolved to avoid choosing one arbitrarily.` });
+        unmatched.push({ name: clinic.name, address, geocoding_address: geocodingAddress, reason: `The Census Geocoder returned ${matches.length} matches; left unresolved to avoid choosing one arbitrarily.` });
       } else {
         const match = matches[0];
         const matchState = match.addressComponents?.state;
@@ -68,9 +94,9 @@ async function main() {
         const latitude = match.coordinates?.y;
 
         if (matchState !== "NH") {
-          unmatched.push({ name: clinic.name, address, reason: `The only match was not confirmed as New Hampshire (state: ${matchState ?? "unknown"}).` });
+          unmatched.push({ name: clinic.name, address, geocoding_address: geocodingAddress, reason: `The only match was not confirmed as New Hampshire (state: ${matchState ?? "unknown"}).` });
         } else if (!Number.isFinite(latitude) || !Number.isFinite(longitude)) {
-          unmatched.push({ name: clinic.name, address, reason: "The Census Geocoder match did not include valid coordinates." });
+          unmatched.push({ name: clinic.name, address, geocoding_address: geocodingAddress, reason: "The Census Geocoder match did not include valid coordinates." });
         } else {
           clinic.lat = latitude;
           clinic.lng = longitude;
@@ -78,7 +104,12 @@ async function main() {
         }
       }
     } catch (error) {
-      unmatched.push({ name: clinic.name, address, reason: error.message });
+      unmatched.push({
+        name: clinic.name,
+        address,
+        geocoding_address: normalizeAddressForGeocoder(address),
+        reason: error.message
+      });
     }
 
     if (index < clinicsNeedingCoordinates.length - 1) {

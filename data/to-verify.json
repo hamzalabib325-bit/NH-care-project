@@ -1,0 +1,28 @@
+{
+  "description": "Clinics and source records awaiting human verification.",
+  "items": [
+    {
+      "name": "ConvenientMD",
+      "type": "urgent_care",
+      "address": "1 PORTSMOUTH AVE, STRATHAM, NH, 038852585",
+      "phone": "",
+      "source": "NPPES NPI Registry API v2.1",
+      "verification_source_url": "",
+      "status": "needs_review",
+      "remains_in_clinics": true,
+      "reason": "NPI records at this location list conflicting phone numbers: 603-772-3600; 603-319-4490."
+    },
+    {
+      "name": "Manchester Mobile Health Care",
+      "type": "free_clinic",
+      "address": "",
+      "phone": "603-663-8718",
+      "source": "Health_Center_Service_Delivery_and_LookAlike_Sites.csv",
+      "verification_source_url": "",
+      "status": "deferred_free_care",
+      "remains_in_clinics": false,
+      "reason": "User confirmed this is a free-care service delivered at changing community locations, not a fixed clinic address. Hold for the future free-care feature; do not map the source base address.",
+      "source_record_address": "199 Manchester St, Manchester, NH, 03103-5262"
+    }
+  ]
+}
