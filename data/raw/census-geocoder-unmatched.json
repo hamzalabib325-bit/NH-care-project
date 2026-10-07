@@ -1,38 +1,44 @@
 {
-  "source": "U.S. Census Geocoder",
+  "source": "Census TIGERweb first pass; remaining missing coordinates resolved from official provider map pages or OpenStreetMap where documented",
   "benchmark": "Public_AR_Current",
-  "created_at": "2026-10-01T22:46:01.927Z",
-  "unmatched_count": 5,
-  "unmatched": [
+  "created_at": "2026-10-07T00:31:29.358Z",
+  "unmatched_count": 0,
+  "unmatched": [],
+  "resolved_elsewhere": [
     {
       "name": "ConvenientMD",
       "address": "1 SHARMA WAY, WINDHAM, NH, 03087",
-      "geocoding_address": "1 SHARMA WAY, WINDHAM, NH, 03087",
-      "reason": "The Census Geocoder returned no matches."
+      "lat": 42.8067253,
+      "lng": -71.2611994,
+      "source": "https://convenientmd.com/locations/windham-nh-urgent-care/"
     },
     {
       "name": "ConvenientMD",
       "address": "49 PLAISTOW RD, PLAISTOW, NH, 038652854",
-      "geocoding_address": "49 PLAISTOW RD, PLAISTOW, NH, 03865",
-      "reason": "The Census Geocoder returned no matches."
+      "lat": 42.8255026,
+      "lng": -71.1051857,
+      "source": "https://convenientmd.com/locations/plaistow-nh-urgent-care/"
     },
     {
       "name": "ConvenientMD",
       "address": "2 DOBSON WAY, MERRIMACK, NH, 030544340",
-      "geocoding_address": "2 DOBSON WAY, MERRIMACK, NH, 03054",
-      "reason": "The Census Geocoder returned no matches."
+      "lat": 42.8373439,
+      "lng": -71.4963966,
+      "source": "https://convenientmd.com/locations/merrimack-nh-urgent-care/"
     },
     {
       "name": "ConvenientMD",
       "address": "1 INTERCHANGE DR UNIT 2, WEST LEBANON, NH, 037842011",
-      "geocoding_address": "1 INTERCHANGE DR, WEST LEBANON, NH, 03784",
-      "reason": "The Census Geocoder returned no matches."
+      "lat": 43.6291198,
+      "lng": -72.3217087,
+      "source": "https://convenientmd.com/locations/west-lebanon/"
     },
     {
       "name": "Elliot Urgent Care at Bedford",
       "address": "25 Leavy Drive, Bedford, NH 03110",
-      "geocoding_address": "25 Leavy Drive, Bedford, NH 03110",
-      "reason": "The U.S. Census Geocoder returned no matches; coordinates left blank."
+      "lat": 42.9591666,
+      "lng": -71.5058183,
+      "source": "https://www.openstreetmap.org/way/684694085"
     }
   ]
 }

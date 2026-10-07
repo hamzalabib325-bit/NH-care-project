@@ -52,32 +52,6 @@
     "last_verified": ""
   },
   {
-    "name": "ACHS - Littleton II",
-    "type": "health_center",
-    "address": "202 Cottage St, Littleton, NH, 03561-4101",
-    "lat": 44.30052064,
-    "lng": -71.76897179,
-    "phone": "603-444-2464",
-    "hours": "50.00 hours per week",
-    "website": "",
-    "cost": "",
-    "source": "Health_Center_Service_Delivery_and_LookAlike_Sites.csv",
-    "last_verified": ""
-  },
-  {
-    "name": "COOS COUNTY FAMILY HEALTH SVCS",
-    "type": "health_center",
-    "address": "54 Willow St, Berlin, NH, 03570-1800",
-    "lat": 44.47275291,
-    "lng": -71.18392501,
-    "phone": "603-752-3669 x4018",
-    "hours": "40.00 hours per week",
-    "website": "WWW.COOSFAMILYHEALTH.ORG",
-    "cost": "",
-    "source": "Health_Center_Service_Delivery_and_LookAlike_Sites.csv",
-    "last_verified": ""
-  },
-  {
     "name": "ACHS - Warren",
     "type": "health_center",
     "address": "333 Nh Route 25, Warren, NH, 03279-4431",
@@ -98,19 +72,6 @@
     "lng": -71.15525002,
     "phone": "603-752-2900",
     "hours": "56.00 hours per week",
-    "website": "WWW.COOSFAMILYHEALTH.ORG",
-    "cost": "",
-    "source": "Health_Center_Service_Delivery_and_LookAlike_Sites.csv",
-    "last_verified": ""
-  },
-  {
-    "name": "COOS COUNTY FAMILY HEALTH SVCS",
-    "type": "health_center",
-    "address": "133 Pleasant St, Berlin, NH, 03570-2006",
-    "lat": 44.469828,
-    "lng": -71.18264903,
-    "phone": "603-752-2040",
-    "hours": "45.00 hours per week",
     "website": "WWW.COOSFAMILYHEALTH.ORG",
     "cost": "",
     "source": "Health_Center_Service_Delivery_and_LookAlike_Sites.csv",
@@ -151,19 +112,6 @@
     "phone": "603-659-2494",
     "hours": "8.00 hours per week",
     "website": "WWW.LAMPREYHEALTH.ORG",
-    "cost": "",
-    "source": "Health_Center_Service_Delivery_and_LookAlike_Sites.csv",
-    "last_verified": ""
-  },
-  {
-    "name": "ACHS - Littleton",
-    "type": "health_center",
-    "address": "25 Mount Eustis Rd, Littleton, NH, 03561-3772",
-    "lat": 44.30014836,
-    "lng": -71.76935049,
-    "phone": "603-444-2464",
-    "hours": "48.00 hours per week",
-    "website": "www.achs-inc.org",
     "cost": "",
     "source": "Health_Center_Service_Delivery_and_LookAlike_Sites.csv",
     "last_verified": ""
@@ -728,19 +676,6 @@
     "last_verified": ""
   },
   {
-    "name": "GRANITE STATE TLC PC",
-    "type": "urgent_care",
-    "address": "3 FLAGSTONE DR, HUDSON, NH, 03051",
-    "lat": 42.73187270572,
-    "lng": -71.425408441169,
-    "phone": "978-337-3178",
-    "hours": "",
-    "website": "",
-    "cost": "",
-    "source": "NPPES NPI Registry API v2.1",
-    "last_verified": ""
-  },
-  {
     "name": "GRANITE STATE UC LLC",
     "type": "urgent_care",
     "address": "10 FERRY ST STE 302, CONCORD, NH, 033015081",
@@ -825,19 +760,6 @@
     "lat": 43.927935690726,
     "lng": -71.223410050054,
     "phone": "832-628-3420",
-    "hours": "",
-    "website": "",
-    "cost": "",
-    "source": "NPPES NPI Registry API v2.1",
-    "last_verified": ""
-  },
-  {
-    "name": "NEPHEALTH HUDSON PC",
-    "type": "urgent_care",
-    "address": "3 FLAGSTONE DR UNIT A, HUDSON, NH, 030514905",
-    "lat": 42.73187270572,
-    "lng": -71.425408441169,
-    "phone": "603-802-4050",
     "hours": "",
     "website": "",
     "cost": "",
@@ -988,20 +910,7 @@
     "last_verified": ""
   },
   {
-    "name": "WENTWORTH DOUGLASS HOSPITAL",
-    "type": "urgent_care",
-    "address": "789 CENTRAL AVENUE, DOVER, NH, 03820",
-    "lat": 43.212148834367,
-    "lng": -70.874760976281,
-    "phone": "603-740-2400",
-    "hours": "",
-    "website": "",
-    "cost": "",
-    "source": "NPPES NPI Registry API v2.1",
-    "last_verified": ""
-  },
-  {
-    "name": "WENTWORTH DOUGLASS HOSPITAL",
+    "name": "Wentworth-Douglass Express Care",
     "type": "urgent_care",
     "address": "701B CENTRAL AVE, DOVER, NH, 038203403",
     "lat": 43.207880066773,
@@ -1010,7 +919,7 @@
     "hours": "",
     "website": "",
     "cost": "",
-    "source": "NPPES NPI Registry API v2.1",
+    "source": "User-confirmed as Express Care; coordinates retained from NPPES NPI Registry API v2.1",
     "last_verified": ""
   },
   {
@@ -1108,26 +1017,26 @@
     "name": "ConvenientMD",
     "type": "urgent_care",
     "address": "1 SHARMA WAY, WINDHAM, NH, 03087",
-    "lat": null,
-    "lng": null,
+    "lat": 42.8067253,
+    "lng": -71.2611994,
     "phone": "603-890-6330",
     "hours": "",
-    "website": "",
+    "website": "https://convenientmd.com/locations/windham-nh-urgent-care/",
     "cost": "",
-    "source": "NPPES NPI Registry API v2.1",
+    "source": "https://convenientmd.com/locations/windham-nh-urgent-care/; coordinates: official ConvenientMD location page map",
     "last_verified": ""
   },
   {
     "name": "ConvenientMD",
     "type": "urgent_care",
     "address": "49 PLAISTOW RD, PLAISTOW, NH, 038652854",
-    "lat": null,
-    "lng": null,
+    "lat": 42.8255026,
+    "lng": -71.1051857,
     "phone": "603-371-3229",
     "hours": "",
-    "website": "",
+    "website": "https://convenientmd.com/locations/plaistow-nh-urgent-care/",
     "cost": "",
-    "source": "NPPES NPI Registry API v2.1",
+    "source": "https://convenientmd.com/locations/plaistow-nh-urgent-care/; coordinates: official ConvenientMD location page map",
     "last_verified": ""
   },
   {
@@ -1199,13 +1108,13 @@
     "name": "ConvenientMD",
     "type": "urgent_care",
     "address": "2 DOBSON WAY, MERRIMACK, NH, 030544340",
-    "lat": null,
-    "lng": null,
+    "lat": 42.8373439,
+    "lng": -71.4963966,
     "phone": "603-471-6069",
     "hours": "",
-    "website": "",
+    "website": "https://convenientmd.com/locations/merrimack-nh-urgent-care/",
     "cost": "",
-    "source": "NPPES NPI Registry API v2.1",
+    "source": "https://convenientmd.com/locations/merrimack-nh-urgent-care/; coordinates: official ConvenientMD location page map",
     "last_verified": ""
   },
   {
@@ -1238,13 +1147,13 @@
     "name": "ConvenientMD",
     "type": "urgent_care",
     "address": "1 INTERCHANGE DR UNIT 2, WEST LEBANON, NH, 037842011",
-    "lat": null,
-    "lng": null,
+    "lat": 43.6291198,
+    "lng": -72.3217087,
     "phone": "603-709-0410",
     "hours": "",
-    "website": "",
+    "website": "https://convenientmd.com/locations/west-lebanon/",
     "cost": "",
-    "source": "NPPES NPI Registry API v2.1",
+    "source": "https://convenientmd.com/locations/west-lebanon/; coordinates: official ConvenientMD location page map",
     "last_verified": ""
   },
   {
@@ -1277,13 +1186,13 @@
     "name": "Elliot Urgent Care at Bedford",
     "type": "urgent_care",
     "address": "25 Leavy Drive, Bedford, NH 03110",
-    "lat": null,
-    "lng": null,
+    "lat": 42.9591666,
+    "lng": -71.5058183,
     "phone": "603-472-1772",
     "hours": "Monday-Friday 7:00 AM-10:00 PM; Saturday-Sunday 7:00 AM-4:00 PM",
     "website": "https://www.elliothospital.org/locations/elliot-urgent-care-bedford",
     "cost": "",
-    "source": "https://www.elliothospital.org/locations/elliot-urgent-care-bedford; coordinates: U.S. Census Geocoder, Public_AR_Current",
+    "source": "https://www.elliothospital.org/locations/elliot-urgent-care-bedford; coordinates: OpenStreetMap Nominatim building match at the exact 25 Leavy Drive address (way 684694085)",
     "last_verified": ""
   },
   {
@@ -1336,6 +1245,19 @@
     "website": "https://goodnhc.org/red-logan-dental-clinic/",
     "cost": "Free for eligible patients age 18+ who live within 30 miles and meet the provider's household-income limit; dental applications are currently paused.",
     "source": "https://goodnhc.org/red-logan-dental-clinic/; contact and hours: https://goodnhc.org/contact/; coordinates: U.S. Census Geocoder, Public_AR_Current",
+    "last_verified": "2026-10-06"
+  },
+  {
+    "name": "AFC Urgent Care Hudson",
+    "type": "urgent_care",
+    "address": "3 Flagstone Dr, Unit A, Hudson, NH 03051",
+    "lat": 42.7320811,
+    "lng": -71.4262499,
+    "phone": "603-802-4050",
+    "hours": "Monday-Friday 8:00 AM-8:00 PM; Saturday-Sunday 8:00 AM-5:00 PM",
+    "website": "https://www.afcurgentcare.com/hudson/",
+    "cost": "",
+    "source": "https://www.afcurgentcare.com/hudson/; coordinates from its linked Google Maps pin",
     "last_verified": "2026-10-06"
   }
 ]
