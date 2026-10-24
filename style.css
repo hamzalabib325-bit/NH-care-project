@@ -58,11 +58,50 @@ main {
   flex: 1 1 auto;
 }
 
+.map-tools {
+  padding: 0.5rem max(1rem, env(safe-area-inset-right)) 0.5rem max(1rem, env(safe-area-inset-left));
+  background: #f4f6f4;
+  border-bottom: 1px solid #d5dbd6;
+}
+
+.filters {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0 1.25rem;
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+.filters legend {
+  float: left;
+  margin-right: 0.25rem;
+  padding: 0;
+  font-weight: 700;
+}
+
+/* The whole label is the tap target, so make it at least 44px tall. */
+.filter-option {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  min-height: 2.75rem;
+  cursor: pointer;
+}
+
+.filter-option input {
+  width: 1.25rem;
+  height: 1.25rem;
+  margin: 0;
+  accent-color: #a51d2d;
+}
+
 /* Leave part of the screen free so the section below the map is discoverable. */
 #map {
   width: 100%;
-  height: 75vh;
-  height: 75dvh;
+  height: 65vh;
+  height: 65dvh;
   min-height: 16rem;
   background: #e7ece7;
 }

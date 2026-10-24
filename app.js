@@ -13,11 +13,30 @@ L.tileLayer("https://tile.openstreetmap.org/{z}/{x}/{y}.png", {
 L.control.zoom({ position: "bottomright" }).addTo(map);
 
 // Each clinic type gets its own pin color and a plain-language label.
+// "filter" says which checkbox above the map shows or hides it.
 const CLINIC_TYPES = {
-  free_clinic: { label: "Free clinic", color: "#1a7f37" },
-  health_center: { label: "Health center (sliding-scale fees)", color: "#1d5fa8" },
-  urgent_care: { label: "Urgent care", color: "#c2410c" }
+  free_clinic: { label: "Free clinic", color: "#1a7f37", filter: "free" },
+  health_center: { label: "Health center (sliding-scale fees)", color: "#1d5fa8", filter: "free" },
+  urgent_care: { label: "Urgent care", color: "#c2410c", filter: "urgent" }
 };
+
+// A layer group holds a set of pins so they can be shown or hidden together.
+const filterLayers = {
+  urgent: L.layerGroup().addTo(map),
+  free: L.layerGroup().addTo(map)
+};
+
+// When a filter checkbox changes, show or hide that group of pins.
+for (const checkbox of document.querySelectorAll('input[name="filter"]')) {
+  checkbox.addEventListener("change", () => {
+    const layer = filterLayers[checkbox.value];
+    if (checkbox.checked) {
+      layer.addTo(map);
+    } else {
+      layer.remove();
+    }
+  });
+}
 
 // Some websites in the data are stored without "https://".
 function toUrl(website) {
@@ -95,8 +114,15 @@ function addLegend() {
   legend.addTo(map);
 }
 
-// Pin locations, kept so "Near me" can find the closest clinics.
+// Pin locations and their filter group, kept so "Near me" can find the closest clinics.
 const clinicLocations = [];
+
+// Only count clinics whose filter checkbox is turned on.
+function visibleClinicLocations() {
+  return clinicLocations
+    .filter((clinic) => map.hasLayer(filterLayers[clinic.filter]))
+    .map((clinic) => clinic.latLng);
+}
 let userMarker = null;
 
 function showNearMe(button, status) {
@@ -127,7 +153,7 @@ function showNearMe(button, status) {
       }
 
       // Zoom to show the patient and the three closest clinics, even in rural areas.
-      const nearest = [...clinicLocations]
+      const nearest = visibleClinicLocations()
         .sort((a, b) => here.distanceTo(a) - here.distanceTo(b))
         .slice(0, 3);
 
@@ -181,8 +207,9 @@ async function loadClinics() {
       if (!Number.isFinite(clinic.lat) || !Number.isFinite(clinic.lng)) {
         continue;
       }
-      clinicLocations.push(L.latLng(clinic.lat, clinic.lng));
-      const type = CLINIC_TYPES[clinic.type] ?? { label: "Clinic", color: "#555" };
+      // Unknown types are grouped with free & low-cost so they are never silently hidden.
+      const type = CLINIC_TYPES[clinic.type] ?? { label: "Clinic", color: "#555", filter: "free" };
+      clinicLocations.push({ latLng: L.latLng(clinic.lat, clinic.lng), filter: type.filter });
       L.circleMarker([clinic.lat, clinic.lng], {
         radius: 8,
         color: "#fff",
@@ -191,7 +218,7 @@ async function loadClinics() {
         fillOpacity: 0.9
       })
         .bindPopup(() => buildPopup(clinic, type), { maxWidth: 280 })
-        .addTo(map);
+        .addTo(filterLayers[type.filter]);
     }
 
     addLegend();
