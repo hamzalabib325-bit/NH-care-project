@@ -18,37 +18,48 @@
     </header>
 
     <main>
-      <h1 class="visually-hidden">New Hampshire Care Finder map</h1>
+      <h1 class="visually-hidden">New Hampshire Care Finder</h1>
 
-      <div class="map-tools">
-        <!-- The search runs only in this browser; what you type is never sent anywhere. -->
-        <form class="place-search" id="place-search" role="search">
-          <label for="place-input">Search by NH ZIP code or town</label>
-          <div class="place-search-row">
-            <input type="text" id="place-input" list="town-list" autocomplete="off"
-                   placeholder="e.g. 03301 or Concord" aria-describedby="place-status">
-            <button type="submit">Search</button>
-          </div>
-          <datalist id="town-list"></datalist>
-          <p class="place-status" id="place-status" role="status"></p>
-        </form>
+      <!-- Tab buttons. Each one shows the panel named in its aria-controls. -->
+      <nav class="tab-bar" role="tablist" aria-label="Sections">
+        <button type="button" class="tab" role="tab" id="tab-map"
+                aria-controls="panel-map" aria-selected="true">Map</button>
+        <button type="button" class="tab" role="tab" id="tab-other-care"
+                aria-controls="panel-other-care" aria-selected="false" tabindex="-1">Other free care</button>
+      </nav>
 
-        <fieldset class="filters">
-          <legend>Show on map</legend>
-          <label class="filter-option">
-            <input type="checkbox" name="filter" value="urgent" checked>
-            Urgent care
-          </label>
-          <label class="filter-option">
-            <input type="checkbox" name="filter" value="free" checked>
-            Free &amp; low-cost clinics
-          </label>
-        </fieldset>
+      <div class="tab-panel map-panel" role="tabpanel" id="panel-map" aria-labelledby="tab-map">
+        <div class="map-tools">
+          <!-- The search runs only in this browser; what you type is never sent anywhere. -->
+          <form class="place-search" id="place-search" role="search">
+            <label for="place-input">Search by NH ZIP code or town</label>
+            <div class="place-search-row">
+              <input type="text" id="place-input" list="town-list" autocomplete="off"
+                     placeholder="e.g. 03301 or Concord" aria-describedby="place-status">
+              <button type="submit">Search</button>
+            </div>
+            <datalist id="town-list"></datalist>
+            <p class="place-status" id="place-status" role="status"></p>
+          </form>
+
+          <fieldset class="filters">
+            <legend>Show on map</legend>
+            <label class="filter-option">
+              <input type="checkbox" name="filter" value="urgent" checked>
+              Urgent care
+            </label>
+            <label class="filter-option">
+              <input type="checkbox" name="filter" value="free" checked>
+              Free &amp; low-cost clinics
+            </label>
+          </fieldset>
+        </div>
+
+        <div id="map" role="region" aria-label="Map of New Hampshire"></div>
       </div>
 
-      <div id="map" role="region" aria-label="Map of New Hampshire"></div>
-
-      <section class="other-care" aria-labelledby="other-care-heading">
+      <section class="tab-panel other-care" role="tabpanel" id="panel-other-care"
+               aria-labelledby="tab-other-care" hidden>
         <h2 id="other-care-heading">Other free care options</h2>
         <p>
           For help finding free or low-cost care, dial <a href="tel:211">2-1-1</a>
