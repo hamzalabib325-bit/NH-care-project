@@ -4,99 +4,81 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="theme-color" content="#a51d2d">
+    <meta name="description" content="Find free and low-cost clinics and urgent care near you in New Hampshire, and see which ones fit your budget.">
     <title>NH Care Finder</title>
-    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
     <link rel="stylesheet" href="style.css">
   </head>
   <body>
-    <header class="emergency-banner" role="alert" aria-label="Emergency information">
-      <p>
-        <strong>Medical emergency?</strong>
-        Call <a href="tel:911">911</a> now for chest pain, trouble breathing,
-        stroke symptoms, or another life-threatening emergency.
-      </p>
+    <header>
+      <div class="emergency-banner" role="alert" aria-label="Emergency information">
+        <p>
+          <strong>Medical emergency?</strong>
+          Call <a href="tel:911">911</a> now for chest pain, trouble breathing,
+          stroke symptoms, or another life-threatening emergency.
+        </p>
+      </div>
+      <nav class="site-nav" aria-label="Main">
+        <a href="index.html" aria-current="page">Home</a>
+        <a href="map.html">Map</a>
+        <a href="cost.html">Costs</a>
+        <a href="help.html">More help</a>
+        <a href="about.html">About</a>
+      </nav>
     </header>
 
-    <main>
-      <h1 class="visually-hidden">New Hampshire Care Finder</h1>
-
-      <!-- Tab buttons. Each one shows the panel named in its aria-controls. -->
-      <nav class="tab-bar" role="tablist" aria-label="Sections">
-        <button type="button" class="tab" role="tab" id="tab-map"
-                aria-controls="panel-map" aria-selected="true">Map</button>
-        <button type="button" class="tab" role="tab" id="tab-other-care"
-                aria-controls="panel-other-care" aria-selected="false" tabindex="-1">Other free care</button>
-      </nav>
-
-      <div class="tab-panel map-panel" role="tabpanel" id="panel-map" aria-labelledby="tab-map">
-        <div class="map-tools">
-          <!-- The search runs only in this browser; what you type is never sent anywhere. -->
-          <form class="place-search" id="place-search" role="search">
-            <label for="place-input">Search by NH ZIP code or town</label>
-            <div class="place-search-row">
-              <input type="text" id="place-input" list="town-list" autocomplete="off"
-                     placeholder="e.g. 03301 or Concord" aria-describedby="place-status">
-              <button type="submit">Search</button>
-            </div>
-            <datalist id="town-list"></datalist>
-            <p class="place-status" id="place-status" role="status"></p>
-          </form>
-
-          <fieldset class="filters">
-            <legend>Show on map</legend>
-            <label class="filter-option">
-              <input type="checkbox" name="filter" value="urgent" checked>
-              Urgent care
-            </label>
-            <label class="filter-option">
-              <input type="checkbox" name="filter" value="free" checked>
-              Free &amp; low-cost clinics
-            </label>
-          </fieldset>
-        </div>
-
-        <div id="map" role="region" aria-label="Map of New Hampshire"></div>
-      </div>
-
-      <section class="tab-panel other-care" role="tabpanel" id="panel-other-care"
-               aria-labelledby="tab-other-care" hidden>
-        <h2 id="other-care-heading">Other free care options</h2>
-        <p>
-          For help finding free or low-cost care, dial <a href="tel:211">2-1-1</a>
-          or visit <a href="https://211nh.org/" target="_blank" rel="noopener">211nh.org</a>.
+    <main class="page home">
+      <section class="hero">
+        <p class="eyebrow">NH Care Finder</p>
+        <h1>Find free and low-cost health care in New Hampshire</h1>
+        <p class="hero-text">
+          Worried about what a doctor visit will cost? Find clinics near you,
+          see which ones fit your budget, and call or get directions in one tap.
         </p>
+        <div class="hero-actions">
+          <a class="button button-primary" href="map.html">Find care near me</a>
+          <a class="button button-secondary" href="cost.html">Check what I might pay</a>
+        </div>
+      </section>
 
-        <h3>Mobile health programs</h3>
-        <ul class="program-list">
-          <li>
-            <span class="program-name">Volunteers in Medicine of New Hampshire</span>
-            <span class="program-links">
-              <a href="https://vimnh.org/" target="_blank" rel="noopener">vimnh.org</a>
-              <a href="mailto:rjohnson@vimnh.org">rjohnson@vimnh.org</a>
-            </span>
+      <section class="section" aria-labelledby="types-heading">
+        <h2 id="types-heading">Which kind of place is right for me?</h2>
+        <ul class="card-grid">
+          <li class="card">
+            <h3><span class="dot dot-free" aria-hidden="true"></span>Free clinic</h3>
+            <p>Care at no cost, usually for people without insurance. Many need an appointment, so call first.</p>
           </li>
-        </ul>
-
-        <h3>Health center vans</h3>
-        <p class="program-note">Sliding-scale fees based on income; not always free.</p>
-        <ul class="program-list">
-          <li>
-            <span class="program-name">Manchester Mobile Health Care</span>
-            <a href="tel:+16036638718">603-663-8718</a>
+          <li class="card">
+            <h3><span class="dot dot-health" aria-hidden="true"></span>Community health center</h3>
+            <p>Regular doctor visits, checkups, and more. Fees go down if your income is lower, and they accept Medicaid and Medicare.</p>
           </li>
-          <li>
-            <span class="program-name">Greater Seacoast Health Mobile Health (formerly Goodwin)</span>
-            <a href="tel:+16037669220">603-766-9220</a>
-          </li>
-          <li>
-            <span class="program-name">Lamprey Health Care Mobile Health Unit</span>
-            <a href="tel:+16038953351">603-895-3351</a>
+          <li class="card">
+            <h3><span class="dot dot-urgent" aria-hidden="true"></span>Urgent care</h3>
+            <p>Walk-in care for problems that can't wait but aren't emergencies, like a sprain, the flu, or a small cut. Usually costs more without insurance.</p>
           </li>
         </ul>
       </section>
+
+      <section class="section" aria-labelledby="how-heading">
+        <h2 id="how-heading">How it works</h2>
+        <ol class="steps">
+          <li><strong>Search</strong> with your location, ZIP code, or town.</li>
+          <li><strong>Answer a few quick questions</strong> about insurance and income to see which clinics fit your budget.</li>
+          <li><strong>Call or get directions</strong> straight from the app.</li>
+        </ol>
+      </section>
+
+      <section class="section privacy-note" aria-labelledby="privacy-heading">
+        <h2 id="privacy-heading">Your information stays with you</h2>
+        <p>
+          Your location and answers are only used on your own device to find nearby clinics.
+          They are never saved or sent anywhere.
+        </p>
+      </section>
     </main>
 
-    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
-    <script src="app.js"></script>
+    <footer class="site-footer">
+      <p>This app is a guide, not medical advice. Call ahead to confirm hours and costs.</p>
+      <p><a href="about.html">About this app and its data sources</a></p>
+    </footer>
   </body>
 </html>

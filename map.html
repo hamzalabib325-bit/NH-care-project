@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#a51d2d">
+    <title>Map · NH Care Finder</title>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body class="map-page">
+    <header>
+      <div class="emergency-banner" role="alert" aria-label="Emergency information">
+        <p>
+          <strong>Medical emergency?</strong>
+          Call <a href="tel:911">911</a> now for chest pain, trouble breathing,
+          stroke symptoms, or another life-threatening emergency.
+        </p>
+      </div>
+      <nav class="site-nav" aria-label="Main">
+        <a href="index.html">Home</a>
+        <a href="map.html" aria-current="page">Map</a>
+        <a href="cost.html">Costs</a>
+        <a href="help.html">More help</a>
+        <a href="about.html">About</a>
+      </nav>
+    </header>
+
+    <main class="map-panel">
+      <h1 class="visually-hidden">Map of clinics in New Hampshire</h1>
+
+      <div class="map-tools">
+        <!-- The search runs only in this browser; what you type is never sent anywhere. -->
+        <form class="place-search" id="place-search" role="search">
+          <label for="place-input">Search by NH ZIP code or town</label>
+          <div class="place-search-row">
+            <input type="text" id="place-input" list="town-list" autocomplete="off"
+                   placeholder="e.g. 03301 or Concord" aria-describedby="place-status">
+            <button type="submit">Search</button>
+          </div>
+          <datalist id="town-list"></datalist>
+          <p class="place-status" id="place-status" role="status"></p>
+        </form>
+
+        <!-- Each button is both a color key and an on/off switch for that kind of clinic. -->
+        <fieldset class="filters">
+          <legend class="visually-hidden">Show on map</legend>
+          <label class="filter-chip">
+            <input type="checkbox" name="filter" value="free_clinic" checked>
+            <span class="dot dot-free" aria-hidden="true"></span>Free clinics
+          </label>
+          <label class="filter-chip">
+            <input type="checkbox" name="filter" value="health_center" checked>
+            <span class="dot dot-health" aria-hidden="true"></span>Health centers
+          </label>
+          <label class="filter-chip">
+            <input type="checkbox" name="filter" value="urgent_care" checked>
+            <span class="dot dot-urgent" aria-hidden="true"></span>Urgent care
+          </label>
+        </fieldset>
+      </div>
+
+      <div id="map" role="region" aria-label="Map of New Hampshire"></div>
+    </main>
+
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+    <script src="common.js"></script>
+    <script src="map.js"></script>
+  </body>
+</html>

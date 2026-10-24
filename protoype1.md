@@ -32,10 +32,15 @@ I am a beginner with no prior coding experience. Please:
 
 ## File structure
 ```
-index.html        — page structure
+index.html        — home page
+map.html, map.js  — map page
+cost.html, cost.js — cost helper page
+help.html         — more help (other free care options)
+about.html        — about, privacy, and data sources
+common.js         — code shared by the map and cost pages
 style.css         — all styling
-app.js            — all app logic
 data/clinics.json — the clinic list
+data/places.json  — NH town and ZIP code centers (from Census Gazetteer files)
 data/raw/         — original downloaded source files (not used by the app directly)
 scripts/          — helper scripts for cleaning data (JavaScript only)
 README.md         — project description for judges

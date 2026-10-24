@@ -1,6 +1,32 @@
+/* ---------- Colors and basics ---------- */
+
+/* Colors are named once here and reused everywhere, so the whole app stays consistent. */
 :root {
+  --brand: #a51d2d;
+  --brand-dark: #861624;
+  --brand-soft: #fbeaec;
+  --ink: #1f2421;
+  --muted: #4d5550;
+  --line: #d5dbd6;
+  --surface: #fff;
+  --background: #f5f6f4;
+  --focus: #1d5fa8;
+
+  /* Clinic type colors (match the map pins). */
+  --free: #1a7f37;
+  --health: #1d5fa8;
+  --urgent: #c2410c;
+
+  /* Cost fit colors: always shown together with words, never color alone. */
+  --good: #1a7f37;
+  --good-soft: #e7f5eb;
+  --check: #8a5a00;
+  --check-soft: #fff4d1;
+  --costly: #b42318;
+  --costly-soft: #fdeceb;
+
   color-scheme: light;
-  font-family: "Segoe UI", Tahoma, sans-serif;
+  font-family: system-ui, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
@@ -22,14 +48,47 @@ body {
   flex-direction: column;
   min-height: 100vh;
   min-height: 100dvh;
-  color: #202522;
+  background: var(--background);
+  color: var(--ink);
+  line-height: 1.5;
 }
 
+a {
+  color: var(--brand);
+  font-weight: 600;
+  text-underline-offset: 0.18em;
+}
+
+/* Keep phone numbers like 2-1-1 on one line. */
+a[href^="tel:"] {
+  white-space: nowrap;
+}
+
+/* A clear outline shows keyboard users where they are. */
+a:focus-visible,
+button:focus-visible,
+input:focus-visible {
+  outline: 3px solid var(--focus);
+  outline-offset: 2px;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+/* ---------- Emergency banner and navigation (every page) ---------- */
+
 .emergency-banner {
-  z-index: 1000;
-  flex: 0 0 auto;
-  padding: 0.9rem max(1rem, env(safe-area-inset-right)) 0.9rem max(1rem, env(safe-area-inset-left));
-  background: #a51d2d;
+  padding: 0.65rem max(1rem, env(safe-area-inset-right)) 0.65rem max(1rem, env(safe-area-inset-left));
+  background: var(--brand);
   color: #fff;
   text-align: center;
 }
@@ -37,76 +96,286 @@ body {
 .emergency-banner p {
   max-width: 72rem;
   margin: 0 auto;
-  font-size: 1rem;
-  line-height: 1.45;
+  font-size: 0.95rem;
+  line-height: 1.4;
 }
 
 .emergency-banner a {
   display: inline-block;
   min-width: 3rem;
   min-height: 2.75rem;
-  padding: 0.45rem 0.5rem;
+  padding: 0.4rem 0.5rem;
   color: #fff;
   font-size: 1.2rem;
   font-weight: 700;
   text-decoration-thickness: 2px;
-  text-underline-offset: 0.18em;
   vertical-align: middle;
 }
 
-main {
+.site-nav {
   display: flex;
-  flex: 1 1 auto;
-  flex-direction: column;
+  justify-content: center;
+  border-bottom: 1px solid var(--line);
+  background: var(--surface);
+  /* If the links don't fit on a very small screen, the bar scrolls sideways. */
+  overflow-x: auto;
 }
 
-.tab-bar {
-  display: flex;
+.site-nav a {
   flex: 0 0 auto;
-  border-bottom: 1px solid #d5dbd6;
-  background: #fff;
+  min-height: 3rem;
+  padding: 0.75rem 0.85rem;
+  border-bottom: 3px solid transparent;
+  color: var(--muted);
+  font-size: 0.95rem;
+  text-decoration: none;
+  white-space: nowrap;
 }
 
-.tab {
-  flex: 1 1 0;
+.site-nav a:hover {
+  color: var(--brand);
+}
+
+.site-nav a[aria-current="page"] {
+  border-bottom-color: var(--brand);
+  color: var(--brand);
+}
+
+/* ---------- Shared page layout ---------- */
+
+main {
+  flex: 1 1 auto;
+}
+
+.page {
+  width: 100%;
+  max-width: 46rem;
+  margin: 0 auto;
+  padding: 1.5rem max(1rem, env(safe-area-inset-right)) 2.5rem max(1rem, env(safe-area-inset-left));
+}
+
+.page h1 {
+  margin: 0 0 0.5rem;
+  font-size: 1.75rem;
+  line-height: 1.2;
+}
+
+.page h2 {
+  margin: 0 0 0.5rem;
+  font-size: 1.25rem;
+  line-height: 1.3;
+}
+
+.lead {
+  margin: 0 0 1.5rem;
+  color: var(--muted);
+  font-size: 1.05rem;
+}
+
+.card {
+  margin: 0 0 1rem;
+  padding: 1rem 1.1rem;
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  background: var(--surface);
+}
+
+.card h2,
+.card h3 {
+  margin-top: 0;
+}
+
+.card p:last-child,
+.card ul:last-child {
+  margin-bottom: 0;
+}
+
+.site-footer {
+  padding: 1.25rem 1rem 2rem;
+  border-top: 1px solid var(--line);
+  color: var(--muted);
+  font-size: 0.9rem;
+  text-align: center;
+}
+
+.site-footer p {
+  margin: 0.25rem 0;
+}
+
+/* Small colored circles that match the map pins. */
+.dot {
+  display: inline-block;
+  flex: 0 0 auto;
+  width: 0.8rem;
+  height: 0.8rem;
+  margin-right: 0.45rem;
+  border: 2px solid #fff;
+  border-radius: 50%;
+  box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.25);
+}
+
+.dot-free { background: var(--free); }
+.dot-health { background: var(--health); }
+.dot-urgent { background: var(--urgent); }
+
+/* ---------- Buttons ---------- */
+
+.button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
   min-height: 3rem;
-  padding: 0.6rem 1rem;
-  border: 0;
-  border-bottom: 3px solid transparent;
-  background: none;
-  color: #4d5550;
+  padding: 0.7rem 1.3rem;
+  border: 2px solid var(--brand);
+  border-radius: 999px;
   font: inherit;
-  font-size: 1rem;
-  font-weight: 600;
+  font-size: 1.05rem;
+  font-weight: 700;
+  text-align: center;
+  text-decoration: none;
   cursor: pointer;
 }
 
-.tab[aria-selected="true"] {
-  border-bottom-color: #a51d2d;
-  color: #a51d2d;
+.button-primary {
+  background: var(--brand);
+  color: #fff;
 }
 
-.tab:focus-visible {
-  outline: 3px solid #1d5fa8;
-  outline-offset: -3px;
+.button-primary:hover {
+  border-color: var(--brand-dark);
+  background: var(--brand-dark);
 }
 
-/* The display rules below would otherwise override the hidden attribute. */
-.tab-panel[hidden] {
-  display: none;
+.button-secondary {
+  background: var(--surface);
+  color: var(--brand);
 }
 
-/* The search bar sits on top and the map fills all the space left below it. */
+.button-secondary:hover {
+  background: var(--brand-soft);
+}
+
+.button-small {
+  min-height: 2.75rem;
+  padding: 0.45rem 1rem;
+  font-size: 0.95rem;
+}
+
+.button:disabled {
+  opacity: 0.7;
+  cursor: wait;
+}
+
+/* ---------- Home page ---------- */
+
+.hero {
+  margin: 0 0 2rem;
+  padding: 1.75rem 1.25rem;
+  border-radius: 16px;
+  background: linear-gradient(160deg, #fff 0%, var(--brand-soft) 100%);
+  border: 1px solid #f1d3d7;
+}
+
+.eyebrow {
+  margin: 0 0 0.35rem;
+  color: var(--brand);
+  font-size: 0.85rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+.hero h1 {
+  font-size: 1.9rem;
+}
+
+.hero-text {
+  margin: 0 0 1.25rem;
+  color: var(--muted);
+  font-size: 1.1rem;
+}
+
+.hero-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+}
+
+/* On phones, the two main buttons stretch to full width so they're easy to tap. */
+@media (max-width: 30rem) {
+  .hero-actions .button {
+    flex: 1 1 100%;
+  }
+}
+
+.section {
+  margin: 0 0 2rem;
+}
+
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(12rem, 1fr));
+  gap: 0.75rem;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.card-grid .card {
+  margin: 0;
+}
+
+.card-grid h3 {
+  display: flex;
+  align-items: center;
+  margin: 0 0 0.35rem;
+  font-size: 1.05rem;
+}
+
+.card-grid p {
+  margin: 0;
+  color: var(--muted);
+}
+
+.steps {
+  margin: 0;
+  padding-left: 1.4rem;
+}
+
+.steps li {
+  margin-bottom: 0.4rem;
+}
+
+.privacy-note {
+  padding: 1rem 1.1rem;
+  border-left: 4px solid var(--good);
+  border-radius: 8px;
+  background: var(--good-soft);
+}
+
+.privacy-note p {
+  margin: 0;
+}
+
+/* ---------- Map page ---------- */
+
+/* The map page fills the screen exactly: banner, nav, tools, then the map. */
+.map-page {
+  height: 100vh;
+  height: 100dvh;
+}
+
 .map-panel {
   display: flex;
   flex: 1 1 auto;
   flex-direction: column;
+  min-height: 0;
 }
 
 .map-tools {
-  padding: 0.5rem max(1rem, env(safe-area-inset-right)) 0.5rem max(1rem, env(safe-area-inset-left));
-  background: #f4f6f4;
-  border-bottom: 1px solid #d5dbd6;
+  padding: 0.6rem max(1rem, env(safe-area-inset-right)) 0.5rem max(1rem, env(safe-area-inset-left));
+  border-bottom: 1px solid var(--line);
+  background: var(--surface);
 }
 
 .place-search label {
@@ -120,16 +389,23 @@ main {
   gap: 0.5rem;
 }
 
-.place-search input {
-  flex: 1 1 auto;
-  min-width: 0;
+.place-search input,
+.cost-form input[type="text"],
+.cost-form input[type="number"] {
   min-height: 2.75rem;
   padding: 0.5rem 0.75rem;
   border: 1px solid #6b746e;
-  border-radius: 6px;
+  border-radius: 8px;
+  background: var(--surface);
+  color: var(--ink);
   font: inherit;
   /* 16px or larger stops iPhones from zooming in when the box is tapped. */
   font-size: 1rem;
+}
+
+.place-search input {
+  flex: 1 1 auto;
+  min-width: 0;
 }
 
 .place-search button {
@@ -137,8 +413,8 @@ main {
   min-height: 2.75rem;
   padding: 0.5rem 1.1rem;
   border: 0;
-  border-radius: 6px;
-  background: #a51d2d;
+  border-radius: 8px;
+  background: var(--brand);
   color: #fff;
   font: inherit;
   font-size: 1rem;
@@ -158,34 +434,42 @@ main {
 .filters {
   display: flex;
   flex-wrap: wrap;
-  align-items: center;
-  gap: 0 1.25rem;
-  margin: 0;
+  gap: 0.4rem;
+  margin: 0.5rem 0 0;
   padding: 0;
   border: 0;
 }
 
-.filters legend {
-  float: left;
-  margin-right: 0.25rem;
-  padding: 0;
-  font-weight: 700;
-}
-
-/* The whole label is the tap target, so make it at least 44px tall. */
-.filter-option {
+/* Each filter is a rounded "chip"; the real checkbox inside keeps it accessible. */
+.filter-chip {
   display: inline-flex;
   align-items: center;
-  gap: 0.5rem;
   min-height: 2.75rem;
+  padding: 0.35rem 0.8rem 0.35rem 0.6rem;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  background: var(--background);
+  font-size: 0.95rem;
+  font-weight: 600;
   cursor: pointer;
+  user-select: none;
 }
 
-.filter-option input {
-  width: 1.25rem;
-  height: 1.25rem;
-  margin: 0;
-  accent-color: #a51d2d;
+.filter-chip input {
+  width: 1.1rem;
+  height: 1.1rem;
+  margin: 0 0.45rem 0 0;
+  accent-color: var(--brand);
+}
+
+/* Unchecked chips fade so it's clear those pins are hidden. */
+.filter-chip:has(input:not(:checked)) {
+  opacity: 0.55;
+}
+
+.filter-chip:has(input:focus-visible) {
+  outline: 3px solid var(--focus);
+  outline-offset: 2px;
 }
 
 #map {
@@ -220,10 +504,9 @@ main {
   min-height: 2.75rem;
   margin-right: 1rem;
   padding: 0.6rem 0;
-  color: #a51d2d;
+  color: var(--brand);
   font-weight: 600;
   text-decoration: underline;
-  text-underline-offset: 0.18em;
   overflow-wrap: anywhere;
 }
 
@@ -236,7 +519,7 @@ main {
   padding: 0.5rem 1rem;
   border: 0;
   border-radius: 999px;
-  background: #a51d2d;
+  background: var(--brand);
   box-shadow: 0 1px 4px rgba(0, 0, 0, 0.35);
   color: #fff;
   font: inherit;
@@ -264,58 +547,260 @@ main {
   line-height: 1.35;
 }
 
-.map-legend {
-  padding: 0.4rem 0.6rem;
-  border-radius: 4px;
-  background: rgba(255, 255, 255, 0.92);
-  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3);
-  font-size: 0.8rem;
-  line-height: 1.6;
+/* ---------- Cost helper page ---------- */
+
+.cost-form {
+  margin: 0 0 1.5rem;
 }
 
-.legend-swatch {
-  display: inline-block;
-  width: 0.75rem;
-  height: 0.75rem;
-  margin-right: 0.4rem;
-  border: 2px solid #fff;
-  border-radius: 50%;
-  box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.25);
-  vertical-align: -0.1rem;
+.question {
+  margin: 0 0 1rem;
+  padding: 1rem 1.1rem;
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  background: var(--surface);
 }
 
-.other-care {
-  width: 100%;
-  max-width: 40rem;
-  margin: 0 auto;
-  padding: 1.25rem max(1rem, env(safe-area-inset-right)) 2rem max(1rem, env(safe-area-inset-left));
-  line-height: 1.5;
-}
-
-.other-care h2 {
+.question legend,
+.question-label {
+  display: flex;
+  align-items: center;
   margin: 0 0 0.5rem;
-  font-size: 1.3rem;
-}
-
-.other-care h3 {
-  margin: 1.25rem 0 0.25rem;
+  padding: 0;
   font-size: 1.05rem;
+  font-weight: 700;
 }
 
-.other-care p {
-  margin: 0;
+/* fieldset legends sit on the border by default; floating them keeps them inside the box. */
+.question legend {
+  float: left;
+  width: 100%;
 }
 
-.other-care .program-note {
-  margin-bottom: 0.25rem;
-  color: #4d5550;
+.question legend + * {
+  clear: both;
+}
+
+.question-number {
+  display: inline-flex;
+  flex: 0 0 auto;
+  align-items: center;
+  justify-content: center;
+  width: 1.75rem;
+  height: 1.75rem;
+  margin-right: 0.6rem;
+  border-radius: 50%;
+  background: var(--brand);
+  color: #fff;
   font-size: 0.9rem;
 }
 
-.other-care a {
-  color: #a51d2d;
-  font-weight: 600;
-  text-underline-offset: 0.18em;
+.hint {
+  margin: -0.25rem 0 0.6rem;
+  color: var(--muted);
+  font-size: 0.9rem;
+}
+
+.choices {
+  display: grid;
+  gap: 0.4rem;
+}
+
+/* Big, easy-to-tap answer rows. */
+.choice {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  min-height: 2.75rem;
+  padding: 0.45rem 0.75rem;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.choice:has(input:checked) {
+  border-color: var(--brand);
+  background: var(--brand-soft);
+}
+
+.choice input {
+  width: 1.2rem;
+  height: 1.2rem;
+  margin: 0;
+  flex: 0 0 auto;
+  accent-color: var(--brand);
+}
+
+.choice-inline {
+  display: inline-flex;
+  margin-top: 0.5rem;
+  border: 0;
+  padding-left: 0;
+}
+
+.choice-inline:has(input:checked) {
+  background: none;
+}
+
+.short-input {
+  width: 6rem;
+}
+
+.money-input {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-size: 1.1rem;
+  font-weight: 700;
+}
+
+.money-input input {
+  width: 100%;
+  max-width: 14rem;
+  font-weight: 400;
+}
+
+.money-input input:disabled {
+  background: var(--background);
+}
+
+#cost-place {
+  display: block;
+  width: 100%;
+  margin-bottom: 0.6rem;
+}
+
+.form-error {
+  margin: 0 0 0.75rem;
+  color: var(--costly);
+  font-weight: 700;
+}
+
+.form-error:empty {
+  display: none;
+}
+
+.cost-form > .button-primary {
+  width: 100%;
+}
+
+.results {
+  margin: 0 0 1.5rem;
+}
+
+.results h2:focus {
+  outline: none;
+}
+
+.tips {
+  margin: 0 0 1.25rem;
+  padding: 0.9rem 1.1rem 0.9rem 2rem;
+  border-radius: 12px;
+  background: var(--surface);
+  border: 1px solid var(--line);
+}
+
+.tips li {
+  margin-bottom: 0.4rem;
+}
+
+.tips li:last-child {
+  margin-bottom: 0;
+}
+
+.fit-heading {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin: 1.5rem 0 0.6rem;
+  font-size: 1.1rem;
+}
+
+/* A colored square before each group heading, matching its cards. */
+.fit-heading::before {
+  content: "";
+  width: 0.9rem;
+  height: 0.9rem;
+  border-radius: 3px;
+  background: currentColor;
+}
+
+.fit-heading.fit-good { color: var(--good); }
+.fit-heading.fit-check { color: var(--check); }
+.fit-heading.fit-costly { color: var(--costly); }
+
+.result-list {
+  display: grid;
+  gap: 0.75rem;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.result-card {
+  padding: 0.9rem 1.1rem;
+  border: 1px solid var(--line);
+  border-left-width: 6px;
+  border-radius: 12px;
+  background: var(--surface);
+}
+
+.result-card.fit-good { border-left-color: var(--good); }
+.result-card.fit-check { border-left-color: var(--check); }
+.result-card.fit-costly { border-left-color: var(--costly); }
+
+.result-card p {
+  margin: 0 0 0.35rem;
+}
+
+.fit-badge {
+  display: inline-block;
+  margin-bottom: 0.35rem;
+  padding: 0.1rem 0.6rem;
+  border-radius: 999px;
+  font-size: 0.8rem;
+  font-weight: 700;
+}
+
+.fit-good .fit-badge { background: var(--good-soft); color: var(--good); }
+.fit-check .fit-badge { background: var(--check-soft); color: var(--check); }
+.fit-costly .fit-badge { background: var(--costly-soft); color: var(--costly); }
+
+.result-name {
+  display: block;
+  font-size: 1.05rem;
+}
+
+.result-meta,
+.result-address {
+  color: var(--muted);
+  font-size: 0.9rem;
+}
+
+.result-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0 1.1rem;
+}
+
+.result-links a {
+  display: inline-block;
+  min-height: 2.75rem;
+  padding: 0.6rem 0;
+  overflow-wrap: anywhere;
+}
+
+.disclaimer {
+  color: var(--muted);
+  font-size: 0.9rem;
+}
+
+/* ---------- More help page ---------- */
+
+.program-note {
+  margin: 0 0 0.25rem;
+  color: var(--muted);
+  font-size: 0.9rem;
 }
 
 .program-list {
@@ -331,7 +816,11 @@ main {
   justify-content: space-between;
   gap: 0 1rem;
   padding: 0.25rem 0;
-  border-bottom: 1px solid #d5dbd6;
+  border-bottom: 1px solid var(--line);
+}
+
+.program-list li:last-child {
+  border-bottom: 0;
 }
 
 .program-links {
@@ -348,22 +837,30 @@ main {
   white-space: nowrap;
 }
 
-.visually-hidden {
-  position: absolute;
-  width: 1px;
-  height: 1px;
-  padding: 0;
-  margin: -1px;
-  overflow: hidden;
-  clip: rect(0, 0, 0, 0);
-  white-space: nowrap;
-  border: 0;
+/* ---------- About page ---------- */
+
+.about ul {
+  margin: 0;
+  padding-left: 1.2rem;
 }
+
+.about li {
+  margin-bottom: 0.4rem;
+}
+
+/* ---------- Small screens ---------- */
 
 @media (max-width: 30rem) {
   .emergency-banner {
-    padding-top: 0.65rem;
-    padding-bottom: 0.65rem;
     text-align: left;
+  }
+
+  .site-nav {
+    justify-content: flex-start;
+  }
+
+  .site-nav a {
+    padding-right: 0.6rem;
+    padding-left: 0.6rem;
   }
 }
