@@ -20,7 +20,7 @@
     "lng": -71.32338177,
     "phone": "603-895-3351",
     "hours": "16.00 hours per week",
-    "website": "",
+    "website": "https://centerforlifemanagement.org/programs-services/integrated-care-healthy-together/",
     "cost": "",
     "source": "Health_Center_Service_Delivery_and_LookAlike_Sites.csv",
     "last_verified": ""
@@ -59,7 +59,7 @@
     "lng": -71.88946559,
     "phone": "603-764-5704",
     "hours": "40.00 hours per week",
-    "website": "www.achs-inc.org",
+    "website": "https://www.ammonoosuc.org/achs-warren/",
     "cost": "",
     "source": "Health_Center_Service_Delivery_and_LookAlike_Sites.csv",
     "last_verified": ""
@@ -137,7 +137,7 @@
     "lng": -71.46397554,
     "phone": "603-626-9500",
     "hours": "16.00 hours per week",
-    "website": "",
+    "website": "https://www.amoskeaghealth.org/locations",
     "cost": "",
     "source": "Health_Center_Service_Delivery_and_LookAlike_Sites.csv",
     "last_verified": ""
@@ -150,7 +150,7 @@
     "lng": -70.771342,
     "phone": "603-422-8208",
     "hours": "40.00 hours per week",
-    "website": "",
+    "website": "https://greaterseacoasthealth.org/",
     "cost": "",
     "source": "Health_Center_Service_Delivery_and_LookAlike_Sites.csv",
     "last_verified": ""
@@ -176,7 +176,7 @@
     "lng": -71.49072688,
     "phone": "603-626-9500",
     "hours": "40.00 hours per week",
-    "website": "",
+    "website": "https://www.amoskeaghealth.org/locations",
     "cost": "",
     "source": "Health_Center_Service_Delivery_and_LookAlike_Sites.csv",
     "last_verified": ""
@@ -254,7 +254,7 @@
     "lng": -71.53859477,
     "phone": "603-882-3616",
     "hours": "20.00 hours per week",
-    "website": "",
+    "website": "https://harborcarenh.org/",
     "cost": "",
     "source": "Health_Center_Service_Delivery_and_LookAlike_Sites.csv",
     "last_verified": ""
@@ -293,7 +293,7 @@
     "lng": -70.77084596,
     "phone": "603-766-9220",
     "hours": "3.00 hours per week",
-    "website": "",
+    "website": "https://greaterseacoasthealth.org/services/mobile-health-care/",
     "cost": "",
     "source": "Health_Center_Service_Delivery_and_LookAlike_Sites.csv",
     "last_verified": ""
@@ -319,7 +319,7 @@
     "lng": -71.46124497,
     "phone": "999-999-9999",
     "hours": "23.00 hours per week",
-    "website": "",
+    "website": "https://lampreyhealth.org/locations/",
     "cost": "",
     "source": "Health_Center_Service_Delivery_and_LookAlike_Sites.csv",
     "last_verified": ""
@@ -345,7 +345,7 @@
     "lng": -71.61171983,
     "phone": "603-837-2333",
     "hours": "40.00 hours per week",
-    "website": "www.achs-inc.org",
+    "website": "https://www.ammonoosuc.org/achs-whitefield/",
     "cost": "",
     "source": "Health_Center_Service_Delivery_and_LookAlike_Sites.csv",
     "last_verified": ""
@@ -384,7 +384,7 @@
     "lng": -72.40919254,
     "phone": "603-826-5711",
     "hours": "62.00 hours per week",
-    "website": "",
+    "website": "https://www.northstarfqhc.org/",
     "cost": "",
     "source": "Health_Center_Service_Delivery_and_LookAlike_Sites.csv",
     "last_verified": ""
@@ -462,7 +462,7 @@
     "lng": -71.18294181,
     "phone": "603-752-3669",
     "hours": "70.00 hours per week",
-    "website": "",
+    "website": "https://coosfamilyhealth.org/locations/ccfhs-healthcare-express/",
     "cost": "",
     "source": "Health_Center_Service_Delivery_and_LookAlike_Sites.csv",
     "last_verified": ""
@@ -488,7 +488,7 @@
     "lng": -71.44781884,
     "phone": "603-665-7450",
     "hours": "40.00 hours per week",
-    "website": "",
+    "website": "https://www.manchesternh.gov/Departments/Health/Homeless-Healthcare-Project",
     "cost": "",
     "source": "Health_Center_Service_Delivery_and_LookAlike_Sites.csv",
     "last_verified": ""
@@ -514,7 +514,7 @@
     "lng": -71.46316946,
     "phone": "603-883-1626",
     "hours": "8.00 hours per week",
-    "website": "",
+    "website": "https://lampreyhealth.org/locations/",
     "cost": "",
     "source": "Health_Center_Service_Delivery_and_LookAlike_Sites.csv",
     "last_verified": ""
@@ -527,7 +527,7 @@
     "lng": -72.02350203,
     "phone": "603-747-3740",
     "hours": "48.00 hours per week",
-    "website": "www.achs-inc.org",
+    "website": "https://www.ammonoosuc.org/achs-woodsville/",
     "cost": "",
     "source": "Health_Center_Service_Delivery_and_LookAlike_Sites.csv",
     "last_verified": ""
@@ -540,7 +540,7 @@
     "lng": -70.917874573195,
     "phone": "603-775-7575",
     "hours": "",
-    "website": "",
+    "website": "https://www.accesssportsmed.com/",
     "cost": "",
     "source": "NPPES NPI Registry API v2.1",
     "last_verified": ""
@@ -566,7 +566,7 @@
     "lng": -71.526360962493,
     "phone": "603-232-1790",
     "hours": "",
-    "website": "",
+    "website": "https://ccmdcenters.com/locations/goffstown-nh",
     "cost": "",
     "source": "NPPES NPI Registry API v2.1",
     "last_verified": ""
@@ -579,7 +579,7 @@
     "lng": -71.532078029722,
     "phone": "603-223-2300",
     "hours": "Monday-Friday 8:00 AM-5:00 PM; closed Saturday-Sunday",
-    "website": "",
+    "website": "https://www.concentra.com/urgent-care-centers/new-hampshire/concord/concord-urgent-care/",
     "cost": "",
     "source": "User-provided correction; coordinates retained from NPPES NPI Registry API v2.1",
     "last_verified": ""
@@ -592,7 +592,7 @@
     "lng": -71.481452543243,
     "phone": "603-889-2354",
     "hours": "Monday-Friday 8:00 AM-5:00 PM; closed Saturday-Sunday",
-    "website": "",
+    "website": "https://www.concentra.com/urgent-care-centers/new-hampshire/nashua/nashua-urgent-care/",
     "cost": "",
     "source": "User-provided correction; coordinates retained from NPPES NPI Registry API v2.1",
     "last_verified": ""
@@ -605,7 +605,7 @@
     "lng": -71.436711925169,
     "phone": "603-644-3330",
     "hours": "Monday-Friday 7:00 AM-4:00 PM; closed Saturday-Sunday",
-    "website": "",
+    "website": "https://www.concentra.com/urgent-care-centers/new-hampshire/manchester/manchester-urgent-care/",
     "cost": "",
     "source": "User-provided correction; coordinates retained from NPPES NPI Registry API v2.1",
     "last_verified": ""
@@ -618,7 +618,7 @@
     "lng": -71.107685861352,
     "phone": "603-797-9289",
     "hours": "",
-    "website": "",
+    "website": "https://ccmdcenters.com/locations/plaistow-nh",
     "cost": "",
     "source": "NPPES NPI Registry API v2.1",
     "last_verified": ""
@@ -631,7 +631,7 @@
     "lng": -71.210628159878,
     "phone": "603-822-4713",
     "hours": "",
-    "website": "",
+    "website": "https://ccmdcenters.com/locations/alton-nh",
     "cost": "",
     "source": "NPPES NPI Registry API v2.1",
     "last_verified": ""
@@ -670,7 +670,7 @@
     "lng": -71.434792410294,
     "phone": "603-663-5573",
     "hours": "",
-    "website": "",
+    "website": "https://www.elliothospital.org/",
     "cost": "",
     "source": "NPPES NPI Registry API v2.1",
     "last_verified": ""
@@ -722,7 +722,7 @@
     "lng": -71.82897916199,
     "phone": "603-444-9294",
     "hours": "",
-    "website": "",
+    "website": "https://littletonhealthcare.org/departments/urgent-care/",
     "cost": "",
     "source": "NPPES NPI Registry API v2.1",
     "last_verified": ""
@@ -735,7 +735,7 @@
     "lng": -71.680179997241,
     "phone": "603-607-6040",
     "hours": "",
-    "website": "",
+    "website": "https://littletonhealthcare.org/departments/urgent-care/",
     "cost": "",
     "source": "NPPES NPI Registry API v2.1",
     "last_verified": ""
@@ -759,9 +759,9 @@
     "address": "1976 WHITE MOUNTAIN HWY STE 105, NORTH CONWAY, NH, 038605147",
     "lat": 43.927935690726,
     "lng": -71.223410050054,
-    "phone": "832-628-3420",
+    "phone": "603-356-4906",
     "hours": "",
-    "website": "",
+    "website": "https://www.mainehealth.org/services/walk-and-urgent-care/mainehealth-urgent-care-north-conway",
     "cost": "",
     "source": "NPPES NPI Registry API v2.1",
     "last_verified": ""
@@ -826,7 +826,7 @@
     "lng": -71.501237721646,
     "phone": "603-536-1120",
     "hours": "",
-    "website": "",
+    "website": "https://www.speare.org/",
     "cost": "",
     "source": "NPPES NPI Registry API v2.1",
     "last_verified": ""
@@ -839,7 +839,7 @@
     "lng": -71.719559339266,
     "phone": "603-536-1120",
     "hours": "",
-    "website": "",
+    "website": "https://www.speare.org/",
     "cost": "",
     "source": "NPPES NPI Registry API v2.1",
     "last_verified": ""
@@ -865,7 +865,7 @@
     "lng": -71.633148299316,
     "phone": "603-673-5623",
     "hours": "",
-    "website": "",
+    "website": "https://stjosephhospital.com/urgent-care/",
     "cost": "",
     "source": "NPPES NPI Registry API v2.1",
     "last_verified": ""
@@ -878,7 +878,7 @@
     "lng": -71.480928497048,
     "phone": "603-882-3000",
     "hours": "",
-    "website": "",
+    "website": "https://stjosephhospital.com/",
     "cost": "",
     "source": "NPPES NPI Registry API v2.1",
     "last_verified": ""
@@ -891,7 +891,7 @@
     "lng": -72.340696013331,
     "phone": "603-542-7771",
     "hours": "",
-    "website": "",
+    "website": "https://vrh.org/service/urgent-care/",
     "cost": "",
     "source": "NPPES NPI Registry API v2.1",
     "last_verified": ""
@@ -917,7 +917,7 @@
     "lng": -70.875120711476,
     "phone": "603-609-6700",
     "hours": "",
-    "website": "",
+    "website": "https://www.massgeneralbrigham.org/en/locations/dover-nh/wentworthdouglass-express-care-dover-loc0000280946",
     "cost": "",
     "source": "User-confirmed as Express Care; coordinates retained from NPPES NPI Registry API v2.1",
     "last_verified": ""
@@ -969,7 +969,7 @@
     "lng": -71.515550457303,
     "phone": "603-226-9000",
     "hours": "",
-    "website": "",
+    "website": "https://convenientmd.com/locations/concord-nh-urgent-care/",
     "cost": "",
     "source": "NPPES NPI Registry API v2.1",
     "last_verified": ""
@@ -982,7 +982,7 @@
     "lng": -71.804340733699,
     "phone": "603-761-3660",
     "hours": "",
-    "website": "",
+    "website": "https://convenientmd.com/locations/littleton-nh-urgent-care/",
     "cost": "",
     "source": "NPPES NPI Registry API v2.1",
     "last_verified": ""
@@ -995,7 +995,7 @@
     "lng": -72.290260311976,
     "phone": "603-352-3406",
     "hours": "",
-    "website": "",
+    "website": "https://convenientmd.com/locations/keene-nh-urgent-care/",
     "cost": "",
     "source": "NPPES NPI Registry API v2.1",
     "last_verified": ""
@@ -1008,7 +1008,7 @@
     "lng": -71.448197542558,
     "phone": "603-384-3900",
     "hours": "",
-    "website": "",
+    "website": "https://convenientmd.com/locations/manchester-nh-urgent-care/",
     "cost": "",
     "source": "NPPES NPI Registry API v2.1",
     "last_verified": ""
@@ -1047,7 +1047,7 @@
     "lng": -71.532975060848,
     "phone": "603-578-3347",
     "hours": "",
-    "website": "",
+    "website": "https://convenientmd.com/locations/nashua-nh-urgent-care/",
     "cost": "",
     "source": "NPPES NPI Registry API v2.1",
     "last_verified": ""
@@ -1060,7 +1060,7 @@
     "lng": -71.518081746271,
     "phone": "603-472-6700",
     "hours": "",
-    "website": "",
+    "website": "https://convenientmd.com/locations/bedford-nh-urgent-care/",
     "cost": "",
     "source": "NPPES NPI Registry API v2.1",
     "last_verified": ""
@@ -1071,9 +1071,9 @@
     "address": "1 PORTSMOUTH AVE, STRATHAM, NH, 038852585",
     "lat": 42.994509770146,
     "lng": -70.92586173599,
-    "phone": "",
+    "phone": "603-772-3600",
     "hours": "",
-    "website": "",
+    "website": "https://convenientmd.com/locations/stratham-nh-urgent-care/",
     "cost": "",
     "source": "NPPES NPI Registry API v2.1",
     "last_verified": ""
@@ -1086,7 +1086,7 @@
     "lng": -71.489991088579,
     "phone": "603-737-0550",
     "hours": "",
-    "website": "",
+    "website": "https://convenientmd.com/locations/belmont-nh-urgent-care/",
     "cost": "",
     "source": "NPPES NPI Registry API v2.1",
     "last_verified": ""
@@ -1099,7 +1099,7 @@
     "lng": -70.769565206438,
     "phone": "603-942-7900",
     "hours": "",
-    "website": "",
+    "website": "https://convenientmd.com/locations/portsmouth-nh-urgent-care/",
     "cost": "",
     "source": "NPPES NPI Registry API v2.1",
     "last_verified": ""
@@ -1125,7 +1125,7 @@
     "lng": -70.890924715525,
     "phone": "603-742-7900",
     "hours": "",
-    "website": "",
+    "website": "https://convenientmd.com/locations/dover-nh-urgent-care/",
     "cost": "",
     "source": "NPPES NPI Registry API v2.1",
     "last_verified": ""
@@ -1138,7 +1138,7 @@
     "lng": -71.347475849949,
     "phone": "603-413-6800",
     "hours": "",
-    "website": "",
+    "website": "https://convenientmd.com/locations/londonderry-nh-urgent-care/",
     "cost": "",
     "source": "NPPES NPI Registry API v2.1",
     "last_verified": ""
@@ -1164,7 +1164,7 @@
     "lng": -71.264268924161,
     "phone": "603-890-6330",
     "hours": "",
-    "website": "",
+    "website": "https://convenientmd.com/locations/windham-nh-urgent-care/",
     "cost": "",
     "source": "NPPES NPI Registry API v2.1",
     "last_verified": ""
@@ -1207,19 +1207,6 @@
     "cost": "",
     "source": "https://www.elliothospital.org/locations/elliot-urgent-care-londonderry; coordinates: U.S. Census Geocoder, Public_AR_Current",
     "last_verified": ""
-  },
-  {
-    "name": "Volunteers in Medicine of New Hampshire",
-    "type": "free_clinic",
-    "address": "600 Lafayette Rd, Portsmouth, NH 03801",
-    "lat": 43.053029308731,
-    "lng": -70.770390637722,
-    "phone": "603-436-2218",
-    "hours": "Two evenings per month, typically 6:00 PM-8:00 PM; check schedule with VIM-NH",
-    "website": "https://vimnh.org/",
-    "cost": "Free care for eligible uninsured/underinsured New Hampshire residents; eligibility details are on the provider site.",
-    "source": "https://vimnh.org/patients; direct contact: rjohnson@vimnh.org; host phone 603-436-2218 is Cross Roads House: https://www.crossroadshouse.org/; coordinates: U.S. Census Geocoder, Public_AR_Current",
-    "last_verified": "2026-10-06"
   },
   {
     "name": "Good Neighbor Health Clinic",
