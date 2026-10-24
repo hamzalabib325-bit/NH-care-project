@@ -1,7 +1,21 @@
+// The corners of a box around New Hampshire (south-west, then north-east).
+const NH_BOUNDS = L.latLngBounds([42.69, -72.56], [45.31, -70.6]);
+
 // Start with a view of New Hampshire; clinic pins are added once the data loads.
+// maxBounds stops the map from being dragged far outside the state.
 const map = L.map("map", {
-  zoomControl: false
-}).setView([43.8, -71.6], 7.7);
+  zoomControl: false,
+  maxBounds: NH_BOUNDS.pad(0.15),
+  maxBoundsViscosity: 1
+}).fitBounds(NH_BOUNDS);
+
+// Don't allow zooming out past the view that fits all of New Hampshire.
+// Screens differ in size, so this is worked out again whenever the window changes.
+function limitZoomToNH() {
+  map.setMinZoom(map.getBoundsZoom(NH_BOUNDS));
+}
+limitZoomToNH();
+map.on("resize", limitZoomToNH);
 
 // OpenStreetMap tiles are free to view and require visible attribution.
 L.tileLayer("https://tile.openstreetmap.org/{z}/{x}/{y}.png", {
