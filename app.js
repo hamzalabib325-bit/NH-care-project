@@ -125,6 +125,32 @@ function visibleClinicLocations() {
 }
 let userMarker = null;
 
+// Mark a starting point (from Near me or the search box) and zoom to the
+// three closest clinics, so rural users still see options on screen.
+function showNearest(here, label) {
+  if (userMarker) {
+    userMarker.setLatLng(here).setPopupContent(label);
+  } else {
+    userMarker = L.circleMarker(here, {
+      radius: 9,
+      color: "#fff",
+      weight: 3,
+      fillColor: "#7c3aed",
+      fillOpacity: 1
+    }).bindPopup(label).addTo(map);
+  }
+
+  const nearest = visibleClinicLocations()
+    .sort((a, b) => here.distanceTo(a) - here.distanceTo(b))
+    .slice(0, 3);
+
+  if (nearest.length) {
+    map.fitBounds(L.latLngBounds([here, ...nearest]), { padding: [40, 40], maxZoom: 13 });
+  } else {
+    map.setView(here, 12);
+  }
+}
+
 function showNearMe(button, status) {
   if (!("geolocation" in navigator)) {
     status.textContent = "Your browser can't share your location.";
@@ -140,28 +166,7 @@ function showNearMe(button, status) {
       status.textContent = "";
       const here = L.latLng(position.coords.latitude, position.coords.longitude);
 
-      if (userMarker) {
-        userMarker.setLatLng(here);
-      } else {
-        userMarker = L.circleMarker(here, {
-          radius: 9,
-          color: "#fff",
-          weight: 3,
-          fillColor: "#7c3aed",
-          fillOpacity: 1
-        }).bindPopup("You are here").addTo(map);
-      }
-
-      // Zoom to show the patient and the three closest clinics, even in rural areas.
-      const nearest = visibleClinicLocations()
-        .sort((a, b) => here.distanceTo(a) - here.distanceTo(b))
-        .slice(0, 3);
-
-      if (nearest.length) {
-        map.fitBounds(L.latLngBounds([here, ...nearest]), { padding: [40, 40], maxZoom: 13 });
-      } else {
-        map.setView(here, 12);
-      }
+      showNearest(here, "You are here");
     },
     (error) => {
       button.disabled = false;
@@ -194,6 +199,78 @@ function addNearMeButton() {
 }
 
 addNearMeButton();
+
+// Town and ZIP code centers from the U.S. Census Bureau (see data/places.json).
+let places = [];
+
+// Make typed text easy to compare: "  Concord, NH " becomes "concord".
+function normalizePlace(text) {
+  return text
+    .trim()
+    .toLowerCase()
+    .replace(/,?\s*(nh|new hampshire)$/, "")
+    .trim();
+}
+
+function findPlace(query) {
+  // "03301-1234" or "03301" both become "03301".
+  const zip = query.match(/^(\d{5})(-\d{4})?$/);
+  if (zip) {
+    return places.find((place) => place.kind === "zip" && place.name === zip[1]);
+  }
+  return places.find((place) => place.kind === "town" && normalizePlace(place.name) === query);
+}
+
+function setUpPlaceSearch() {
+  const form = document.getElementById("place-search");
+  const input = document.getElementById("place-input");
+  const status = document.getElementById("place-status");
+
+  form.addEventListener("submit", (event) => {
+    // Stop the browser from reloading the page when the form is sent.
+    event.preventDefault();
+    const query = normalizePlace(input.value);
+    if (!query) {
+      status.textContent = "Type a New Hampshire ZIP code or town name.";
+      return;
+    }
+
+    const place = findPlace(query);
+    if (!place) {
+      status.textContent = /^\d/.test(query)
+        ? "We couldn't find that New Hampshire ZIP code. Try your town name instead."
+        : "We couldn't find that New Hampshire town. Check the spelling or try a ZIP code.";
+      return;
+    }
+
+    const label = place.kind === "zip" ? `ZIP code ${place.name}` : `${place.name}, NH`;
+    status.textContent = `Showing the clinics closest to ${label}.`;
+    showNearest(L.latLng(place.lat, place.lng), label);
+  });
+}
+
+async function loadPlaces() {
+  try {
+    const response = await fetch("data/places.json");
+    if (!response.ok) {
+      throw new Error(`HTTP ${response.status}`);
+    }
+    places = await response.json();
+
+    // Fill the drop-down suggestions with town names as the user types.
+    const townList = document.getElementById("town-list");
+    for (const place of places.filter((p) => p.kind === "town")) {
+      const option = document.createElement("option");
+      option.value = place.name;
+      townList.append(option);
+    }
+  } catch (error) {
+    console.error("Could not load town and ZIP data:", error);
+  }
+}
+
+setUpPlaceSearch();
+loadPlaces();
 
 async function loadClinics() {
   try {

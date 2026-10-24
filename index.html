@@ -21,6 +21,18 @@
       <h1 class="visually-hidden">New Hampshire Care Finder map</h1>
 
       <div class="map-tools">
+        <!-- The search runs only in this browser; what you type is never sent anywhere. -->
+        <form class="place-search" id="place-search" role="search">
+          <label for="place-input">Search by NH ZIP code or town</label>
+          <div class="place-search-row">
+            <input type="text" id="place-input" list="town-list" autocomplete="off"
+                   placeholder="e.g. 03301 or Concord" aria-describedby="place-status">
+            <button type="submit">Search</button>
+          </div>
+          <datalist id="town-list"></datalist>
+          <p class="place-status" id="place-status" role="status"></p>
+        </form>
+
         <fieldset class="filters">
           <legend>Show on map</legend>
           <label class="filter-option">
