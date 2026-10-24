@@ -34,6 +34,64 @@ function distanceMiles(lat1, lng1, lat2, lng2) {
   return 2 * earthRadiusMiles * Math.asin(Math.sqrt(a));
 }
 
+// Some sources store names in ALL CAPS ("ST JOSEPH HOSPITAL OF NASHUA NH").
+// For display only, turn those into normal capitals ("St Joseph Hospital of Nashua NH").
+// The names in data/clinics.json are left exactly as the source has them.
+const KEEP_UPPERCASE = new Set([
+  "LLC", "PLLC", "PC", "NH", "UC", "MD", "FIT", "CMC", "HCA", "TX", "P.A.", "MSO",
+  "PO", "NE", "NW", "SE", "SW", "US", "DW"
+]);
+const KEEP_LOWERCASE = new Set(["of", "at", "and", "the", "in", "d/b/a"]);
+const SPECIAL_SPELLINGS = {
+  CLEARCHOICEMD: "ClearChoiceMD",
+  LRGHEALTHCARE: "LRGHealthcare",
+  MAINEHEALTH: "MaineHealth",
+  HEALTHSTOP: "HealthStop"
+};
+
+function capitalizeWord(word, isFirst) {
+  // Split off punctuation like "," or "(" so "LLC," and "(TX)" are handled too.
+  const [, before, core, after] = word.match(/^([^A-Za-z0-9]*)(.*?)([^A-Za-z0-9.]*)$/);
+  let fixed;
+  if (SPECIAL_SPELLINGS[core]) {
+    fixed = SPECIAL_SPELLINGS[core];
+  } else if (KEEP_UPPERCASE.has(core) || /\d/.test(core)) {
+    // Words with numbers in them, like "701B" or "NH-104", stay as they are.
+    fixed = core;
+  } else if (!isFirst && KEEP_LOWERCASE.has(core.toLowerCase())) {
+    fixed = core.toLowerCase();
+  } else {
+    // Capitalize each part of hyphenated words, like "WALK-IN" -> "Walk-In".
+    fixed = core.split("-").map((part) => KEEP_UPPERCASE.has(part)
+      ? part
+      : part.charAt(0) + part.slice(1).toLowerCase()).join("-");
+  }
+  return before + fixed + after;
+}
+
+function displayName(name) {
+  if (/[a-z]/.test(name)) {
+    return name; // Already has normal capitals.
+  }
+  return name.split(" ").map((word, index) => capitalizeWord(word, index === 0)).join(" ");
+}
+
+// Addresses get the same capital-letter fix, and 9-digit ZIP codes get their dash
+// ("030554915" becomes "03055-4915").
+function displayAddress(address) {
+  return displayName(address).replace(/\b(\d{5})-?(\d{4})\b/, "$1-$2");
+}
+
+// The federal health center list gives hours as a weekly total ("40.00 hours per week").
+// Say that in plain language, and remind people to call for the exact times.
+function displayHours(hours) {
+  const weekly = hours.match(/^(\d+(?:\.\d+)?) hours per week$/);
+  if (weekly) {
+    return `Open about ${Math.round(Number(weekly[1]))} hours a week. Call for times.`;
+  }
+  return hours;
+}
+
 // Some websites in the data are stored without "https://".
 function toUrl(website) {
   return /^https?:\/\//i.test(website) ? website : `https://${website}`;

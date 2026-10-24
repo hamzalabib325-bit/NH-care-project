@@ -288,7 +288,7 @@ function resultCard(entry, info) {
 
   const name = document.createElement("strong");
   name.className = "result-name";
-  name.textContent = clinic.name;
+  name.textContent = displayName(clinic.name);
 
   const meta = document.createElement("p");
   meta.className = "result-meta";
@@ -299,13 +299,20 @@ function resultCard(entry, info) {
 
   const address = document.createElement("p");
   address.className = "result-address";
-  address.textContent = clinic.address;
+  address.textContent = displayAddress(clinic.address);
+  card.append(badge, name, meta, reason, address);
+
+  if (clinic.hours) {
+    const hours = document.createElement("p");
+    hours.className = "result-address";
+    hours.textContent = `Hours: ${displayHours(clinic.hours)}`;
+    card.append(hours);
+  }
 
   const links = document.createElement("div");
   links.className = "result-links";
   links.append(...clinicLinks(clinic));
-
-  card.append(badge, name, meta, reason, address, links);
+  card.append(links);
   return card;
 }
 
