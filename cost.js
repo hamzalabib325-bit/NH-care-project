@@ -311,7 +311,11 @@ function resultCard(entry, info) {
 
   const links = document.createElement("div");
   links.className = "result-links";
-  links.append(...clinicLinks(clinic));
+  // The map page reads lat and lng from the link, then zooms to this clinic's pin.
+  links.append(
+    makeLink(`map.html?lat=${clinic.lat}&lng=${clinic.lng}`, "Show on map", false),
+    ...clinicLinks(clinic)
+  );
   card.append(links);
   return card;
 }

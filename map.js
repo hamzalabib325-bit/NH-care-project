@@ -40,11 +40,44 @@ map.on("mouseout", () => map.scrollWheelZoom.disable());
 // Keep the zoom buttons in the lower corner where they are easy to reach.
 L.control.zoom({ position: "bottomright" }).addTo(map);
 
-// A layer group holds a set of pins so they can be shown or hidden together.
-// There is one group per clinic type, matching the filter buttons above the map.
+// A message on top of the map, for "Loading…" or when something goes wrong.
+const mapMessage = document.getElementById("map-message");
+function showMapMessage(text) {
+  mapMessage.textContent = text;
+  mapMessage.hidden = !text;
+}
+
+// Clinic pins are small colored circles drawn with CSS (see .clinic-pin in style.css).
+const pinIcons = {};
+for (const [key, type] of Object.entries(CLINIC_TYPES)) {
+  pinIcons[key] = L.divIcon({
+    className: "clinic-pin",
+    html: `<span style="background:${type.color}"></span>`,
+    iconSize: [20, 20],
+    popupAnchor: [0, -8]
+  });
+}
+
+// A cluster group holds one clinic type's pins. Pins that are close together on screen
+// are combined into one numbered bubble, which splits apart as you zoom in.
+// There is one group per type, so each bubble keeps its type's color and the filter
+// buttons can still show or hide each type.
 const filterLayers = {};
-for (const type of Object.keys(CLINIC_TYPES)) {
-  filterLayers[type] = L.layerGroup().addTo(map);
+for (const [key, type] of Object.entries(CLINIC_TYPES)) {
+  filterLayers[key] = L.markerClusterGroup({
+    maxClusterRadius: 35,
+    // Zoomed in to street level, always show every pin on its own.
+    disableClusteringAtZoom: 14,
+    showCoverageOnHover: false,
+    iconCreateFunction: (cluster) => {
+      const count = cluster.getChildCount();
+      return L.divIcon({
+        className: "clinic-cluster",
+        html: `<span style="background:${type.color}" aria-label="${count} ${type.label} locations">${count}</span>`,
+        iconSize: [34, 34]
+      });
+    }
+  }).addTo(map);
 }
 
 // When a filter checkbox changes, show or hide that group of pins.
@@ -85,14 +118,14 @@ function buildPopup(clinic) {
   return container;
 }
 
-// Pin locations and their type, kept so "Near me" can find the closest clinics.
-const clinicLocations = [];
+// Every pin, with its clinic and filter group, so "Near me" and "Show on map" can find them.
+const clinicMarkers = [];
 
 // Only count clinics whose filter checkbox is turned on.
 function visibleClinicLocations() {
-  return clinicLocations
-    .filter((clinic) => map.hasLayer(filterLayers[clinic.type]))
-    .map((clinic) => clinic.latLng);
+  return clinicMarkers
+    .filter((entry) => map.hasLayer(filterLayers[entry.group]))
+    .map((entry) => entry.marker.getLatLng());
 }
 
 let userMarker = null;
@@ -172,6 +205,10 @@ function setUpPlaceSearch() {
   form.addEventListener("submit", (event) => {
     // Stop the browser from reloading the page when the form is sent.
     event.preventDefault();
+    if (!places.length) {
+      status.textContent = "Town and ZIP search isn't available right now. Try refreshing the page.";
+      return;
+    }
     const place = findPlace(places, input.value);
     if (!place) {
       status.textContent = placeNotFoundMessage(input.value);
@@ -193,29 +230,53 @@ async function loadPlaces() {
   }
 }
 
+// The cost helper links here as map.html?lat=...&lng=... to show one clinic.
+// Zoom to that clinic's pin and open its popup.
+function showLinkedClinic() {
+  const params = new URLSearchParams(window.location.search);
+  const lat = Number(params.get("lat"));
+  const lng = Number(params.get("lng"));
+  if (!params.has("lat") || !Number.isFinite(lat) || !Number.isFinite(lng)) {
+    return;
+  }
+  const entry = clinicMarkers.find(({ clinic }) =>
+    Math.abs(clinic.lat - lat) < 1e-6 && Math.abs(clinic.lng - lng) < 1e-6);
+  if (!entry) {
+    return;
+  }
+  // If that type is filtered out, turn it back on so the pin can be seen.
+  const checkbox = document.querySelector(`input[name="filter"][value="${entry.group}"]`);
+  if (checkbox && !checkbox.checked) {
+    checkbox.click();
+  }
+  map.setView(entry.marker.getLatLng(), 15);
+  filterLayers[entry.group].zoomToShowLayer(entry.marker, () => entry.marker.openPopup());
+}
+
 async function loadClinics() {
+  showMapMessage("Loading clinics…");
   try {
     const clinics = await loadJson("data/clinics.json");
     for (const clinic of clinics) {
       if (!Number.isFinite(clinic.lat) || !Number.isFinite(clinic.lng)) {
         continue;
       }
-      const type = clinicType(clinic);
       // Unknown types are grouped with health centers so they are never silently hidden.
       const group = filterLayers[clinic.type] ? clinic.type : "health_center";
-      clinicLocations.push({ latLng: L.latLng(clinic.lat, clinic.lng), type: group });
-      L.circleMarker([clinic.lat, clinic.lng], {
-        radius: 8,
-        color: "#fff",
-        weight: 2,
-        fillColor: type.color,
-        fillOpacity: 0.9
-      })
-        .bindPopup(() => buildPopup(clinic), { maxWidth: 280 })
-        .addTo(filterLayers[group]);
+      const marker = L.marker([clinic.lat, clinic.lng], {
+        icon: pinIcons[group],
+        // Screen readers and hover tooltips read the clinic's name.
+        title: displayName(clinic.name),
+        alt: displayName(clinic.name)
+      }).bindPopup(() => buildPopup(clinic), { maxWidth: 280 });
+      filterLayers[group].addLayer(marker);
+      clinicMarkers.push({ clinic, marker, group });
     }
+    showMapMessage("");
+    showLinkedClinic();
   } catch (error) {
     console.error("Could not load clinic data:", error);
+    showMapMessage("Sorry, the clinic list didn't load. Check your internet connection and refresh the page.");
   }
 }
 

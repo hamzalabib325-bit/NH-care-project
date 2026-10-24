@@ -468,11 +468,62 @@ main {
 /* Scroll down and the map almost fills the screen. The 3.5rem left over at the top
    gives phone users somewhere to drag to scroll back up, since dragging on the map moves the map. */
 #map {
-  flex: 0 0 auto;
+  display: block;
   height: calc(100vh - 3.5rem);
   height: calc(100dvh - 3.5rem);
   min-height: 16rem;
   background: #e7ece7;
+}
+
+/* The wrapper lets the loading/error message sit on top of the map. */
+.map-wrap {
+  position: relative;
+}
+
+.map-message {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  z-index: 1000;
+  width: max-content;
+  max-width: calc(100% - 2rem);
+  margin: 0;
+  padding: 0.75rem 1.1rem;
+  border-radius: 12px;
+  background: rgba(255, 255, 255, 0.97);
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.25);
+  font-weight: 600;
+  text-align: center;
+  transform: translate(-50%, -50%);
+}
+
+.map-message[hidden] {
+  display: none;
+}
+
+/* A clinic pin: a colored circle with a white ring (color is set in map.js). */
+.clinic-pin span {
+  display: block;
+  width: 20px;
+  height: 20px;
+  border: 3px solid #fff;
+  border-radius: 50%;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.45);
+}
+
+/* A bubble standing for several pins close together, showing how many. */
+.clinic-cluster span {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 34px;
+  height: 34px;
+  border: 3px solid #fff;
+  border-radius: 50%;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.45);
+  color: #fff;
+  font-size: 0.9rem;
+  font-weight: 700;
 }
 
 .clinic-popup {

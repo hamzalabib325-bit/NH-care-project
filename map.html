@@ -6,6 +6,7 @@
     <meta name="theme-color" content="#a51d2d">
     <title>Map · NH Care Finder</title>
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet.markercluster@1.5.3/dist/MarkerCluster.css">
     <link rel="stylesheet" href="style.css">
   </head>
   <body class="map-page">
@@ -60,10 +61,15 @@
         </fieldset>
       </div>
 
-      <div id="map" role="region" aria-label="Map of New Hampshire"></div>
+      <div class="map-wrap">
+        <div id="map" role="region" aria-label="Map of New Hampshire"></div>
+        <p class="map-message" id="map-message" role="status" hidden></p>
+      </div>
     </main>
 
     <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+    <!-- Groups nearby pins into numbered bubbles: github.com/Leaflet/Leaflet.markercluster -->
+    <script src="https://unpkg.com/leaflet.markercluster@1.5.3/dist/leaflet.markercluster.js"></script>
     <script src="common.js"></script>
     <script src="map.js"></script>
   </body>
