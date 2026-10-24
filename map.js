@@ -9,6 +9,8 @@ const NH_BOUNDS = L.latLngBounds([42.69, -72.56], [45.31, -70.6]);
 const map = L.map("map", {
   zoomControl: false,
   zoomSnap: 0.25,
+  // The mouse wheel scrolls the page until the map is clicked (see below).
+  scrollWheelZoom: false,
   maxBounds: NH_BOUNDS.pad(0.15),
   maxBoundsViscosity: 1
 }).fitBounds(NH_BOUNDS);
@@ -29,6 +31,11 @@ L.tileLayer("https://tile.openstreetmap.org/{z}/{x}/{y}.png", {
   detectRetina: true,
   attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
 }).addTo(map);
+
+// On computers, scrolling over the map would zoom it instead of scrolling the page.
+// So wheel-zoom turns on only after the map is clicked, and off when the mouse leaves.
+map.on("click", () => map.scrollWheelZoom.enable());
+map.on("mouseout", () => map.scrollWheelZoom.disable());
 
 // Keep the zoom buttons in the lower corner where they are easy to reach.
 L.control.zoom({ position: "bottomright" }).addTo(map);
@@ -59,7 +66,7 @@ function buildPopup(clinic) {
 
   const name = document.createElement("strong");
   name.className = "clinic-name";
-  name.textContent = clinic.name;
+  name.textContent = displayName(clinic.name);
 
   const typeLabel = document.createElement("span");
   typeLabel.className = "clinic-type";
@@ -67,7 +74,7 @@ function buildPopup(clinic) {
   typeLabel.style.color = type.color;
   container.append(name, typeLabel);
 
-  const details = [clinic.address, clinic.hours && `Hours: ${clinic.hours}`, clinic.cost];
+  const details = [clinic.address && displayAddress(clinic.address), clinic.hours && `Hours: ${displayHours(clinic.hours)}`, clinic.cost];
   for (const text of details.filter(Boolean)) {
     const line = document.createElement("p");
     line.textContent = text;
@@ -172,6 +179,8 @@ function setUpPlaceSearch() {
     }
     status.textContent = `Showing the clinics closest to ${placeLabel(place)}.`;
     showNearest(L.latLng(place.lat, place.lng), placeLabel(place));
+    // Bring the map into view so the results are on screen.
+    document.getElementById("map").scrollIntoView({ behavior: "smooth", block: "end" });
   });
 }
 
