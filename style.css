@@ -55,14 +55,55 @@ body {
 }
 
 main {
+  display: flex;
+  flex: 1 1 auto;
+  flex-direction: column;
+}
+
+.tab-bar {
+  display: flex;
+  flex: 0 0 auto;
+  border-bottom: 1px solid #d5dbd6;
+  background: #fff;
+}
+
+.tab {
+  flex: 1 1 0;
+  min-height: 3rem;
+  padding: 0.6rem 1rem;
+  border: 0;
+  border-bottom: 3px solid transparent;
+  background: none;
+  color: #4d5550;
+  font: inherit;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.tab[aria-selected="true"] {
+  border-bottom-color: #a51d2d;
+  color: #a51d2d;
+}
+
+.tab:focus-visible {
+  outline: 3px solid #1d5fa8;
+  outline-offset: -3px;
+}
+
+/* The display rules below would otherwise override the hidden attribute. */
+.tab-panel[hidden] {
+  display: none;
+}
+
+/* The map fills all the space left under the banner and tabs. */
+.map-panel {
+  display: flex;
   flex: 1 1 auto;
 }
 
-/* Leave part of the screen free so the section below the map is discoverable. */
 #map {
-  width: 100%;
-  height: 75vh;
-  height: 75dvh;
+  flex: 1 1 auto;
   min-height: 16rem;
   background: #e7ece7;
 }
@@ -158,6 +199,7 @@ main {
 }
 
 .other-care {
+  width: 100%;
   max-width: 40rem;
   margin: 0 auto;
   padding: 1.25rem max(1rem, env(safe-area-inset-right)) 2rem max(1rem, env(safe-area-inset-left));

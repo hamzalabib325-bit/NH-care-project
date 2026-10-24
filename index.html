@@ -18,10 +18,22 @@
     </header>
 
     <main>
-      <h1 class="visually-hidden">New Hampshire Care Finder map</h1>
-      <div id="map" role="region" aria-label="Map of New Hampshire"></div>
+      <h1 class="visually-hidden">New Hampshire Care Finder</h1>
 
-      <section class="other-care" aria-labelledby="other-care-heading">
+      <!-- Tab buttons. Each one shows the panel named in its aria-controls. -->
+      <nav class="tab-bar" role="tablist" aria-label="Sections">
+        <button type="button" class="tab" role="tab" id="tab-map"
+                aria-controls="panel-map" aria-selected="true">Map</button>
+        <button type="button" class="tab" role="tab" id="tab-other-care"
+                aria-controls="panel-other-care" aria-selected="false" tabindex="-1">Other free care</button>
+      </nav>
+
+      <div class="tab-panel map-panel" role="tabpanel" id="panel-map" aria-labelledby="tab-map">
+        <div id="map" role="region" aria-label="Map of New Hampshire"></div>
+      </div>
+
+      <section class="tab-panel other-care" role="tabpanel" id="panel-other-care"
+               aria-labelledby="tab-other-care" hidden>
         <h2 id="other-care-heading">Other free care options</h2>
         <p>
           For help finding free or low-cost care, dial <a href="tel:211">2-1-1</a>

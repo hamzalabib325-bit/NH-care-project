@@ -159,6 +159,36 @@ function addNearMeButton() {
 
 addNearMeButton();
 
+// Tabs: clicking a tab button shows its panel and hides the others.
+const tabs = document.querySelectorAll('[role="tab"]');
+
+function selectTab(selected) {
+  for (const tab of tabs) {
+    const isSelected = tab === selected;
+    tab.setAttribute("aria-selected", String(isSelected));
+    // Only the selected tab is reachable with the Tab key; arrow keys move between tabs.
+    tab.tabIndex = isSelected ? 0 : -1;
+    document.getElementById(tab.getAttribute("aria-controls")).hidden = !isSelected;
+  }
+  // Leaflet can't measure a hidden map, so tell it to re-check its size once it's visible.
+  if (selected.id === "tab-map") {
+    map.invalidateSize();
+  }
+}
+
+tabs.forEach((tab, index) => {
+  tab.addEventListener("click", () => selectTab(tab));
+  tab.addEventListener("keydown", (event) => {
+    const step = { ArrowRight: 1, ArrowLeft: -1 }[event.key];
+    if (!step) {
+      return;
+    }
+    const next = tabs[(index + step + tabs.length) % tabs.length];
+    next.focus();
+    selectTab(next);
+  });
+});
+
 async function loadClinics() {
   try {
     const response = await fetch("data/clinics.json");
