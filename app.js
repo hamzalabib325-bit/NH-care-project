@@ -65,6 +65,16 @@ function buildPopup(clinic, type) {
     container.append(website);
   }
 
+  // Google Maps works on phones and computers. We only send the clinic's address;
+  // Google Maps itself asks for the user's location if they want turn-by-turn directions.
+  const directions = document.createElement("a");
+  const destination = clinic.address || `${clinic.lat},${clinic.lng}`;
+  directions.href = `https://www.google.com/maps/dir/?api=1&destination=${encodeURIComponent(destination)}`;
+  directions.target = "_blank";
+  directions.rel = "noopener";
+  directions.textContent = "Get directions";
+  container.append(directions);
+
   return container;
 }
 
