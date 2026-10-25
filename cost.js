@@ -115,6 +115,32 @@ function costTips(insurance, povertyPercent) {
     });
   }
 
+  // Prescriptions. Medicare's Extra Help program is run by Social Security (ssa.gov).
+  if (insurance === "medicare") {
+    tips.push({
+      text: t("If your income and savings are limited, Medicare's Extra Help program can lower your prescription costs. Apply at "),
+      link: { href: "https://www.ssa.gov/medicare/part-d-extra-help", text: "SSA.gov" },
+      after: t(" or call 1-800-772-1213.")
+    });
+  } else if (insurance !== "medicaid") {
+    tips.push(t("Ask community health centers about lower-cost prescriptions. Many offer discounted medicines to their patients through a federal program called 340B."));
+  }
+
+  // Rides. Each NH Medicaid plan books rides to covered appointments; the numbers are on help.html.
+  if (insurance === "medicaid") {
+    tips.push({
+      text: t("Need a ride? Your NH Medicaid plan may give you a free ride to medical appointments. Find your plan's ride number on "),
+      link: { href: "help.html#rides", text: t("More help"), sameTab: true },
+      after: "."
+    });
+  } else {
+    tips.push({
+      text: t("Need a ride? Dial 2-1-1 to ask about transportation programs near you, or see "),
+      link: { href: "help.html#rides", text: t("More help"), sameTab: true },
+      after: "."
+    });
+  }
+
   tips.push(t("Always call ahead and ask what your visit will cost. Prices here are a guide, not a quote."));
   return tips;
 }
@@ -248,7 +274,8 @@ function showResults(insurance, povertyPercent, spot) {
     if (typeof tip === "string") {
       item.textContent = tip;
     } else {
-      item.append(tip.text, makeLink(tip.link.href, tip.link.text, true), tip.after);
+      // Links to other sites open in a new tab; links to our own pages don't.
+      item.append(tip.text, makeLink(tip.link.href, tip.link.text, !tip.link.sameTab), tip.after);
     }
     tipList.append(item);
   }

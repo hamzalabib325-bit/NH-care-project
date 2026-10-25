@@ -108,7 +108,7 @@ function makeLink(href, text, opensNewTab) {
   return link;
 }
 
-// Call, website, and directions links for one clinic.
+// Call, website (or online check-in), and directions links for one clinic.
 // Built with DOM nodes so clinic text is never parsed as HTML.
 function clinicLinks(clinic) {
   const links = [];
@@ -118,7 +118,11 @@ function clinicLinks(clinic) {
     links.push(makeLink(`tel:${number.replace(/[^\d+]/g, "")}`, t("Call {number}", { number }), false));
   }
 
-  if (clinic.website) {
+  if (clinic.check_in_url) {
+    // This clinic's own page has a button to hold your place in line, which
+    // often means a shorter wait. (See scripts/add-check-in-urls.js.)
+    links.push(makeLink(clinic.check_in_url, t("Save your spot online"), true));
+  } else if (clinic.website) {
     const url = toUrl(clinic.website);
     // Show the site's address (e.g. "example.org") so it reads clearly as a link.
     links.push(makeLink(url, new URL(url).hostname.replace(/^www\./, ""), true));

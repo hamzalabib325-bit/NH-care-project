@@ -901,6 +901,25 @@ main {
   border-bottom: 0;
 }
 
+.card-note {
+  margin: 0.75rem 0 0;
+  color: var(--muted);
+  font-size: 0.95rem;
+}
+
+.tip-list {
+  margin: 0;
+  padding-left: 1.2rem;
+}
+
+.tip-list li {
+  margin-bottom: 0.5rem;
+}
+
+.tip-list li:last-child {
+  margin-bottom: 0;
+}
+
 .program-links {
   display: flex;
   flex-wrap: wrap;

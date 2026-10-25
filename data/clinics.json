@@ -569,7 +569,9 @@
     "website": "https://ccmdcenters.com/locations/goffstown-nh",
     "cost": "",
     "source": "NPPES NPI Registry API v2.1",
-    "last_verified": ""
+    "last_verified": "",
+    "check_in_url": "https://ccmdcenters.com/locations/goffstown-nh",
+    "check_in_verified": "2026-10-24"
   },
   {
     "name": "Concentra Urgent Care - Concord",
@@ -621,7 +623,9 @@
     "website": "https://ccmdcenters.com/locations/plaistow-nh",
     "cost": "",
     "source": "NPPES NPI Registry API v2.1",
-    "last_verified": ""
+    "last_verified": "",
+    "check_in_url": "https://ccmdcenters.com/locations/plaistow-nh",
+    "check_in_verified": "2026-10-24"
   },
   {
     "name": "CLEARCHOICEMD, PLLC",
@@ -634,7 +638,9 @@
     "website": "https://ccmdcenters.com/locations/alton-nh",
     "cost": "",
     "source": "NPPES NPI Registry API v2.1",
-    "last_verified": ""
+    "last_verified": "",
+    "check_in_url": "https://ccmdcenters.com/locations/alton-nh",
+    "check_in_verified": "2026-10-24"
   },
   {
     "name": "CMC D/B/A URGENT CARE AT BEDFORD MEDICAL PARK",
@@ -764,7 +770,9 @@
     "website": "https://www.mainehealth.org/services/walk-and-urgent-care/mainehealth-urgent-care-north-conway",
     "cost": "",
     "source": "NPPES NPI Registry API v2.1",
-    "last_verified": ""
+    "last_verified": "",
+    "check_in_url": "https://www.mainehealth.org/services/walk-and-urgent-care/mainehealth-urgent-care-north-conway",
+    "check_in_verified": "2026-10-24"
   },
   {
     "name": "NEW FOUND EXPRESS CARE LLC",
@@ -972,7 +980,9 @@
     "website": "https://convenientmd.com/locations/concord-nh-urgent-care/",
     "cost": "",
     "source": "NPPES NPI Registry API v2.1",
-    "last_verified": ""
+    "last_verified": "",
+    "check_in_url": "https://convenientmd.com/locations/concord-nh-urgent-care/",
+    "check_in_verified": "2026-10-24"
   },
   {
     "name": "ConvenientMD",
@@ -985,7 +995,9 @@
     "website": "https://convenientmd.com/locations/littleton-nh-urgent-care/",
     "cost": "",
     "source": "NPPES NPI Registry API v2.1",
-    "last_verified": ""
+    "last_verified": "",
+    "check_in_url": "https://convenientmd.com/locations/littleton-nh-urgent-care/",
+    "check_in_verified": "2026-10-24"
   },
   {
     "name": "ConvenientMD",
@@ -998,7 +1010,9 @@
     "website": "https://convenientmd.com/locations/keene-nh-urgent-care/",
     "cost": "",
     "source": "NPPES NPI Registry API v2.1",
-    "last_verified": ""
+    "last_verified": "",
+    "check_in_url": "https://convenientmd.com/locations/keene-nh-urgent-care/",
+    "check_in_verified": "2026-10-24"
   },
   {
     "name": "ConvenientMD",
@@ -1011,7 +1025,9 @@
     "website": "https://convenientmd.com/locations/manchester-nh-urgent-care/",
     "cost": "",
     "source": "NPPES NPI Registry API v2.1",
-    "last_verified": ""
+    "last_verified": "",
+    "check_in_url": "https://convenientmd.com/locations/manchester-nh-urgent-care/",
+    "check_in_verified": "2026-10-24"
   },
   {
     "name": "ConvenientMD",
@@ -1024,7 +1040,9 @@
     "website": "https://convenientmd.com/locations/windham-nh-urgent-care/",
     "cost": "",
     "source": "https://convenientmd.com/locations/windham-nh-urgent-care/; coordinates: official ConvenientMD location page map",
-    "last_verified": ""
+    "last_verified": "",
+    "check_in_url": "https://convenientmd.com/locations/windham-nh-urgent-care/",
+    "check_in_verified": "2026-10-24"
   },
   {
     "name": "ConvenientMD",
@@ -1037,7 +1055,9 @@
     "website": "https://convenientmd.com/locations/plaistow-nh-urgent-care/",
     "cost": "",
     "source": "https://convenientmd.com/locations/plaistow-nh-urgent-care/; coordinates: official ConvenientMD location page map",
-    "last_verified": ""
+    "last_verified": "",
+    "check_in_url": "https://convenientmd.com/locations/plaistow-nh-urgent-care/",
+    "check_in_verified": "2026-10-24"
   },
   {
     "name": "ConvenientMD",
@@ -1050,7 +1070,9 @@
     "website": "https://convenientmd.com/locations/nashua-nh-urgent-care/",
     "cost": "",
     "source": "NPPES NPI Registry API v2.1",
-    "last_verified": ""
+    "last_verified": "",
+    "check_in_url": "https://convenientmd.com/locations/nashua-nh-urgent-care/",
+    "check_in_verified": "2026-10-24"
   },
   {
     "name": "ConvenientMD",
@@ -1063,7 +1085,9 @@
     "website": "https://convenientmd.com/locations/bedford-nh-urgent-care/",
     "cost": "",
     "source": "NPPES NPI Registry API v2.1",
-    "last_verified": ""
+    "last_verified": "",
+    "check_in_url": "https://convenientmd.com/locations/bedford-nh-urgent-care/",
+    "check_in_verified": "2026-10-24"
   },
   {
     "name": "ConvenientMD",
@@ -1076,7 +1100,9 @@
     "website": "https://convenientmd.com/locations/stratham-nh-urgent-care/",
     "cost": "",
     "source": "NPPES NPI Registry API v2.1",
-    "last_verified": ""
+    "last_verified": "",
+    "check_in_url": "https://convenientmd.com/locations/stratham-nh-urgent-care/",
+    "check_in_verified": "2026-10-24"
   },
   {
     "name": "ConvenientMD",
@@ -1089,7 +1115,9 @@
     "website": "https://convenientmd.com/locations/belmont-nh-urgent-care/",
     "cost": "",
     "source": "NPPES NPI Registry API v2.1",
-    "last_verified": ""
+    "last_verified": "",
+    "check_in_url": "https://convenientmd.com/locations/belmont-nh-urgent-care/",
+    "check_in_verified": "2026-10-24"
   },
   {
     "name": "ConvenientMD",
@@ -1102,7 +1130,9 @@
     "website": "https://convenientmd.com/locations/portsmouth-nh-urgent-care/",
     "cost": "",
     "source": "NPPES NPI Registry API v2.1",
-    "last_verified": ""
+    "last_verified": "",
+    "check_in_url": "https://convenientmd.com/locations/portsmouth-nh-urgent-care/",
+    "check_in_verified": "2026-10-24"
   },
   {
     "name": "ConvenientMD",
@@ -1115,7 +1145,9 @@
     "website": "https://convenientmd.com/locations/merrimack-nh-urgent-care/",
     "cost": "",
     "source": "https://convenientmd.com/locations/merrimack-nh-urgent-care/; coordinates: official ConvenientMD location page map",
-    "last_verified": ""
+    "last_verified": "",
+    "check_in_url": "https://convenientmd.com/locations/merrimack-nh-urgent-care/",
+    "check_in_verified": "2026-10-24"
   },
   {
     "name": "ConvenientMD",
@@ -1128,7 +1160,9 @@
     "website": "https://convenientmd.com/locations/dover-nh-urgent-care/",
     "cost": "",
     "source": "NPPES NPI Registry API v2.1",
-    "last_verified": ""
+    "last_verified": "",
+    "check_in_url": "https://convenientmd.com/locations/dover-nh-urgent-care/",
+    "check_in_verified": "2026-10-24"
   },
   {
     "name": "ConvenientMD",
@@ -1141,7 +1175,9 @@
     "website": "https://convenientmd.com/locations/londonderry-nh-urgent-care/",
     "cost": "",
     "source": "NPPES NPI Registry API v2.1",
-    "last_verified": ""
+    "last_verified": "",
+    "check_in_url": "https://convenientmd.com/locations/londonderry-nh-urgent-care/",
+    "check_in_verified": "2026-10-24"
   },
   {
     "name": "ConvenientMD",
@@ -1154,7 +1190,9 @@
     "website": "https://convenientmd.com/locations/west-lebanon/",
     "cost": "",
     "source": "https://convenientmd.com/locations/west-lebanon/; coordinates: official ConvenientMD location page map",
-    "last_verified": ""
+    "last_verified": "",
+    "check_in_url": "https://convenientmd.com/locations/west-lebanon/",
+    "check_in_verified": "2026-10-24"
   },
   {
     "name": "ConvenientMD",
@@ -1167,7 +1205,9 @@
     "website": "https://convenientmd.com/locations/windham-nh-urgent-care/",
     "cost": "",
     "source": "NPPES NPI Registry API v2.1",
-    "last_verified": ""
+    "last_verified": "",
+    "check_in_url": "https://convenientmd.com/locations/windham-nh-urgent-care/",
+    "check_in_verified": "2026-10-24"
   },
   {
     "name": "Elliot Urgent Care at River's Edge",
@@ -1180,7 +1220,9 @@
     "website": "https://www.elliothospital.org/locations/elliot-urgent-care-rivers-edge",
     "cost": "",
     "source": "https://www.elliothospital.org/locations/elliot-urgent-care-rivers-edge; coordinates: U.S. Census Geocoder, Public_AR_Current",
-    "last_verified": ""
+    "last_verified": "",
+    "check_in_url": "https://www.elliothospital.org/locations/elliot-urgent-care-rivers-edge",
+    "check_in_verified": "2026-10-24"
   },
   {
     "name": "Elliot Urgent Care at Bedford",
@@ -1193,7 +1235,9 @@
     "website": "https://www.elliothospital.org/locations/elliot-urgent-care-bedford",
     "cost": "",
     "source": "https://www.elliothospital.org/locations/elliot-urgent-care-bedford; coordinates: OpenStreetMap Nominatim building match at the exact 25 Leavy Drive address (way 684694085)",
-    "last_verified": ""
+    "last_verified": "",
+    "check_in_url": "https://www.elliothospital.org/locations/elliot-urgent-care-bedford",
+    "check_in_verified": "2026-10-24"
   },
   {
     "name": "Elliot Urgent Care at Londonderry",
@@ -1206,7 +1250,9 @@
     "website": "https://www.elliothospital.org/locations/elliot-urgent-care-londonderry",
     "cost": "",
     "source": "https://www.elliothospital.org/locations/elliot-urgent-care-londonderry; coordinates: U.S. Census Geocoder, Public_AR_Current",
-    "last_verified": ""
+    "last_verified": "",
+    "check_in_url": "https://www.elliothospital.org/locations/elliot-urgent-care-londonderry",
+    "check_in_verified": "2026-10-24"
   },
   {
     "name": "Good Neighbor Health Clinic",
@@ -1245,6 +1291,8 @@
     "website": "https://www.afcurgentcare.com/hudson/",
     "cost": "",
     "source": "https://www.afcurgentcare.com/hudson/; coordinates from its linked Google Maps pin",
-    "last_verified": "2026-10-06"
+    "last_verified": "2026-10-06",
+    "check_in_url": "https://www.afcurgentcare.com/hudson/",
+    "check_in_verified": "2026-10-24"
   }
 ]
