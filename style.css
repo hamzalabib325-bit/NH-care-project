@@ -970,12 +970,27 @@ main {
     text-align: start;
   }
 
+  /* On phones the language menu gets its own slim row above the links, so it never
+     covers them, and the links share the full width. Long translations wrap to a
+     second row instead of being cut off. */
   .site-nav {
+    flex-wrap: wrap;
     justify-content: flex-start;
+    overflow-x: visible;
+  }
+
+  .language-picker {
+    position: static;
+    order: -1;
+    flex: 1 0 100%;
+    justify-content: flex-end;
+    padding: 0.35rem 0.75rem 0;
   }
 
   .site-nav a {
-    padding-right: 0.6rem;
-    padding-left: 0.6rem;
+    flex: 1 1 auto;
+    padding: 0.6rem 0.4rem;
+    font-size: 0.9rem;
+    text-align: center;
   }
 }
