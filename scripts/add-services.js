@@ -7,7 +7,7 @@ const path = require("node:path");
 // - HRSA health center sites: every "Service Delivery Site" offers primary care.
 //   The site's "Location Setting" (School, Nursing Home) and "Location Type"
 //   (Mobile Van) say who the site serves and where.
-// - Health Care for the Homeless sites: the HRSA site name says HCH, shelter, or soup kitchen.
+// - Homeless shelters: the HRSA site name says shelter.
 // - Urgent care (NPI taxonomy "Clinic/Center, Urgent Care") and "Express Care"
 //   sites take walk-in patients.
 // - Free clinics: the provider's own page (see each clinic's source).
@@ -66,7 +66,7 @@ function healthCenterServices(site) {
   if (site["Health Center Type Description"].includes("Service Delivery Site")) {
     services.push("primary_care");
   }
-  if (/\bHCH\b|shelter|soup kitchen/i.test(site["Site Name"])) {
+  if (/shelter/i.test(site["Site Name"])) {
     services.push("homeless");
   }
   if (/express care/i.test(site["Site Name"])) {

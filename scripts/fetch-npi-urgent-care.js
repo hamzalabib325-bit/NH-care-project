@@ -140,6 +140,7 @@ async function readActiveNewHampshireSites(projectRoot) {
     "Geocoding Artifact Address Primary Y Coordinate",
     "Geocoding Artifact Address Primary X Coordinate",
     "Site Status Description",
+    "Health Center Type Description",
     "Operating Hours per Week"
   ];
   const missingColumns = requiredColumns.filter((column) => !(column in rows[0]));
@@ -150,6 +151,8 @@ async function readActiveNewHampshireSites(projectRoot) {
   return rows.filter((row) =>
     row["Site State Abbreviation"].toUpperCase() === "NH"
     && row["Site Status Description"].toLowerCase() === "active"
+    // "Administrative" sites are offices only; patients are seen at service delivery sites.
+    && row["Health Center Type Description"] !== "Administrative"
   );
 }
 

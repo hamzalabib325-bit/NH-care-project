@@ -78,6 +78,11 @@ const TRANSLATIONS = {
 
     // --- More help page ---
     "help-heading": "Otras opciones de atención gratuita",
+    "crisis-heading": "Ayuda en una crisis de salud mental",
+    "crisis-text": "Si usted o alguien que conoce está pensando en el suicidio, o está pasando por una crisis de salud mental o de consumo de sustancias, puede recibir ayuda ahora mismo. Es gratis, confidencial y está disponible las 24 horas del día.",
+    "crisis-988": "Línea 988 de Prevención del Suicidio y Crisis (llame o envíe un mensaje de texto)",
+    "crisis-nh": "NH Rapid Response (llame o envíe un mensaje de texto)",
+    "crisis-note": 'NH Rapid Response puede enviarle un equipo de crisis a cualquier lugar de New Hampshire. También puede chatear en línea en <a href="https://www.nh988.com/" target="_blank" rel="noopener">NH988.com</a>. Los veteranos pueden llamar al 988 y marcar 1.',
     "talk-heading": "Hable con alguien",
     "talk-text": 'Para obtener ayuda para encontrar atención gratuita o de bajo costo, marque el <a href="tel:211">2-1-1</a> o visite <a href="https://211nh.org/" target="_blank" rel="noopener">211nh.org</a>. Es gratis y confidencial.',
     "coverage-heading": "Obtenga cobertura médica",
@@ -267,6 +272,11 @@ const TRANSLATIONS = {
 
     // --- More help page ---
     "help-heading": "Autres options de soins gratuits",
+    "crisis-heading": "Aide en cas de crise de santé mentale",
+    "crisis-text": "Si vous ou un proche pensez au suicide, ou traversez une crise de santé mentale ou liée à la consommation de substances, vous pouvez obtenir de l'aide tout de suite. C'est gratuit, confidentiel et disponible 24 heures sur 24.",
+    "crisis-988": "Ligne 988 de prévention du suicide et d'aide en cas de crise (appel ou texto)",
+    "crisis-nh": "NH Rapid Response (appel ou texto)",
+    "crisis-note": 'NH Rapid Response peut envoyer une équipe de crise jusqu\'à vous, partout au New Hampshire. Vous pouvez aussi discuter en ligne sur <a href="https://www.nh988.com/" target="_blank" rel="noopener">NH988.com</a>. Les anciens combattants peuvent appeler le 988 et appuyer sur 1.',
     "talk-heading": "Parler à quelqu'un",
     "talk-text": 'Pour trouver des soins gratuits ou à faible coût, composez le <a href="tel:211">2-1-1</a> ou visitez <a href="https://211nh.org/" target="_blank" rel="noopener">211nh.org</a>. C\'est gratuit et confidentiel.',
     "coverage-heading": "Obtenir une couverture santé",
@@ -456,6 +466,11 @@ const TRANSLATIONS = {
 
     // --- More help page ---
     "help-heading": "خيارات أخرى للرعاية المجانية",
+    "crisis-heading": "مساعدة في أزمات الصحة النفسية",
+    "crisis-text": "إذا كنت أنت أو شخص تعرفه تفكر في الانتحار، أو تمر بأزمة صحة نفسية أو أزمة تعاطي مواد، يمكنك الحصول على المساعدة الآن. الخدمة مجانية وسرية ومتاحة على مدار 24 ساعة.",
+    "crisis-988": "خط 988 للوقاية من الانتحار والأزمات (اتصال أو رسالة نصية)",
+    "crisis-nh": "NH Rapid Response (اتصال أو رسالة نصية)",
+    "crisis-note": 'يمكن لـ NH Rapid Response إرسال فريق أزمات إليك في أي مكان في نيوهامبشر. يمكنك أيضًا الدردشة عبر الإنترنت على <a href="https://www.nh988.com/" target="_blank" rel="noopener">NH988.com</a>. يمكن للمحاربين القدامى الاتصال بالرقم 988 ثم الضغط على 1.',
     "talk-heading": "تحدث مع شخص",
     "talk-text": 'للمساعدة في العثور على رعاية مجانية أو منخفضة التكلفة، اتصل بالرقم <a href="tel:211">2-1-1</a> أو زر موقع <a href="https://211nh.org/" target="_blank" rel="noopener">211nh.org</a>. الخدمة مجانية وسرية.',
     "coverage-heading": "احصل على تغطية صحية",
@@ -645,6 +660,11 @@ const TRANSLATIONS = {
 
     // --- More help page ---
     "help-heading": "其他免费医疗选择",
+    "crisis-heading": "心理健康危机求助",
+    "crisis-text": "如果您或您认识的人有自杀的念头，或正在经历心理健康或物质滥用危机，现在就可以获得帮助。免费、保密，全天 24 小时服务。",
+    "crisis-988": "988 自杀与危机生命线（可打电话或发短信）",
+    "crisis-nh": "NH Rapid Response（可打电话或发短信）",
+    "crisis-note": 'NH Rapid Response 可以派危机小组到新罕布什尔州的任何地方找您。您也可以在 <a href="https://www.nh988.com/" target="_blank" rel="noopener">NH988.com</a> 在线聊天。退伍军人可以拨打 988 后按 1。',
     "talk-heading": "找人咨询",
     "talk-text": '如需帮助寻找免费或低价医疗服务，请拨打 <a href="tel:211">2-1-1</a> 或访问 <a href="https://211nh.org/" target="_blank" rel="noopener">211nh.org</a>。免费且保密。',
     "coverage-heading": "获得医疗保险",
@@ -834,6 +854,11 @@ const TRANSLATIONS = {
 
     // --- More help page ---
     "help-heading": "مفت علاج کے دوسرے آپشن",
+    "crisis-heading": "ذہنی صحت کے بحران میں مدد",
+    "crisis-text": "اگر آپ یا آپ کا کوئی جاننے والا خودکشی کے بارے میں سوچ رہا ہے، یا ذہنی صحت یا نشے کے بحران سے گزر رہا ہے، تو آپ ابھی مدد حاصل کر سکتے ہیں۔ یہ مفت اور رازدارانہ ہے، اور 24 گھنٹے دستیاب ہے۔",
+    "crisis-988": "988 خودکشی اور بحران لائف لائن (کال یا ٹیکسٹ کریں)",
+    "crisis-nh": "NH Rapid Response (کال یا ٹیکسٹ کریں)",
+    "crisis-note": 'NH Rapid Response نیو ہیمپشائر میں کہیں بھی آپ کے پاس بحران کی ٹیم بھیج سکتا ہے۔ آپ <a href="https://www.nh988.com/" target="_blank" rel="noopener">NH988.com</a> پر آن لائن چیٹ بھی کر سکتے ہیں۔ سابق فوجی 988 پر کال کر کے 1 دبا سکتے ہیں۔',
     "talk-heading": "کسی سے بات کریں",
     "talk-text": 'مفت یا کم قیمت علاج تلاش کرنے میں مدد کے لیے <a href="tel:211">2-1-1</a> ڈائل کریں یا <a href="https://211nh.org/" target="_blank" rel="noopener">211nh.org</a> دیکھیں۔ یہ مفت اور رازدارانہ ہے۔',
     "coverage-heading": "ہیلتھ کوریج حاصل کریں",
@@ -1023,6 +1048,11 @@ const TRANSLATIONS = {
 
     // --- More help page ---
     "help-heading": "기타 무료 진료 방법",
+    "crisis-heading": "정신 건강 위기 도움",
+    "crisis-text": "본인이나 아는 사람이 자살을 생각하고 있거나 정신 건강 또는 약물 사용 위기를 겪고 있다면 지금 바로 도움을 받을 수 있습니다. 무료이며 비밀이 보장되고 24시간 운영됩니다.",
+    "crisis-988": "988 자살 및 위기 상담 전화 (전화 또는 문자)",
+    "crisis-nh": "NH Rapid Response (전화 또는 문자)",
+    "crisis-note": 'NH Rapid Response는 뉴햄프셔 어디든 위기 대응팀을 보낼 수 있습니다. <a href="https://www.nh988.com/" target="_blank" rel="noopener">NH988.com</a>에서 온라인 채팅도 가능합니다. 재향군인은 988에 전화한 뒤 1번을 누르세요.',
     "talk-heading": "상담하기",
     "talk-text": '무료 또는 저비용 진료를 찾는 데 도움이 필요하면 <a href="tel:211">2-1-1</a>에 전화하거나 <a href="https://211nh.org/" target="_blank" rel="noopener">211nh.org</a>를 방문하세요. 무료이며 비밀이 보장됩니다.',
     "coverage-heading": "건강 보험 가입하기",

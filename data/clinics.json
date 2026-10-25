@@ -32,19 +32,6 @@
     ]
   },
   {
-    "name": "FAMILIES IN TRANSITION-FIT",
-    "type": "health_center",
-    "address": "122 Market St, Manchester, NH, 03101-1952",
-    "lat": 42.99068403,
-    "lng": -71.46621175,
-    "phone": "603-641-9441",
-    "hours": "12.00 hours per week",
-    "website": "www.familiesintransition.org",
-    "cost": "",
-    "source": "Health_Center_Service_Delivery_and_LookAlike_Sites.csv",
-    "last_verified": ""
-  },
-  {
     "name": "White Mountain Community Health Center",
     "type": "health_center",
     "address": "298 White Mountain Hwy, Conway, NH, 03818-4204",
@@ -90,22 +77,6 @@
     "last_verified": "",
     "services": [
       "primary_care"
-    ]
-  },
-  {
-    "name": "HCH Program at CMC Community Health Services Division",
-    "type": "health_center",
-    "address": "195 McGregor St, Manchester, NH, 03102-3748",
-    "lat": 42.99236028,
-    "lng": -71.47191279,
-    "phone": "603-663-8709",
-    "hours": "40.00 hours per week",
-    "website": "www.catholicmedicalcenter.org",
-    "cost": "",
-    "source": "Health_Center_Service_Delivery_and_LookAlike_Sites.csv",
-    "last_verified": "",
-    "services": [
-      "homeless"
     ]
   },
   {
@@ -315,22 +286,6 @@
     "last_verified": "",
     "services": [
       "primary_care"
-    ]
-  },
-  {
-    "name": "City of Manchester - Public Health Department- HCH Program",
-    "type": "health_center",
-    "address": "1528 Elm St, Manchester, NH, 03101-1356",
-    "lat": 42.99943079,
-    "lng": -71.46477258,
-    "phone": "603-663-8716",
-    "hours": "40.00 hours per week",
-    "website": "www.manchesternh.gov",
-    "cost": "",
-    "source": "Health_Center_Service_Delivery_and_LookAlike_Sites.csv",
-    "last_verified": "",
-    "services": [
-      "homeless"
     ]
   },
   {
