@@ -17,6 +17,7 @@ function clinicType(clinic) {
 const SERVICE_LABELS = {
   primary_care: t("Primary care (checkups and sick visits)"),
   dental: t("Dental care"),
+  reproductive_health: t("Birth control, STI testing, and sexual health"),
   walk_in: t("Walk-ins welcome"),
   school_based: t("School-based (for students)"),
   nursing_home: t("For nursing home residents only"),

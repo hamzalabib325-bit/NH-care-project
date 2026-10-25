@@ -1619,6 +1619,32 @@
     "federally_funded": false,
     "services": [
       "primary_care"
+    ],
+    "accepts": [
+      "medicaid",
+      "medicare",
+      "insurance"
+    ]
+  },
+  {
+    "name": "Planned Parenthood Keene Health Center",
+    "type": "health_center",
+    "address": "8 Middle St, Keene, NH 03431",
+    "lat": 42.9342845,
+    "lng": -72.2812914,
+    "phone": "603-352-6898",
+    "hours": "Mon, Wed, Fri 9:00 AM-5:00 PM; Tue, Thu 10:00 AM-6:00 PM; every other Saturday 8:30 AM-2:00 PM; appointment required",
+    "website": "https://www.plannedparenthood.org/health-center/new-hampshire/keene/03431/keene-health-center-2744-91770",
+    "cost": "Sliding scale; accepts Medicaid and insurance",
+    "source": "CDC NPIN https://npin.cdc.gov/organization/planned-parenthood-northern-new-england-16 (address, phone, hours, services, sliding scale, Medicaid, insurance); listed as an open NH center on plannedparenthood.org/ppnne/locations-hours; coordinates: OpenStreetMap 'Planned Parenthood' clinic at 8 Middle St (matches U.S. Census Geocoder)",
+    "last_verified": "2026-10-25",
+    "federally_funded": false,
+    "accepts": [
+      "medicaid",
+      "insurance"
+    ],
+    "services": [
+      "reproductive_health"
     ]
   }
 ]

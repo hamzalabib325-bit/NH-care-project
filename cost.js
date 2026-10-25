@@ -46,11 +46,22 @@ function costFit(clinic, insurance, povertyPercent) {
 
   // A sliding-scale clinic that isn't federally funded (like a hospital clinic) has no
   // required discount rules, so we only repeat what its own listing says.
+  // "accepts" lists the coverage its listing names (see data/clinics.json).
   if (clinic.type === "health_center" && clinic.federally_funded === false) {
+    let fit;
     if (insurance === "medicaid" || insurance === "medicare") {
-      return { level: "good", reason: t("Listed as accepting {insurance}. Call to confirm before your visit.", { insurance: INSURANCE_NAMES[insurance] }) };
+      fit = (clinic.accepts ?? []).includes(insurance)
+        ? { level: "good", reason: t("Listed as accepting {insurance}. Call to confirm before your visit.", { insurance: INSURANCE_NAMES[insurance] }) }
+        : { level: "check", reason: t("Call to ask whether they accept {insurance}.", { insurance: INSURANCE_NAMES[insurance] }) };
+    } else {
+      fit = { level: "check", reason: t("Offers sliding-scale fees based on income. Call to ask what you would pay.") };
     }
-    return { level: "check", reason: t("Offers sliding-scale fees based on income. Call to ask what you would pay.") };
+    // A clinic for certain kinds of care only (like birth control and STI testing) is never
+    // the "best fit" for a regular doctor visit.
+    if (!(clinic.services ?? []).includes("primary_care")) {
+      fit = { level: "check", reason: `${fit.reason} ${t("This clinic offers certain kinds of care only. Call to check it has what you need.")}` };
+    }
+    return fit;
   }
 
   if (clinic.type === "health_center") {
