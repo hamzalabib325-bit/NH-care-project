@@ -141,6 +141,36 @@ input:focus-visible {
   color: var(--brand);
 }
 
+/* Language menu at the end of the navigation bar (added by lang.js).
+   "sticky" keeps it in view on small phones, even when the bar scrolls sideways. */
+.language-picker {
+  position: sticky;
+  right: 0;
+  display: flex;
+  flex: 0 0 auto;
+  align-items: center;
+  gap: 0.3rem;
+  padding: 0 0.6rem;
+  background: var(--surface);
+}
+
+.language-picker select {
+  min-height: 2.25rem;
+  padding: 0.25rem 0.4rem;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: var(--surface);
+  color: var(--ink);
+  font: inherit;
+  font-size: 0.95rem;
+  cursor: pointer;
+}
+
+.language-picker select:focus-visible {
+  outline: 3px solid var(--focus);
+  outline-offset: 1px;
+}
+
 /* ---------- Shared page layout ---------- */
 
 main {

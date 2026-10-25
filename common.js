@@ -3,14 +3,14 @@
 
 // Each clinic type gets its own pin color and a plain-language label.
 const CLINIC_TYPES = {
-  free_clinic: { label: "Free clinic", color: "#1a7f37" },
-  health_center: { label: "Health center (sliding-scale fees)", color: "#1d5fa8" },
-  urgent_care: { label: "Urgent care", color: "#c2410c" }
+  free_clinic: { label: t("Free clinic"), color: "#1a7f37" },
+  health_center: { label: t("Health center (sliding-scale fees)"), color: "#1d5fa8" },
+  urgent_care: { label: t("Urgent care"), color: "#c2410c" }
 };
 
 // Unknown types still get shown, just in gray.
 function clinicType(clinic) {
-  return CLINIC_TYPES[clinic.type] ?? { label: "Clinic", color: "#555" };
+  return CLINIC_TYPES[clinic.type] ?? { label: t("Clinic"), color: "#555" };
 }
 
 // Load a JSON file from the data folder.
@@ -87,7 +87,7 @@ function displayAddress(address) {
 function displayHours(hours) {
   const weekly = hours.match(/^(\d+(?:\.\d+)?) hours per week$/);
   if (weekly) {
-    return `Open about ${Math.round(Number(weekly[1]))} hours a week. Call for times.`;
+    return t("Open about {hours} hours a week. Call for times.", { hours: Math.round(Number(weekly[1])) });
   }
   return hours;
 }
@@ -115,7 +115,7 @@ function clinicLinks(clinic) {
 
   // phone_alt holds a number verified on the provider's own site, so it is listed first.
   for (const number of [clinic.phone_alt, clinic.phone].filter(Boolean)) {
-    links.push(makeLink(`tel:${number.replace(/[^\d+]/g, "")}`, `Call ${number}`, false));
+    links.push(makeLink(`tel:${number.replace(/[^\d+]/g, "")}`, t("Call {number}", { number }), false));
   }
 
   if (clinic.website) {
@@ -129,7 +129,7 @@ function clinicLinks(clinic) {
   const destination = clinic.address || `${clinic.lat},${clinic.lng}`;
   links.push(makeLink(
     `https://www.google.com/maps/dir/?api=1&destination=${encodeURIComponent(destination)}`,
-    "Get directions",
+    t("Get directions"),
     true
   ));
 
@@ -164,15 +164,15 @@ function findPlace(places, text) {
 function placeNotFoundMessage(text) {
   const query = normalizePlace(text);
   if (!query) {
-    return "Type a New Hampshire ZIP code or town name.";
+    return t("Type a New Hampshire ZIP code or town name.");
   }
   return /^\d/.test(query)
-    ? "We couldn't find that New Hampshire ZIP code. Try your town name instead."
-    : "We couldn't find that New Hampshire town. Check the spelling or try a ZIP code.";
+    ? t("We couldn't find that New Hampshire ZIP code. Try your town name instead.")
+    : t("We couldn't find that New Hampshire town. Check the spelling or try a ZIP code.");
 }
 
 function placeLabel(place) {
-  return place.kind === "zip" ? `ZIP code ${place.name}` : `${place.name}, NH`;
+  return place.kind === "zip" ? t("ZIP code {zip}", { zip: place.name }) : `${place.name}, NH`;
 }
 
 // Fill a <datalist> with town names so they are suggested while typing.
@@ -189,14 +189,14 @@ function fillTownSuggestions(places, datalistId) {
 // The location is only used on this device to measure distances.
 function getUserLocation(onFound, onError) {
   if (!("geolocation" in navigator)) {
-    onError("Your browser can't share your location. Try a ZIP code or town instead.");
+    onError(t("Your browser can't share your location. Try a ZIP code or town instead."));
     return;
   }
   navigator.geolocation.getCurrentPosition(
     (position) => onFound(position.coords.latitude, position.coords.longitude),
     (error) => onError(error.code === error.PERMISSION_DENIED
-      ? "Location is turned off. Allow location access, or type a ZIP code or town instead."
-      : "Couldn't find your location. Please try again, or type a ZIP code or town."),
+      ? t("Location is turned off. Allow location access, or type a ZIP code or town instead.")
+      : t("Couldn't find your location. Please try again, or type a ZIP code or town.")),
     { enableHighAccuracy: false, timeout: 10000, maximumAge: 300000 }
   );
 }

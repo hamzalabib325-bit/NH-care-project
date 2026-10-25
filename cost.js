@@ -25,9 +25,9 @@ const MEDICAID_ADULT_LIMIT_PERCENT = 138;
 
 // How well each clinic fits someone's costs. "rank" decides the order on the page.
 const FIT_LEVELS = {
-  good: { rank: 0, label: "Best fit", heading: "Best fit for your costs" },
-  check: { rank: 1, label: "Call to check cost", heading: "Call first to check the cost" },
-  costly: { rank: 2, label: "Likely costly", heading: "Likely to cost more" }
+  good: { rank: 0, label: t("Best fit"), heading: t("Best fit for your costs") },
+  check: { rank: 1, label: t("Call to check cost"), heading: t("Call first to check the cost") },
+  costly: { rank: 2, label: t("Likely costly"), heading: t("Likely to cost more") }
 };
 
 const INSURANCE_NAMES = { medicaid: "Medicaid", medicare: "Medicare" };
@@ -40,36 +40,36 @@ function costFit(clinic, insurance, povertyPercent) {
 
   if (clinic.type === "free_clinic") {
     return uninsured
-      ? { level: "good", reason: "Free care. Call to ask whether you qualify and how to get an appointment." }
-      : { level: "check", reason: "Free clinics often focus on people without insurance. Call to ask if they can see you." };
+      ? { level: "good", reason: t("Free care. Call to ask whether you qualify and how to get an appointment.") }
+      : { level: "check", reason: t("Free clinics often focus on people without insurance. Call to ask if they can see you.") };
   }
 
   if (clinic.type === "health_center") {
     if (insurance === "medicaid" || insurance === "medicare") {
-      return { level: "good", reason: `Community health centers accept ${INSURANCE_NAMES[insurance]}.` };
+      return { level: "good", reason: t("Community health centers accept {insurance}.", { insurance: INSURANCE_NAMES[insurance] }) };
     }
     if (lowIncome) {
-      return { level: "good", reason: "At your income, health centers must offer you a discount on their fees." };
+      return { level: "good", reason: t("At your income, health centers must offer you a discount on their fees.") };
     }
     if (povertyPercent === null) {
-      return { level: "check", reason: "Fees are based on income. Bring proof of income to ask for a discount." };
+      return { level: "check", reason: t("Fees are based on income. Bring proof of income to ask for a discount.") };
     }
     return uninsured
-      ? { level: "check", reason: "At your income you may pay full price, but health centers can't turn you away because you can't pay." }
-      : { level: "check", reason: "Accepts many insurance plans. Call to check that yours is accepted." };
+      ? { level: "check", reason: t("At your income you may pay full price, but health centers can't turn you away because you can't pay.") }
+      : { level: "check", reason: t("Accepts many insurance plans. Call to check that yours is accepted.") };
   }
 
   if (clinic.type === "urgent_care") {
     if (uninsured) {
-      return { level: "costly", reason: "Without insurance you will likely pay full price. Ask for the self-pay price before your visit." };
+      return { level: "costly", reason: t("Without insurance you will likely pay full price. Ask for the self-pay price before your visit.") };
     }
     if (insurance === "private") {
-      return { level: "check", reason: "Most insurance plans cover urgent care with a copay. Check that it's in your plan's network." };
+      return { level: "check", reason: t("Most insurance plans cover urgent care with a copay. Check that it's in your plan's network.") };
     }
-    return { level: "check", reason: `Many urgent care centers accept ${INSURANCE_NAMES[insurance]}, but not all. Call to check.` };
+    return { level: "check", reason: t("Many urgent care centers accept {insurance}, but not all. Call to check.", { insurance: INSURANCE_NAMES[insurance] }) };
   }
 
-  return { level: "check", reason: "Call to ask about costs before your visit." };
+  return { level: "check", reason: t("Call to ask about costs before your visit.") };
 }
 
 // Tips shown above the clinic list, based on the answers.
@@ -81,41 +81,41 @@ function costTips(insurance, povertyPercent) {
   // Sliding-fee discounts matter most to people paying out of their own pocket.
   if (povertyPercent !== null && !hasPublicCoverage) {
     if (povertyPercent <= FULL_DISCOUNT_PERCENT) {
-      tips.push("At your income, community health centers must give you their largest discount. You may only pay a small fee.");
+      tips.push(t("At your income, community health centers must give you their largest discount. You may only pay a small fee."));
     } else if (povertyPercent <= SLIDING_FEE_LIMIT_PERCENT) {
-      tips.push("At your income, community health centers must give you a partial discount based on what you earn.");
+      tips.push(t("At your income, community health centers must give you a partial discount based on what you earn."));
     } else {
-      tips.push("Your income is above the level for health center discounts, so you may be charged their regular price.");
+      tips.push(t("Your income is above the level for health center discounts, so you may be charged their regular price."));
     }
   }
 
   if (uninsured && povertyPercent !== null && povertyPercent <= MEDICAID_ADULT_LIMIT_PERCENT) {
     tips.push({
-      text: "You may qualify for NH Medicaid, which offers free or low-cost health coverage. Apply anytime at ",
+      text: t("You may qualify for NH Medicaid, which offers free or low-cost health coverage. Apply anytime at "),
       link: { href: "https://nheasy.nh.gov/", text: "NH EASY" },
-      after: " or call 1-844-275-3447."
+      after: t(" or call 1-844-275-3447.")
     });
   } else if (uninsured) {
     tips.push({
-      text: "Children can qualify for NH Medicaid at higher incomes than adults. Check at ",
+      text: t("Children can qualify for NH Medicaid at higher incomes than adults. Check at "),
       link: { href: "https://nheasy.nh.gov/", text: "NH EASY" },
       after: "."
     });
   }
 
   if (uninsured) {
-    tips.push("If you are 65 or older, you may qualify for Medicare.");
+    tips.push(t("If you are 65 or older, you may qualify for Medicare."));
   }
 
   if (insurance === "private") {
     tips.push({
-      text: "Compare what your insurance plan pays at different places with ",
+      text: t("Compare what your insurance plan pays at different places with "),
       link: { href: "https://nhhealthcost.nh.gov/", text: "NH HealthCost" },
-      after: ", the state's official price tool."
+      after: t(", the state's official price tool.")
     });
   }
 
-  tips.push("Always call ahead and ask what your visit will cost. Prices here are a guide, not a quote.");
+  tips.push(t("Always call ahead and ask what your visit will cost. Prices here are a guide, not a quote."));
   return tips;
 }
 
@@ -145,13 +145,13 @@ incomeSkip.addEventListener("change", () => {
 
 locationButton.addEventListener("click", () => {
   locationButton.disabled = true;
-  locationStatus.textContent = "Finding your location…";
+  locationStatus.textContent = t("Finding your location…");
   getUserLocation(
     (lat, lng) => {
       locationButton.disabled = false;
-      deviceSpot = { lat, lng, label: "your location" };
+      deviceSpot = { lat, lng, label: t("your location") };
       placeInput.value = "";
-      locationStatus.textContent = "Using your current location.";
+      locationStatus.textContent = t("Using your current location.");
     },
     (message) => {
       locationButton.disabled = false;
@@ -181,13 +181,13 @@ form.addEventListener("submit", (event) => {
 
   const insurance = form.elements.insurance.value;
   if (!insurance) {
-    showError("Please answer question 1: what insurance do you have?", form.elements.insurance[0]);
+    showError(t("Please answer question 1: what insurance do you have?"), form.elements.insurance[0]);
     return;
   }
 
   const householdSize = Math.round(Number(form.elements.household.value));
   if (!(householdSize >= 1 && householdSize <= 20)) {
-    showError("Please enter how many people live in your household (1 to 20).", form.elements.household);
+    showError(t("Please enter how many people live in your household (1 to 20)."), form.elements.household);
     return;
   }
 
@@ -196,7 +196,7 @@ form.addEventListener("submit", (event) => {
     // Allow "$45,000" as well as "45000".
     const income = Number(incomeInput.value.replace(/[$,\s]/g, ""));
     if (incomeInput.value.trim() === "" || !(income >= 0)) {
-      showError("Please enter your yearly household income, or check \"I'd rather not say\".", incomeInput);
+      showError(t("Please enter your yearly household income, or check \"I'd rather not say\"."), incomeInput);
       return;
     }
     povertyPercent = (income / povertyGuideline(householdSize)) * 100;
@@ -212,7 +212,7 @@ form.addEventListener("submit", (event) => {
     spot = { lat: place.lat, lng: place.lng, label: placeLabel(place) };
   }
   if (!spot) {
-    showError("Please type your ZIP code or town, or tap \"Use my location\".", placeInput);
+    showError(t("Please type your ZIP code or town, or tap \"Use my location\"."), placeInput);
     return;
   }
 
@@ -237,7 +237,7 @@ function showResults(insurance, povertyPercent, spot) {
   results.replaceChildren();
 
   const heading = document.createElement("h2");
-  heading.textContent = `Your options near ${spot.label}`;
+  heading.textContent = t("Your options near {place}", { place: spot.label });
   heading.tabIndex = -1;
   results.append(heading);
 
@@ -292,7 +292,7 @@ function resultCard(entry, info) {
 
   const meta = document.createElement("p");
   meta.className = "result-meta";
-  meta.textContent = `${clinicType(clinic).label} · ${entry.miles.toFixed(1)} miles away`;
+  meta.textContent = t("{type} · {miles} miles away", { type: clinicType(clinic).label, miles: entry.miles.toFixed(1) });
 
   const reason = document.createElement("p");
   reason.textContent = entry.reason;
@@ -305,7 +305,7 @@ function resultCard(entry, info) {
   if (clinic.hours) {
     const hours = document.createElement("p");
     hours.className = "result-address";
-    hours.textContent = `Hours: ${displayHours(clinic.hours)}`;
+    hours.textContent = t("Hours: {hours}", { hours: displayHours(clinic.hours) });
     card.append(hours);
   }
 
@@ -313,7 +313,7 @@ function resultCard(entry, info) {
   links.className = "result-links";
   // The map page reads lat and lng from the link, then zooms to this clinic's pin.
   links.append(
-    makeLink(`map.html?lat=${clinic.lat}&lng=${clinic.lng}`, "Show on map", false),
+    makeLink(`map.html?lat=${clinic.lat}&lng=${clinic.lng}`, t("Show on map"), false),
     ...clinicLinks(clinic)
   );
   card.append(links);
@@ -326,7 +326,7 @@ async function loadData() {
     fillTownSuggestions(places, "cost-town-list");
   } catch (error) {
     console.error("Could not load data:", error);
-    formError.textContent = "Sorry, the clinic list didn't load. Please refresh the page.";
+    formError.textContent = t("Sorry, the clinic list didn't load. Please refresh the page.");
   }
 }
 

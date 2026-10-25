@@ -73,7 +73,7 @@ for (const [key, type] of Object.entries(CLINIC_TYPES)) {
       const count = cluster.getChildCount();
       return L.divIcon({
         className: "clinic-cluster",
-        html: `<span style="background:${type.color}" aria-label="${count} ${type.label} locations">${count}</span>`,
+        html: `<span style="background:${type.color}" aria-label="${t("{count} {type} locations", { count, type: type.label })}">${count}</span>`,
         iconSize: [34, 34]
       });
     }
@@ -107,7 +107,7 @@ function buildPopup(clinic) {
   typeLabel.style.color = type.color;
   container.append(name, typeLabel);
 
-  const details = [clinic.address && displayAddress(clinic.address), clinic.hours && `Hours: ${displayHours(clinic.hours)}`, clinic.cost];
+  const details = [clinic.address && displayAddress(clinic.address), clinic.hours && t("Hours: {hours}", { hours: displayHours(clinic.hours) }), clinic.cost];
   for (const text of details.filter(Boolean)) {
     const line = document.createElement("p");
     line.textContent = text;
@@ -163,19 +163,19 @@ function addNearMeButton() {
     const button = document.createElement("button");
     button.type = "button";
     button.className = "near-me-button";
-    button.textContent = "Near me";
+    button.textContent = t("Near me");
     const status = document.createElement("p");
     status.className = "near-me-status";
     status.setAttribute("role", "status");
 
     button.addEventListener("click", () => {
       button.disabled = true;
-      status.textContent = "Finding your location…";
+      status.textContent = t("Finding your location…");
       getUserLocation(
         (lat, lng) => {
           button.disabled = false;
           status.textContent = "";
-          showNearest(L.latLng(lat, lng), "You are here");
+          showNearest(L.latLng(lat, lng), t("You are here"));
         },
         (message) => {
           button.disabled = false;
@@ -206,7 +206,7 @@ function setUpPlaceSearch() {
     // Stop the browser from reloading the page when the form is sent.
     event.preventDefault();
     if (!places.length) {
-      status.textContent = "Town and ZIP search isn't available right now. Try refreshing the page.";
+      status.textContent = t("Town and ZIP search isn't available right now. Try refreshing the page.");
       return;
     }
     const place = findPlace(places, input.value);
@@ -214,7 +214,7 @@ function setUpPlaceSearch() {
       status.textContent = placeNotFoundMessage(input.value);
       return;
     }
-    status.textContent = `Showing the clinics closest to ${placeLabel(place)}.`;
+    status.textContent = t("Showing the clinics closest to {place}.", { place: placeLabel(place) });
     showNearest(L.latLng(place.lat, place.lng), placeLabel(place));
     // Bring the map into view so the results are on screen.
     document.getElementById("map").scrollIntoView({ behavior: "smooth", block: "end" });
@@ -254,7 +254,7 @@ function showLinkedClinic() {
 }
 
 async function loadClinics() {
-  showMapMessage("Loading clinics…");
+  showMapMessage(t("Loading clinics…"));
   try {
     const clinics = await loadJson("data/clinics.json");
     for (const clinic of clinics) {
@@ -276,7 +276,7 @@ async function loadClinics() {
     showLinkedClinic();
   } catch (error) {
     console.error("Could not load clinic data:", error);
-    showMapMessage("Sorry, the clinic list didn't load. Check your internet connection and refresh the page.");
+    showMapMessage(t("Sorry, the clinic list didn't load. Check your internet connection and refresh the page."));
   }
 }
 

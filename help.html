@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="theme-color" content="#a51d2d">
-    <title>More help · NH Care Finder</title>
+    <title data-i18n="title-help">More help · NH Care Finder</title>
     <meta name="description" content="Find free and low-cost clinics and urgent care near you in New Hampshire, and see which ones fit your budget.">
     <link rel="icon" href="icon.svg" type="image/svg+xml">
     <link rel="apple-touch-icon" href="apple-touch-icon.png">
@@ -20,28 +20,28 @@
   </head>
   <body>
     <header>
-      <div class="emergency-banner" role="alert" aria-label="Emergency information">
-        <p>
+      <div class="emergency-banner" role="alert" aria-label="Emergency information" data-i18n-label="emergency-label">
+        <p data-i18n="emergency">
           <strong>Medical emergency?</strong>
           Call <a href="tel:911">911</a> now for chest pain, trouble breathing,
           stroke symptoms, or another life-threatening emergency.
         </p>
       </div>
       <nav class="site-nav" aria-label="Main">
-        <a href="index.html">Home</a>
-        <a href="map.html">Map</a>
-        <a href="cost.html">Costs</a>
-        <a href="help.html" aria-current="page">More help</a>
-        <a href="about.html">About</a>
+        <a href="index.html" data-i18n="nav-home">Home</a>
+        <a href="map.html" data-i18n="nav-map">Map</a>
+        <a href="cost.html" data-i18n="nav-costs">Costs</a>
+        <a href="help.html" aria-current="page" data-i18n="nav-help">More help</a>
+        <a href="about.html" data-i18n="nav-about">About</a>
       </nav>
     </header>
 
     <main class="page other-care">
-      <h1>Other free care options</h1>
+      <h1 data-i18n="help-heading">Other free care options</h1>
 
       <section class="card">
-        <h2>Talk to someone</h2>
-        <p>
+        <h2 data-i18n="talk-heading">Talk to someone</h2>
+        <p data-i18n="talk-text">
           For help finding free or low-cost care, dial <a href="tel:211">2-1-1</a>
           or visit <a href="https://211nh.org/" target="_blank" rel="noopener">211nh.org</a>.
           It's free and confidential.
@@ -49,8 +49,8 @@
       </section>
 
       <section class="card">
-        <h2>Get health coverage</h2>
-        <p>
+        <h2 data-i18n="coverage-heading">Get health coverage</h2>
+        <p data-i18n="coverage-text">
           NH Medicaid offers free or low-cost health coverage to people with lower incomes,
           and you can apply at any time of year. Apply online at
           <a href="https://nheasy.nh.gov/" target="_blank" rel="noopener">NH EASY</a>
@@ -59,7 +59,7 @@
       </section>
 
       <section class="card">
-        <h2>Mobile health programs</h2>
+        <h2 data-i18n="mobile-heading">Mobile health programs</h2>
         <ul class="program-list">
           <li>
             <span class="program-name">Volunteers in Medicine of New Hampshire</span>
@@ -72,8 +72,8 @@
       </section>
 
       <section class="card">
-        <h2>Health center vans</h2>
-        <p class="program-note">Sliding-scale fees based on income; not always free.</p>
+        <h2 data-i18n="vans-heading">Health center vans</h2>
+        <p class="program-note" data-i18n="vans-note">Sliding-scale fees based on income; not always free.</p>
         <ul class="program-list">
           <li>
             <span class="program-name">Manchester Mobile Health Care</span>
@@ -92,8 +92,11 @@
     </main>
 
     <footer class="site-footer">
-      <p>This app is a guide, not medical advice. Call ahead to confirm hours and costs.</p>
-      <p><a href="about.html">About this app and its data sources</a></p>
+      <p data-i18n="footer-guide">This app is a guide, not medical advice. Call ahead to confirm hours and costs.</p>
+      <p><a href="about.html" data-i18n="footer-about">About this app and its data sources</a></p>
     </footer>
+
+    <script src="translations.js"></script>
+    <script src="lang.js"></script>
   </body>
 </html>

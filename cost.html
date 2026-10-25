@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="theme-color" content="#a51d2d">
-    <title>Cost helper · NH Care Finder</title>
+    <title data-i18n="title-cost">Cost helper · NH Care Finder</title>
     <meta name="description" content="Find free and low-cost clinics and urgent care near you in New Hampshire, and see which ones fit your budget.">
     <link rel="icon" href="icon.svg" type="image/svg+xml">
     <link rel="apple-touch-icon" href="apple-touch-icon.png">
@@ -20,25 +20,25 @@
   </head>
   <body>
     <header>
-      <div class="emergency-banner" role="alert" aria-label="Emergency information">
-        <p>
+      <div class="emergency-banner" role="alert" aria-label="Emergency information" data-i18n-label="emergency-label">
+        <p data-i18n="emergency">
           <strong>Medical emergency?</strong>
           Call <a href="tel:911">911</a> now for chest pain, trouble breathing,
           stroke symptoms, or another life-threatening emergency.
         </p>
       </div>
       <nav class="site-nav" aria-label="Main">
-        <a href="index.html">Home</a>
-        <a href="map.html">Map</a>
-        <a href="cost.html" aria-current="page">Costs</a>
-        <a href="help.html">More help</a>
-        <a href="about.html">About</a>
+        <a href="index.html" data-i18n="nav-home">Home</a>
+        <a href="map.html" data-i18n="nav-map">Map</a>
+        <a href="cost.html" aria-current="page" data-i18n="nav-costs">Costs</a>
+        <a href="help.html" data-i18n="nav-help">More help</a>
+        <a href="about.html" data-i18n="nav-about">About</a>
       </nav>
     </header>
 
     <main class="page">
-      <h1>What might I pay?</h1>
-      <p class="lead">
+      <h1 data-i18n="cost-heading">What might I pay?</h1>
+      <p class="lead" data-i18n="cost-intro">
         Answer a few questions to see which nearby clinics are the best fit for your budget.
         Your answers stay on your device and are never saved or sent anywhere.
       </p>
@@ -46,61 +46,63 @@
       <!-- novalidate: we check the answers ourselves so the messages are in plain language. -->
       <form id="cost-form" class="cost-form" novalidate>
         <fieldset class="question">
-          <legend><span class="question-number">1</span>What health insurance do you have?</legend>
+          <legend><span class="question-number">1</span><span data-i18n="q1">What health insurance do you have?</span></legend>
           <div class="choices">
-            <label class="choice"><input type="radio" name="insurance" value="none"> No insurance</label>
-            <label class="choice"><input type="radio" name="insurance" value="medicaid"> Medicaid (including Granite Advantage)</label>
-            <label class="choice"><input type="radio" name="insurance" value="medicare"> Medicare</label>
-            <label class="choice"><input type="radio" name="insurance" value="private"> Insurance from a job or HealthCare.gov</label>
-            <label class="choice"><input type="radio" name="insurance" value="unsure"> I'm not sure</label>
+            <label class="choice"><input type="radio" name="insurance" value="none"> <span data-i18n="ins-none">No insurance</span></label>
+            <label class="choice"><input type="radio" name="insurance" value="medicaid"> <span data-i18n="ins-medicaid">Medicaid (including Granite Advantage)</span></label>
+            <label class="choice"><input type="radio" name="insurance" value="medicare"> <span data-i18n="ins-medicare">Medicare</span></label>
+            <label class="choice"><input type="radio" name="insurance" value="private"> <span data-i18n="ins-private">Insurance from a job or HealthCare.gov</span></label>
+            <label class="choice"><input type="radio" name="insurance" value="unsure"> <span data-i18n="ins-unsure">I'm not sure</span></label>
           </div>
         </fieldset>
 
         <div class="question">
-          <label for="household" class="question-label"><span class="question-number">2</span>How many people live in your household?</label>
-          <p class="hint" id="household-hint">Count yourself, plus anyone you share income with, like a spouse or children.</p>
+          <label for="household" class="question-label"><span class="question-number">2</span><span data-i18n="q2">How many people live in your household?</span></label>
+          <p class="hint" id="household-hint" data-i18n="q2-hint">Count yourself, plus anyone you share income with, like a spouse or children.</p>
           <input type="number" id="household" name="household" min="1" max="20" value="1"
                  inputmode="numeric" class="short-input" aria-describedby="household-hint">
         </div>
 
         <div class="question">
-          <label for="income" class="question-label"><span class="question-number">3</span>About how much does your household earn in a year?</label>
-          <p class="hint" id="income-hint">Before taxes. A rough guess is fine.</p>
+          <label for="income" class="question-label"><span class="question-number">3</span><span data-i18n="q3">About how much does your household earn in a year?</span></label>
+          <p class="hint" id="income-hint" data-i18n="q3-hint">Before taxes. A rough guess is fine.</p>
           <div class="money-input">
             <span aria-hidden="true">$</span>
             <input type="text" id="income" name="income" inputmode="numeric" autocomplete="off"
-                   placeholder="e.g. 30000" aria-describedby="income-hint">
+                   placeholder="e.g. 30000" data-i18n-placeholder="income-placeholder" aria-describedby="income-hint">
           </div>
-          <label class="choice choice-inline"><input type="checkbox" id="income-skip"> I'd rather not say</label>
+          <label class="choice choice-inline"><input type="checkbox" id="income-skip"> <span data-i18n="income-skip">I'd rather not say</span></label>
         </div>
 
         <div class="question">
-          <label for="cost-place" class="question-label"><span class="question-number">4</span>Where are you?</label>
-          <p class="hint" id="place-hint">Type a New Hampshire ZIP code or town, or use your location.</p>
+          <label for="cost-place" class="question-label"><span class="question-number">4</span><span data-i18n="q4">Where are you?</span></label>
+          <p class="hint" id="place-hint" data-i18n="q4-hint">Type a New Hampshire ZIP code or town, or use your location.</p>
           <input type="text" id="cost-place" list="cost-town-list" autocomplete="off"
-                 placeholder="e.g. 03301 or Concord" aria-describedby="place-hint location-status">
+                 placeholder="e.g. 03301 or Concord" data-i18n-placeholder="place-placeholder" aria-describedby="place-hint location-status">
           <datalist id="cost-town-list"></datalist>
-          <button type="button" id="use-location" class="button button-secondary button-small">Use my location</button>
+          <button type="button" id="use-location" class="button button-secondary button-small" data-i18n="use-location">Use my location</button>
           <p class="place-status" id="location-status" role="status"></p>
         </div>
 
         <p class="form-error" id="form-error" role="alert"></p>
-        <button type="submit" class="button button-primary">Show my best options</button>
+        <button type="submit" class="button button-primary" data-i18n="cost-submit">Show my best options</button>
       </form>
 
       <section id="results" class="results" aria-live="polite" hidden></section>
 
-      <p class="disclaimer">
+      <p class="disclaimer" data-i18n="cost-disclaimer">
         This is a guide based on federal and New Hampshire rules, not a price quote.
         Costs depend on the clinic, your plan, and the care you need, so always call ahead.
       </p>
     </main>
 
     <footer class="site-footer">
-      <p>This app is a guide, not medical advice. Call ahead to confirm hours and costs.</p>
-      <p><a href="about.html">About this app and its data sources</a></p>
+      <p data-i18n="footer-guide">This app is a guide, not medical advice. Call ahead to confirm hours and costs.</p>
+      <p><a href="about.html" data-i18n="footer-about">About this app and its data sources</a></p>
     </footer>
 
+    <script src="translations.js"></script>
+    <script src="lang.js"></script>
     <script src="common.js"></script>
     <script src="cost.js"></script>
   </body>
