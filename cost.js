@@ -44,6 +44,15 @@ function costFit(clinic, insurance, povertyPercent) {
       : { level: "check", reason: t("Free clinics often focus on people without insurance. Call to ask if they can see you.") };
   }
 
+  // A sliding-scale clinic that isn't federally funded (like a hospital clinic) has no
+  // required discount rules, so we only repeat what its own listing says.
+  if (clinic.type === "health_center" && clinic.federally_funded === false) {
+    if (insurance === "medicaid" || insurance === "medicare") {
+      return { level: "good", reason: t("Listed as accepting {insurance}. Call to confirm before your visit.", { insurance: INSURANCE_NAMES[insurance] }) };
+    }
+    return { level: "check", reason: t("Offers sliding-scale fees based on income. Call to ask what you would pay.") };
+  }
+
   if (clinic.type === "health_center") {
     if (insurance === "medicaid" || insurance === "medicare") {
       return { level: "good", reason: t("Community health centers accept {insurance}.", { insurance: INSURANCE_NAMES[insurance] }) };

@@ -92,7 +92,11 @@ async function main() {
 
   for (const clinic of clinics) {
     let services = [];
-    if (clinic.type === "health_center") {
+    if (clinic.type === "health_center" && clinic.federally_funded === false) {
+      // Not on the HRSA list (for example, a hospital-run clinic), so keep the
+      // services that were entered by hand from its own sources.
+      services = clinic.services ?? [];
+    } else if (clinic.type === "health_center") {
       const site = findHrsaSite(sites, clinic);
       if (site) {
         services = healthCenterServices(site);

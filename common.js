@@ -32,7 +32,8 @@ function serviceLines(clinic) {
     lines.push(t("Services: {services}", { services: labels.join(" · ") }));
   }
   // Federally funded health centers must offer these, on site or through a partner.
-  if (clinic.type === "health_center") {
+  // (federally_funded: false marks a sliding-scale clinic that isn't one, like a hospital clinic.)
+  if (clinic.type === "health_center" && clinic.federally_funded !== false) {
     lines.push(t("Health centers can also help you get dental, mental health, and addiction care, here or at a partner site. Call to ask."));
   }
   return lines;

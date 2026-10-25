@@ -1603,5 +1603,22 @@
     "services": [
       "walk_in"
     ]
+  },
+  {
+    "name": "Concord Hospital Family Health Center",
+    "type": "health_center",
+    "address": "246 Pleasant St, Suite G200, Concord, NH 03301",
+    "lat": 43.199004,
+    "lng": -71.5628707,
+    "phone": "603-228-7200",
+    "hours": "Monday-Friday 8:00 AM-5:00 PM; closed Saturday-Sunday; appointment required",
+    "website": "https://www.concordhospital.org/locations/profile/family-health-center/",
+    "cost": "Sliding scale; accepts Medicaid, Medicare, and insurance",
+    "source": "https://www.concordhospital.org/locations/profile/family-health-center/ (address, phone, hours); CDC NPIN https://npin.cdc.gov/organization/concord-hospital-family-health-center (sliding scale, Medicaid, Medicare, appointment required); coordinates: OpenStreetMap building match for Memorial Medical Office Building, 246 Pleasant St",
+    "last_verified": "2026-10-25",
+    "federally_funded": false,
+    "services": [
+      "primary_care"
+    ]
   }
 ]
