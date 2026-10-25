@@ -16,7 +16,7 @@ const REQUIRED_FIELDS = [
   "last_verified"
 ];
 const REQUIRED_TEXT_FIELDS = ["name", "type", "address", "source"];
-const ALLOWED_TYPES = new Set(["urgent_care", "free_clinic", "health_center"]);
+const ALLOWED_TYPES = new Set(["urgent_care", "free_clinic", "health_center", "membership"]);
 const EARTH_RADIUS_MILES = 3958.7613;
 
 function pointInRing(longitude, latitude, ring) {

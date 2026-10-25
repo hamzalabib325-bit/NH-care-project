@@ -79,6 +79,17 @@ function costFit(clinic, insurance, povertyPercent) {
       : { level: "check", reason: t("Accepts many insurance plans. Call to check that yours is accepted.") };
   }
 
+  // Membership (direct primary care) clinics charge a flat monthly fee and don't use insurance.
+  if (clinic.type === "membership") {
+    if (insurance === "medicaid" || insurance === "medicare") {
+      return { level: "costly", reason: t("Insurance isn't used here, so you would pay the monthly fee yourself. A clinic that accepts {insurance} will likely cost you less.", { insurance: INSURANCE_NAMES[insurance] }) };
+    }
+    if (insurance === "private") {
+      return { level: "check", reason: t("Insurance isn't used for the membership, so you would pay the monthly fee on top of your plan.") };
+    }
+    return { level: "check", reason: t("Primary care for a flat monthly fee instead of a bill for each visit. It doesn't cover emergencies or hospital care, so you may still want insurance.") };
+  }
+
   if (clinic.type === "urgent_care") {
     if (uninsured) {
       return { level: "costly", reason: t("Without insurance you will likely pay full price. Ask for the self-pay price before your visit.") };
@@ -354,6 +365,14 @@ function resultCard(entry, info) {
     hours.className = "result-address";
     hours.textContent = t("Hours: {hours}", { hours: displayHours(clinic.hours) });
     card.append(hours);
+  }
+
+  // What the clinic's own listing says about cost, like a sliding scale or monthly prices.
+  if (clinic.cost) {
+    const cost = document.createElement("p");
+    cost.className = "result-address";
+    cost.textContent = t("Cost: {cost}", { cost: clinic.cost });
+    card.append(cost);
   }
 
   for (const text of serviceLines(clinic)) {

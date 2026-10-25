@@ -107,6 +107,9 @@ async function main() {
       services = ["walk_in"];
     } else if (clinic.type === "free_clinic") {
       services = FREE_CLINIC_SERVICES[clinic.name] ?? [];
+    } else if (clinic.type === "membership") {
+      // Entered by hand from the practice's own website.
+      services = clinic.services ?? [];
     }
 
     if (services.length > 0) {

@@ -63,7 +63,8 @@ Each entry in `data/clinics.json` should look like this:
   "last_verified": "2026-10-01"
 }
 ```
-Allowed values for `type`: `urgent_care`, `free_clinic`, `health_center` (sliding-scale / FQHC).
+Allowed values for `type`: `urgent_care`, `free_clinic`, `health_center` (sliding-scale / FQHC),
+`membership` (direct primary care: a flat monthly fee, no insurance billing).
 
 ## Important rules
 - **Never invent clinic names, addresses, phone numbers, or hours.** Every location

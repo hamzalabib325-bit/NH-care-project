@@ -1646,5 +1646,21 @@
     "services": [
       "reproductive_health"
     ]
+  },
+  {
+    "name": "Monarca Health",
+    "type": "membership",
+    "address": "340 West St, Keene, NH 03431",
+    "lat": 42.9327975,
+    "lng": -72.2909044,
+    "phone": "603-751-3010",
+    "hours": "",
+    "website": "https://www.monarcahealth.com/",
+    "cost": "Monthly membership: $69 (ages 16-44), $89 (ages 45-64), $109 (ages 65+); 10% off for couples, 12% off for 3 or more members; insurance is not used",
+    "source": "https://www.monarcahealth.com/ (address, phone, membership prices, services; \"insurance companies are not involved\"); coordinates: OpenStreetMap 'Monarca Health' at 340 West St (matches U.S. Census Geocoder)",
+    "last_verified": "2026-10-25",
+    "services": [
+      "primary_care"
+    ]
   }
 ]

@@ -16,6 +16,7 @@
   --free: #1a7f37;
   --health: #1d5fa8;
   --urgent: #c2410c;
+  --membership: #0f766e;
 
   /* Cost fit colors: always shown together with words, never color alone. */
   --good: #1a7f37;
@@ -247,6 +248,7 @@ main {
 .dot-free { background: var(--free); }
 .dot-health { background: var(--health); }
 .dot-urgent { background: var(--urgent); }
+.dot-membership { background: var(--membership); }
 
 /* ---------- Buttons ---------- */
 

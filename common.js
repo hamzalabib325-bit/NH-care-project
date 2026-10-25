@@ -5,7 +5,9 @@
 const CLINIC_TYPES = {
   free_clinic: { label: t("Free clinic"), color: "#1a7f37" },
   health_center: { label: t("Health center (sliding-scale fees)"), color: "#1d5fa8" },
-  urgent_care: { label: t("Urgent care"), color: "#c2410c" }
+  urgent_care: { label: t("Urgent care"), color: "#c2410c" },
+  // Direct primary care: a flat monthly fee instead of insurance or per-visit bills.
+  membership: { label: t("Membership primary care (monthly fee)"), color: "#0f766e" }
 };
 
 // Unknown types still get shown, just in gray.
