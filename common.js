@@ -21,7 +21,7 @@ const SERVICE_LABELS = {
   school_based: t("School-based (for students)"),
   nursing_home: t("For nursing home residents only"),
   mobile: t("Mobile van"),
-  homeless: t("Care for people without a home")
+  homeless: t("Homeless shelter")
 };
 
 // Lines describing a clinic's services, or an empty list if we don't know any.
