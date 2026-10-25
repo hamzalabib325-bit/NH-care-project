@@ -1,6 +1,7 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
-  <!-- App icon: a white map pin with a red plus, on the app's red. -->
-  <rect width="64" height="64" rx="14" fill="#a51d2d"/>
-  <path d="M32 9c-9.4 0-17 7.4-17 16.6C15 38 32 55 32 55s17-17 17-29.4C49 16.4 41.4 9 32 9z" fill="#fff"/>
-  <path d="M29 17h6v6.5h6.5v6H35V36h-6v-6.5h-6.5v-6H29z" fill="#a51d2d"/>
+  <!-- App icon: "UD" for UrgentDocs in white on blue, with a small gold plus. -->
+  <rect width="64" height="64" rx="14" fill="#1d5fa8"/>
+  <path d="M8 18h6.5v15a5 5 0 0 0 10 0V18H31v15a11.5 11.5 0 0 1-23 0z" fill="#fff"/>
+  <path d="M38 21h4.5a10 10 0 0 1 0 20H38z" fill="none" stroke="#fff" stroke-width="6.5" stroke-linejoin="round"/>
+  <path d="M49.5 8h4v4.5H58v4h-4.5V21h-4v-4.5H45v-4h4.5z" fill="#ffd166"/>
 </svg>
