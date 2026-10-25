@@ -1,8 +1,8 @@
-# NH Care Finder
+# UrgentDocs
 
 **Find free and low-cost health care in New Hampshire, and know what you might pay before you go.**
 
-Many people put off seeing a doctor because they are worried about the cost. NH Care Finder helps people in New Hampshire find the closest free clinics, community health centers, and urgent care centers, and shows which ones are the best fit for their budget.
+Many people put off seeing a doctor because they are worried about the cost. UrgentDocs helps people in New Hampshire find the closest free clinics, community health centers, and urgent care centers, and shows which ones are the best fit for their budget.
 
 Built for the 2026 Congressional App Challenge.
 

@@ -21,10 +21,10 @@ const TRANSLATIONS = {
     "nav-about": "Acerca de",
     "footer-guide": "Esta aplicación es una guía, no un consejo médico. Llame antes para confirmar el horario y los costos.",
     "footer-about": "Acerca de esta aplicación y sus fuentes de datos",
-    "title-map": "Mapa · NH Care Finder",
-    "title-cost": "Ayuda con costos · NH Care Finder",
-    "title-help": "Más ayuda · NH Care Finder",
-    "title-about": "Acerca de · NH Care Finder",
+    "title-map": "Mapa · UrgentDocs",
+    "title-cost": "Ayuda con costos · UrgentDocs",
+    "title-help": "Más ayuda · UrgentDocs",
+    "title-about": "Acerca de · UrgentDocs",
 
     // --- Home page ---
     "home-title": "Encuentre atención médica gratuita y de bajo costo en New Hampshire",
@@ -104,8 +104,8 @@ const TRANSLATIONS = {
     "rx-generic": "<strong>Para todos:</strong> pregunte a su médico o farmacéutico si hay un medicamento genérico. Los genéricos suelen costar menos.",
 
     // --- About page ---
-    "about-heading": "Acerca de NH Care Finder",
-    "about-intro": "Muchas personas dejan de ir al médico porque les preocupa el costo. NH Care Finder ayuda a las personas en New Hampshire a encontrar las clínicas gratuitas y de bajo costo y los centros de atención de urgencia más cercanos, y a entender cuánto podrían pagar antes de ir.",
+    "about-heading": "Acerca de UrgentDocs",
+    "about-intro": "Muchas personas dejan de ir al médico porque les preocupa el costo. UrgentDocs ayuda a las personas en New Hampshire a encontrar las clínicas gratuitas y de bajo costo y los centros de atención de urgencia más cercanos, y a entender cuánto podrían pagar antes de ir.",
     "about-built": "Creado para el Congressional App Challenge 2026.",
     "about-privacy-heading": "Su privacidad",
     "about-privacy-1": "Su ubicación solo se usa en su dispositivo para medir distancias. Nunca se guarda ni se envía a ningún lugar.",
@@ -229,10 +229,10 @@ const TRANSLATIONS = {
     "nav-about": "À propos",
     "footer-guide": "Cette application est un guide, pas un avis médical. Appelez avant pour confirmer les horaires et les coûts.",
     "footer-about": "À propos de cette application et de ses sources de données",
-    "title-map": "Carte · NH Care Finder",
-    "title-cost": "Aide aux coûts · NH Care Finder",
-    "title-help": "Plus d'aide · NH Care Finder",
-    "title-about": "À propos · NH Care Finder",
+    "title-map": "Carte · UrgentDocs",
+    "title-cost": "Aide aux coûts · UrgentDocs",
+    "title-help": "Plus d'aide · UrgentDocs",
+    "title-about": "À propos · UrgentDocs",
 
     // --- Home page ---
     "home-title": "Trouvez des soins gratuits ou à faible coût au New Hampshire",
@@ -312,8 +312,8 @@ const TRANSLATIONS = {
     "rx-generic": "<strong>Pour tous :</strong> demandez à votre médecin ou à votre pharmacien s'il existe un médicament générique. Les génériques coûtent généralement moins cher.",
 
     // --- About page ---
-    "about-heading": "À propos de NH Care Finder",
-    "about-intro": "Beaucoup de gens repoussent une visite chez le médecin parce qu'ils s'inquiètent du coût. NH Care Finder aide les habitants du New Hampshire à trouver les cliniques gratuites ou à faible coût et les centres de soins urgents les plus proches, et à comprendre ce qu'ils risquent de payer avant d'y aller.",
+    "about-heading": "À propos de UrgentDocs",
+    "about-intro": "Beaucoup de gens repoussent une visite chez le médecin parce qu'ils s'inquiètent du coût. UrgentDocs aide les habitants du New Hampshire à trouver les cliniques gratuites ou à faible coût et les centres de soins urgents les plus proches, et à comprendre ce qu'ils risquent de payer avant d'y aller.",
     "about-built": "Créé pour le Congressional App Challenge 2026.",
     "about-privacy-heading": "Votre vie privée",
     "about-privacy-1": "Votre position n'est utilisée que sur votre appareil pour mesurer les distances. Elle n'est jamais enregistrée ni envoyée nulle part.",
@@ -437,10 +437,10 @@ const TRANSLATIONS = {
     "nav-about": "حول التطبيق",
     "footer-guide": "هذا التطبيق دليل وليس نصيحة طبية. اتصل مسبقًا لتأكيد المواعيد والتكاليف.",
     "footer-about": "حول هذا التطبيق ومصادر بياناته",
-    "title-map": "الخريطة · NH Care Finder",
-    "title-cost": "مساعد التكاليف · NH Care Finder",
-    "title-help": "مساعدة إضافية · NH Care Finder",
-    "title-about": "حول التطبيق · NH Care Finder",
+    "title-map": "الخريطة · UrgentDocs",
+    "title-cost": "مساعد التكاليف · UrgentDocs",
+    "title-help": "مساعدة إضافية · UrgentDocs",
+    "title-about": "حول التطبيق · UrgentDocs",
 
     // --- Home page ---
     "home-title": "اعثر على رعاية صحية مجانية ومنخفضة التكلفة في نيوهامبشر",
@@ -520,8 +520,8 @@ const TRANSLATIONS = {
     "rx-generic": "<strong>للجميع:</strong> اسأل طبيبك أو الصيدلي إن كان هناك دواء بديل (جنيس). الأدوية البديلة عادةً أرخص.",
 
     // --- About page ---
-    "about-heading": "حول NH Care Finder",
-    "about-intro": "كثير من الناس يؤجلون زيارة الطبيب لأنهم قلقون من التكلفة. يساعد NH Care Finder سكان نيوهامبشر على العثور على أقرب العيادات المجانية ومنخفضة التكلفة ومراكز الرعاية العاجلة، وفهم ما قد يدفعونه قبل الذهاب.",
+    "about-heading": "حول UrgentDocs",
+    "about-intro": "كثير من الناس يؤجلون زيارة الطبيب لأنهم قلقون من التكلفة. يساعد UrgentDocs سكان نيوهامبشر على العثور على أقرب العيادات المجانية ومنخفضة التكلفة ومراكز الرعاية العاجلة، وفهم ما قد يدفعونه قبل الذهاب.",
     "about-built": "صُمم لمسابقة التطبيقات في الكونغرس لعام 2026.",
     "about-privacy-heading": "خصوصيتك",
     "about-privacy-1": "يُستخدم موقعك على جهازك فقط لحساب المسافات. لا يُحفظ ولا يُرسل إلى أي مكان أبدًا.",
@@ -645,10 +645,10 @@ const TRANSLATIONS = {
     "nav-about": "关于",
     "footer-guide": "本应用仅供参考，不构成医疗建议。请提前致电确认营业时间和费用。",
     "footer-about": "关于本应用及其数据来源",
-    "title-map": "地图 · NH Care Finder",
-    "title-cost": "费用助手 · NH Care Finder",
-    "title-help": "更多帮助 · NH Care Finder",
-    "title-about": "关于 · NH Care Finder",
+    "title-map": "地图 · UrgentDocs",
+    "title-cost": "费用助手 · UrgentDocs",
+    "title-help": "更多帮助 · UrgentDocs",
+    "title-about": "关于 · UrgentDocs",
 
     // --- Home page ---
     "home-title": "在新罕布什尔州寻找免费和低价医疗服务",
@@ -728,8 +728,8 @@ const TRANSLATIONS = {
     "rx-generic": "<strong>所有人：</strong>询问您的医生或药剂师是否有仿制药。仿制药通常更便宜。",
 
     // --- About page ---
-    "about-heading": "关于 NH Care Finder",
-    "about-intro": "很多人因为担心费用而推迟看医生。NH Care Finder 帮助新罕布什尔州的居民找到最近的免费和低价诊所以及紧急护理中心，并在就诊前了解可能需要支付的费用。",
+    "about-heading": "关于 UrgentDocs",
+    "about-intro": "很多人因为担心费用而推迟看医生。UrgentDocs 帮助新罕布什尔州的居民找到最近的免费和低价诊所以及紧急护理中心，并在就诊前了解可能需要支付的费用。",
     "about-built": "为 2026 年国会应用程序挑战赛而开发。",
     "about-privacy-heading": "您的隐私",
     "about-privacy-1": "您的位置只在您的设备上用于计算距离，绝不会被保存或发送到任何地方。",
@@ -853,10 +853,10 @@ const TRANSLATIONS = {
     "nav-about": "تعارف",
     "footer-guide": "یہ ایپ ایک رہنما ہے، طبی مشورہ نہیں۔ اوقات اور اخراجات کی تصدیق کے لیے پہلے سے کال کریں۔",
     "footer-about": "اس ایپ اور اس کے ڈیٹا کے ذرائع کے بارے میں",
-    "title-map": "نقشہ · NH Care Finder",
-    "title-cost": "اخراجات کا مددگار · NH Care Finder",
-    "title-help": "مزید مدد · NH Care Finder",
-    "title-about": "تعارف · NH Care Finder",
+    "title-map": "نقشہ · UrgentDocs",
+    "title-cost": "اخراجات کا مددگار · UrgentDocs",
+    "title-help": "مزید مدد · UrgentDocs",
+    "title-about": "تعارف · UrgentDocs",
 
     // --- Home page ---
     "home-title": "نیو ہیمپشائر میں مفت اور کم قیمت طبی سہولت تلاش کریں",
@@ -936,8 +936,8 @@ const TRANSLATIONS = {
     "rx-generic": "<strong>سب کے لیے:</strong> اپنے ڈاکٹر یا فارماسسٹ سے پوچھیں کہ کیا جنرک دوا دستیاب ہے۔ جنرک دوائیں عام طور پر سستی ہوتی ہیں۔",
 
     // --- About page ---
-    "about-heading": "NH Care Finder کا تعارف",
-    "about-intro": "بہت سے لوگ خرچ کی فکر میں ڈاکٹر کے پاس جانا ٹال دیتے ہیں۔ NH Care Finder نیو ہیمپشائر کے لوگوں کو قریب ترین مفت اور کم قیمت کلینک اور فوری نگہداشت کے مراکز تلاش کرنے، اور جانے سے پہلے یہ سمجھنے میں مدد دیتی ہے کہ انہیں کتنا ادا کرنا پڑ سکتا ہے۔",
+    "about-heading": "UrgentDocs کا تعارف",
+    "about-intro": "بہت سے لوگ خرچ کی فکر میں ڈاکٹر کے پاس جانا ٹال دیتے ہیں۔ UrgentDocs نیو ہیمپشائر کے لوگوں کو قریب ترین مفت اور کم قیمت کلینک اور فوری نگہداشت کے مراکز تلاش کرنے، اور جانے سے پہلے یہ سمجھنے میں مدد دیتی ہے کہ انہیں کتنا ادا کرنا پڑ سکتا ہے۔",
     "about-built": "2026 کے کانگریشنل ایپ چیلنج کے لیے بنائی گئی۔",
     "about-privacy-heading": "آپ کی پرائیویسی",
     "about-privacy-1": "آپ کا مقام صرف آپ کے آلے پر فاصلے ناپنے کے لیے استعمال ہوتا ہے۔ اسے کبھی محفوظ نہیں کیا جاتا اور نہ کہیں بھیجا جاتا ہے۔",
@@ -1061,10 +1061,10 @@ const TRANSLATIONS = {
     "nav-about": "소개",
     "footer-guide": "이 앱은 안내용이며 의학적 조언이 아닙니다. 진료 시간과 비용은 미리 전화로 확인하세요.",
     "footer-about": "이 앱과 데이터 출처 소개",
-    "title-map": "지도 · NH Care Finder",
-    "title-cost": "비용 도우미 · NH Care Finder",
-    "title-help": "추가 도움 · NH Care Finder",
-    "title-about": "소개 · NH Care Finder",
+    "title-map": "지도 · UrgentDocs",
+    "title-cost": "비용 도우미 · UrgentDocs",
+    "title-help": "추가 도움 · UrgentDocs",
+    "title-about": "소개 · UrgentDocs",
 
     // --- Home page ---
     "home-title": "뉴햄프셔에서 무료 및 저비용 의료 서비스 찾기",
@@ -1144,8 +1144,8 @@ const TRANSLATIONS = {
     "rx-generic": "<strong>모든 분:</strong> 의사나 약사에게 복제약(제네릭)이 있는지 물어보세요. 복제약은 보통 더 저렴합니다.",
 
     // --- About page ---
-    "about-heading": "NH Care Finder 소개",
-    "about-intro": "많은 사람이 비용이 걱정되어 병원 방문을 미룹니다. NH Care Finder는 뉴햄프셔 주민이 가장 가까운 무료 및 저비용 진료소와 긴급 진료 센터를 찾고, 가기 전에 얼마를 낼지 이해하도록 돕습니다.",
+    "about-heading": "UrgentDocs 소개",
+    "about-intro": "많은 사람이 비용이 걱정되어 병원 방문을 미룹니다. UrgentDocs는 뉴햄프셔 주민이 가장 가까운 무료 및 저비용 진료소와 긴급 진료 센터를 찾고, 가기 전에 얼마를 낼지 이해하도록 돕습니다.",
     "about-built": "2026 의회 앱 챌린지(Congressional App Challenge)를 위해 만들었습니다.",
     "about-privacy-heading": "개인정보 보호",
     "about-privacy-1": "위치는 거리를 계산하기 위해 내 기기에서만 사용됩니다. 절대 저장되거나 어디로도 전송되지 않습니다.",
@@ -1269,10 +1269,10 @@ const TRANSLATIONS = {
     "nav-about": "Sobre",
     "footer-guide": "Este aplicativo é um guia, não um conselho médico. Ligue antes para confirmar horários e custos.",
     "footer-about": "Sobre este aplicativo e suas fontes de dados",
-    "title-map": "Mapa · NH Care Finder",
-    "title-cost": "Ajuda com custos · NH Care Finder",
-    "title-help": "Mais ajuda · NH Care Finder",
-    "title-about": "Sobre · NH Care Finder",
+    "title-map": "Mapa · UrgentDocs",
+    "title-cost": "Ajuda com custos · UrgentDocs",
+    "title-help": "Mais ajuda · UrgentDocs",
+    "title-about": "Sobre · UrgentDocs",
 
     // --- Home page ---
     "home-title": "Encontre atendimento de saúde gratuito e de baixo custo em New Hampshire",
@@ -1352,8 +1352,8 @@ const TRANSLATIONS = {
     "rx-generic": "<strong>Para todos:</strong> pergunte ao seu médico ou farmacêutico se existe um remédio genérico. Os genéricos costumam custar menos.",
 
     // --- About page ---
-    "about-heading": "Sobre o NH Care Finder",
-    "about-intro": "Muitas pessoas adiam a ida ao médico porque se preocupam com o custo. O NH Care Finder ajuda as pessoas em New Hampshire a encontrar as clínicas gratuitas e de baixo custo e os prontos atendimentos mais próximos, e a entender quanto provavelmente vão pagar antes de ir.",
+    "about-heading": "Sobre o UrgentDocs",
+    "about-intro": "Muitas pessoas adiam a ida ao médico porque se preocupam com o custo. O UrgentDocs ajuda as pessoas em New Hampshire a encontrar as clínicas gratuitas e de baixo custo e os prontos atendimentos mais próximos, e a entender quanto provavelmente vão pagar antes de ir.",
     "about-built": "Criado para o Congressional App Challenge de 2026.",
     "about-privacy-heading": "Sua privacidade",
     "about-privacy-1": "Sua localização é usada apenas no seu aparelho para medir distâncias. Ela nunca é salva nem enviada para lugar nenhum.",

@@ -1,4 +1,4 @@
-# NH Care Finder — Project Context
+# UrgentDocs — Project Context
 
 ## What this app does
 A web app that helps people in New Hampshire find the nearest urgent care centers

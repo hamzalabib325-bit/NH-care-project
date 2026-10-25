@@ -1,6 +1,6 @@
 {
-  "name": "NH Care Finder",
-  "short_name": "NH Care",
+  "name": "UrgentDocs",
+  "short_name": "UrgentDocs",
   "description": "Find free and low-cost health care in New Hampshire.",
   "start_url": "./index.html",
   "display": "standalone",
