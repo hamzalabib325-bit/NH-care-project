@@ -1,6 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
-  <!-- App icon: "UD" for UrgentDocs in white on blue, with a small gold plus. -->
-  <rect width="64" height="64" rx="14" fill="#1d5fa8"/>
+  <!-- App icon: "UD" for UrgentDocs in white on the app's red, with a small gold plus. -->
+  <rect width="64" height="64" rx="14" fill="#a51d2d"/>
   <path d="M8 18h6.5v15a5 5 0 0 0 10 0V18H31v15a11.5 11.5 0 0 1-23 0z" fill="#fff"/>
   <path d="M38 21h4.5a10 10 0 0 1 0 20H38z" fill="none" stroke="#fff" stroke-width="6.5" stroke-linejoin="round"/>
   <path d="M49.5 8h4v4.5H58v4h-4.5V21h-4v-4.5H45v-4h4.5z" fill="#ffd166"/>
