@@ -11,6 +11,7 @@ const LANGUAGES = {
   en: "English",
   es: "Español",
   fr: "Français",
+  pt: "Português",
   ar: "العربية",
   zh: "中文",
   ur: "اردو",
@@ -100,7 +101,7 @@ function addLanguagePicker() {
   // Screen readers hear "Language" in every language, so anyone can find it.
   const name = document.createElement("span");
   name.className = "visually-hidden";
-  name.textContent = "Language / Idioma / Langue / اللغة / 语言 / زبان / 언어";
+  name.textContent = "Language / Idioma / Langue / Língua / اللغة / 语言 / زبان / 언어";
 
   const select = document.createElement("select");
   for (const [code, label] of Object.entries(LANGUAGES)) {
