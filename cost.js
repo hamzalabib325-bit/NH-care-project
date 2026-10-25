@@ -336,6 +336,13 @@ function resultCard(entry, info) {
     card.append(hours);
   }
 
+  for (const text of serviceLines(clinic)) {
+    const line = document.createElement("p");
+    line.className = "result-address";
+    line.textContent = text;
+    card.append(line);
+  }
+
   const links = document.createElement("div");
   links.className = "result-links";
   // The map page reads lat and lng from the link, then zooms to this clinic's pin.

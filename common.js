@@ -13,6 +13,31 @@ function clinicType(clinic) {
   return CLINIC_TYPES[clinic.type] ?? { label: t("Clinic"), color: "#555" };
 }
 
+// Plain-language labels for the service tags in clinics.json (see scripts/add-services.js).
+const SERVICE_LABELS = {
+  primary_care: t("Primary care (checkups and sick visits)"),
+  dental: t("Dental care"),
+  walk_in: t("Walk-ins welcome"),
+  school_based: t("School-based (for students)"),
+  nursing_home: t("For nursing home residents only"),
+  mobile: t("Mobile van"),
+  homeless: t("Care for people without a home")
+};
+
+// Lines describing a clinic's services, or an empty list if we don't know any.
+function serviceLines(clinic) {
+  const lines = [];
+  const labels = (clinic.services ?? []).map((service) => SERVICE_LABELS[service]).filter(Boolean);
+  if (labels.length > 0) {
+    lines.push(t("Services: {services}", { services: labels.join(" · ") }));
+  }
+  // Federally funded health centers must offer these, on site or through a partner.
+  if (clinic.type === "health_center") {
+    lines.push(t("Health centers can also help you get dental, mental health, and addiction care, here or at a partner site. Call to ask."));
+  }
+  return lines;
+}
+
 // Load a JSON file from the data folder.
 async function loadJson(path) {
   const response = await fetch(path);

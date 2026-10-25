@@ -107,7 +107,7 @@ function buildPopup(clinic) {
   typeLabel.style.color = type.color;
   container.append(name, typeLabel);
 
-  const details = [clinic.address && displayAddress(clinic.address), clinic.hours && t("Hours: {hours}", { hours: displayHours(clinic.hours) }), clinic.cost];
+  const details = [clinic.address && displayAddress(clinic.address), clinic.hours && t("Hours: {hours}", { hours: displayHours(clinic.hours) }), clinic.cost, ...serviceLines(clinic)];
   for (const text of details.filter(Boolean)) {
     const line = document.createElement("p");
     line.textContent = text;

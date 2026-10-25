@@ -10,7 +10,10 @@
     "website": "https://coosfamilyhealth.org/locations/colebrook-clinic/",
     "cost": "",
     "source": "Health_Center_Service_Delivery_and_LookAlike_Sites.csv",
-    "last_verified": ""
+    "last_verified": "",
+    "services": [
+      "primary_care"
+    ]
   },
   {
     "name": "Healthy Together",
@@ -23,7 +26,10 @@
     "website": "https://centerforlifemanagement.org/programs-services/integrated-care-healthy-together/",
     "cost": "",
     "source": "Health_Center_Service_Delivery_and_LookAlike_Sites.csv",
-    "last_verified": ""
+    "last_verified": "",
+    "services": [
+      "primary_care"
+    ]
   },
   {
     "name": "FAMILIES IN TRANSITION-FIT",
@@ -49,7 +55,10 @@
     "website": "whitemountainhealth.org",
     "cost": "",
     "source": "Health_Center_Service_Delivery_and_LookAlike_Sites.csv",
-    "last_verified": ""
+    "last_verified": "",
+    "services": [
+      "primary_care"
+    ]
   },
   {
     "name": "ACHS - Warren",
@@ -62,7 +71,10 @@
     "website": "https://www.ammonoosuc.org/achs-warren/",
     "cost": "",
     "source": "Health_Center_Service_Delivery_and_LookAlike_Sites.csv",
-    "last_verified": ""
+    "last_verified": "",
+    "services": [
+      "primary_care"
+    ]
   },
   {
     "name": "COOS COUNTY FAMILY HEALTH SERVICES",
@@ -75,7 +87,10 @@
     "website": "WWW.COOSFAMILYHEALTH.ORG",
     "cost": "",
     "source": "Health_Center_Service_Delivery_and_LookAlike_Sites.csv",
-    "last_verified": ""
+    "last_verified": "",
+    "services": [
+      "primary_care"
+    ]
   },
   {
     "name": "HCH Program at CMC Community Health Services Division",
@@ -88,7 +103,10 @@
     "website": "www.catholicmedicalcenter.org",
     "cost": "",
     "source": "Health_Center_Service_Delivery_and_LookAlike_Sites.csv",
-    "last_verified": ""
+    "last_verified": "",
+    "services": [
+      "homeless"
+    ]
   },
   {
     "name": "HealthFirst at Archways",
@@ -101,7 +119,10 @@
     "website": "",
     "cost": "",
     "source": "Health_Center_Service_Delivery_and_LookAlike_Sites.csv",
-    "last_verified": ""
+    "last_verified": "",
+    "services": [
+      "primary_care"
+    ]
   },
   {
     "name": "ROCKINGHAM COUNTY NURSING HOME",
@@ -114,7 +135,11 @@
     "website": "WWW.LAMPREYHEALTH.ORG",
     "cost": "",
     "source": "Health_Center_Service_Delivery_and_LookAlike_Sites.csv",
-    "last_verified": ""
+    "last_verified": "",
+    "services": [
+      "primary_care",
+      "nursing_home"
+    ]
   },
   {
     "name": "Mid-State Health Center - Bristol",
@@ -127,7 +152,10 @@
     "website": "www.midstatehealth.org",
     "cost": "",
     "source": "Health_Center_Service_Delivery_and_LookAlike_Sites.csv",
-    "last_verified": ""
+    "last_verified": "",
+    "services": [
+      "primary_care"
+    ]
   },
   {
     "name": "Amoskeag Health at ProHealth",
@@ -140,7 +168,10 @@
     "website": "https://www.amoskeaghealth.org/locations",
     "cost": "",
     "source": "Health_Center_Service_Delivery_and_LookAlike_Sites.csv",
-    "last_verified": ""
+    "last_verified": "",
+    "services": [
+      "primary_care"
+    ]
   },
   {
     "name": "Greater Seacoast Health",
@@ -153,7 +184,10 @@
     "website": "https://greaterseacoasthealth.org/",
     "cost": "",
     "source": "Health_Center_Service_Delivery_and_LookAlike_Sites.csv",
-    "last_verified": ""
+    "last_verified": "",
+    "services": [
+      "primary_care"
+    ]
   },
   {
     "name": "Amoskeag Health at 1245 Elm Street",
@@ -166,7 +200,10 @@
     "website": "www.amoskeaghealth.org",
     "cost": "",
     "source": "Health_Center_Service_Delivery_and_LookAlike_Sites.csv",
-    "last_verified": ""
+    "last_verified": "",
+    "services": [
+      "primary_care"
+    ]
   },
   {
     "name": "Amoskeag Health at Mark Stebbins Community Center",
@@ -179,7 +216,10 @@
     "website": "https://www.amoskeaghealth.org/locations",
     "cost": "",
     "source": "Health_Center_Service_Delivery_and_LookAlike_Sites.csv",
-    "last_verified": ""
+    "last_verified": "",
+    "services": [
+      "primary_care"
+    ]
   },
   {
     "name": "Harbor Care Health and Wellness Center",
@@ -192,7 +232,10 @@
     "website": "http://www.harborhomes.org",
     "cost": "",
     "source": "Health_Center_Service_Delivery_and_LookAlike_Sites.csv",
-    "last_verified": ""
+    "last_verified": "",
+    "services": [
+      "primary_care"
+    ]
   },
   {
     "name": "COOS COUNTY FAMILY HEALTH SERVICES",
@@ -205,7 +248,10 @@
     "website": "WWW.COOSFAMILYHEALTH.ORG",
     "cost": "",
     "source": "Health_Center_Service_Delivery_and_LookAlike_Sites.csv",
-    "last_verified": ""
+    "last_verified": "",
+    "services": [
+      "primary_care"
+    ]
   },
   {
     "name": "Lamprey Health Care - Nashua Center",
@@ -218,7 +264,10 @@
     "website": "www.lampreyhealth.org",
     "cost": "",
     "source": "Health_Center_Service_Delivery_and_LookAlike_Sites.csv",
-    "last_verified": ""
+    "last_verified": "",
+    "services": [
+      "primary_care"
+    ]
   },
   {
     "name": "HealthFirst - Laconia",
@@ -231,7 +280,10 @@
     "website": "www.healthfirstfamily.org",
     "cost": "",
     "source": "Health_Center_Service_Delivery_and_LookAlike_Sites.csv",
-    "last_verified": ""
+    "last_verified": "",
+    "services": [
+      "primary_care"
+    ]
   },
   {
     "name": "Amoskeag Health at 184 Tarrytown Road",
@@ -244,7 +296,10 @@
     "website": "www.amoskeaghealth.org",
     "cost": "",
     "source": "Health_Center_Service_Delivery_and_LookAlike_Sites.csv",
-    "last_verified": ""
+    "last_verified": "",
+    "services": [
+      "primary_care"
+    ]
   },
   {
     "name": "Harbor Care Health and Wellness Center",
@@ -257,7 +312,10 @@
     "website": "https://harborcarenh.org/",
     "cost": "",
     "source": "Health_Center_Service_Delivery_and_LookAlike_Sites.csv",
-    "last_verified": ""
+    "last_verified": "",
+    "services": [
+      "primary_care"
+    ]
   },
   {
     "name": "City of Manchester - Public Health Department- HCH Program",
@@ -270,7 +328,10 @@
     "website": "www.manchesternh.gov",
     "cost": "",
     "source": "Health_Center_Service_Delivery_and_LookAlike_Sites.csv",
-    "last_verified": ""
+    "last_verified": "",
+    "services": [
+      "homeless"
+    ]
   },
   {
     "name": "Lamprey Health Care - Raymond Center",
@@ -283,7 +344,10 @@
     "website": "WWW.LAMPREYHEALTH.ORG",
     "cost": "",
     "source": "Health_Center_Service_Delivery_and_LookAlike_Sites.csv",
-    "last_verified": ""
+    "last_verified": "",
+    "services": [
+      "primary_care"
+    ]
   },
   {
     "name": "Cross Roads House",
@@ -296,7 +360,10 @@
     "website": "https://greaterseacoasthealth.org/services/mobile-health-care/",
     "cost": "",
     "source": "Health_Center_Service_Delivery_and_LookAlike_Sites.csv",
-    "last_verified": ""
+    "last_verified": "",
+    "services": [
+      "primary_care"
+    ]
   },
   {
     "name": "Greater Seacoast Health",
@@ -309,7 +376,10 @@
     "website": "getcommunityhealth.org",
     "cost": "",
     "source": "Health_Center_Service_Delivery_and_LookAlike_Sites.csv",
-    "last_verified": ""
+    "last_verified": "",
+    "services": [
+      "primary_care"
+    ]
   },
   {
     "name": "InteGreat Health",
@@ -322,7 +392,10 @@
     "website": "https://lampreyhealth.org/locations/",
     "cost": "",
     "source": "Health_Center_Service_Delivery_and_LookAlike_Sites.csv",
-    "last_verified": ""
+    "last_verified": "",
+    "services": [
+      "primary_care"
+    ]
   },
   {
     "name": "LAMPREY HEALTH CARE",
@@ -335,7 +408,10 @@
     "website": "WWW.LAMPREYHEALTH.ORG",
     "cost": "",
     "source": "Health_Center_Service_Delivery_and_LookAlike_Sites.csv",
-    "last_verified": ""
+    "last_verified": "",
+    "services": [
+      "primary_care"
+    ]
   },
   {
     "name": "ACHS - Whitefield",
@@ -348,7 +424,10 @@
     "website": "https://www.ammonoosuc.org/achs-whitefield/",
     "cost": "",
     "source": "Health_Center_Service_Delivery_and_LookAlike_Sites.csv",
-    "last_verified": ""
+    "last_verified": "",
+    "services": [
+      "primary_care"
+    ]
   },
   {
     "name": "Mid-State Health Center Plymouth",
@@ -361,7 +440,10 @@
     "website": "www.midstatehealth.org",
     "cost": "",
     "source": "Health_Center_Service_Delivery_and_LookAlike_Sites.csv",
-    "last_verified": ""
+    "last_verified": "",
+    "services": [
+      "primary_care"
+    ]
   },
   {
     "name": "Mid-State Health Center - Main Street",
@@ -374,7 +456,10 @@
     "website": "https://www.midstatehealth.org/",
     "cost": "",
     "source": "Health_Center_Service_Delivery_and_LookAlike_Sites.csv",
-    "last_verified": ""
+    "last_verified": "",
+    "services": [
+      "primary_care"
+    ]
   },
   {
     "name": "Charlestown Health Center",
@@ -387,7 +472,10 @@
     "website": "https://www.northstarfqhc.org/",
     "cost": "",
     "source": "Health_Center_Service_Delivery_and_LookAlike_Sites.csv",
-    "last_verified": ""
+    "last_verified": "",
+    "services": [
+      "primary_care"
+    ]
   },
   {
     "name": "HealthFirst - Church St",
@@ -400,7 +488,10 @@
     "website": "",
     "cost": "",
     "source": "Health_Center_Service_Delivery_and_LookAlike_Sites.csv",
-    "last_verified": ""
+    "last_verified": "",
+    "services": [
+      "primary_care"
+    ]
   },
   {
     "name": "Amoskeag Health at MST",
@@ -413,7 +504,11 @@
     "website": "www.amoskeaghealth.org",
     "cost": "",
     "source": "Health_Center_Service_Delivery_and_LookAlike_Sites.csv",
-    "last_verified": ""
+    "last_verified": "",
+    "services": [
+      "primary_care",
+      "school_based"
+    ]
   },
   {
     "name": "Amoskeag Health at 145 Hollis Street",
@@ -426,7 +521,10 @@
     "website": "www.amoskeaghealth.org",
     "cost": "",
     "source": "Health_Center_Service_Delivery_and_LookAlike_Sites.csv",
-    "last_verified": ""
+    "last_verified": "",
+    "services": [
+      "primary_care"
+    ]
   },
   {
     "name": "HealthFirst - Canaan",
@@ -439,7 +537,10 @@
     "website": "",
     "cost": "",
     "source": "Health_Center_Service_Delivery_and_LookAlike_Sites.csv",
-    "last_verified": ""
+    "last_verified": "",
+    "services": [
+      "primary_care"
+    ]
   },
   {
     "name": "Mid-State Health Center - Lincoln",
@@ -452,7 +553,10 @@
     "website": "https://www.midstatehealth.org/",
     "cost": "",
     "source": "Health_Center_Service_Delivery_and_LookAlike_Sites.csv",
-    "last_verified": ""
+    "last_verified": "",
+    "services": [
+      "primary_care"
+    ]
   },
   {
     "name": "Coos County Family Health - Express Care",
@@ -465,7 +569,11 @@
     "website": "https://coosfamilyhealth.org/locations/ccfhs-healthcare-express/",
     "cost": "",
     "source": "Health_Center_Service_Delivery_and_LookAlike_Sites.csv",
-    "last_verified": ""
+    "last_verified": "",
+    "services": [
+      "primary_care",
+      "walk_in"
+    ]
   },
   {
     "name": "HealthFirst at Isaiah 61 Cafe",
@@ -478,7 +586,10 @@
     "website": "",
     "cost": "",
     "source": "Health_Center_Service_Delivery_and_LookAlike_Sites.csv",
-    "last_verified": ""
+    "last_verified": "",
+    "services": [
+      "primary_care"
+    ]
   },
   {
     "name": "Wilson Street Integrated Health",
@@ -491,7 +602,10 @@
     "website": "https://www.manchesternh.gov/Departments/Health/Homeless-Healthcare-Project",
     "cost": "",
     "source": "Health_Center_Service_Delivery_and_LookAlike_Sites.csv",
-    "last_verified": ""
+    "last_verified": "",
+    "services": [
+      "primary_care"
+    ]
   },
   {
     "name": "Boys and Girls Club of Souhegan Valley",
@@ -504,7 +618,11 @@
     "website": "",
     "cost": "",
     "source": "Health_Center_Service_Delivery_and_LookAlike_Sites.csv",
-    "last_verified": ""
+    "last_verified": "",
+    "services": [
+      "primary_care",
+      "school_based"
+    ]
   },
   {
     "name": "Lamprey Health Care - Nashua Soup Kitchen & Shelter - Spring Street",
@@ -517,7 +635,11 @@
     "website": "https://lampreyhealth.org/locations/",
     "cost": "",
     "source": "Health_Center_Service_Delivery_and_LookAlike_Sites.csv",
-    "last_verified": ""
+    "last_verified": "",
+    "services": [
+      "primary_care",
+      "homeless"
+    ]
   },
   {
     "name": "ACHS - Woodsville",
@@ -530,7 +652,10 @@
     "website": "https://www.ammonoosuc.org/achs-woodsville/",
     "cost": "",
     "source": "Health_Center_Service_Delivery_and_LookAlike_Sites.csv",
-    "last_verified": ""
+    "last_verified": "",
+    "services": [
+      "primary_care"
+    ]
   },
   {
     "name": "ACCESS SPORTS MEDICINE & ORTHOPAEDICS",
@@ -543,7 +668,10 @@
     "website": "https://www.accesssportsmed.com/",
     "cost": "",
     "source": "NPPES NPI Registry API v2.1",
-    "last_verified": ""
+    "last_verified": "",
+    "services": [
+      "walk_in"
+    ]
   },
   {
     "name": "ACUTE MOBILE MEDICAL CARE LLC",
@@ -556,7 +684,10 @@
     "website": "",
     "cost": "",
     "source": "NPPES NPI Registry API v2.1",
-    "last_verified": ""
+    "last_verified": "",
+    "services": [
+      "walk_in"
+    ]
   },
   {
     "name": "ClearChoiceMD",
@@ -571,7 +702,10 @@
     "source": "NPPES NPI Registry API v2.1; name/details confirmed 2026-10-24: https://ccmdcenters.com/locations/goffstown-nh",
     "last_verified": "2026-10-24",
     "check_in_url": "https://ccmdcenters.com/locations/goffstown-nh",
-    "check_in_verified": "2026-10-24"
+    "check_in_verified": "2026-10-24",
+    "services": [
+      "walk_in"
+    ]
   },
   {
     "name": "Concentra Urgent Care - Concord",
@@ -584,7 +718,10 @@
     "website": "https://www.concentra.com/urgent-care-centers/new-hampshire/concord/concord-urgent-care/",
     "cost": "",
     "source": "User-provided correction; coordinates retained from NPPES NPI Registry API v2.1",
-    "last_verified": ""
+    "last_verified": "",
+    "services": [
+      "walk_in"
+    ]
   },
   {
     "name": "Concentra Urgent Care - Nashua",
@@ -597,7 +734,10 @@
     "website": "https://www.concentra.com/urgent-care-centers/new-hampshire/nashua/nashua-urgent-care/",
     "cost": "",
     "source": "User-provided correction; coordinates retained from NPPES NPI Registry API v2.1",
-    "last_verified": ""
+    "last_verified": "",
+    "services": [
+      "walk_in"
+    ]
   },
   {
     "name": "Concentra Urgent Care - Manchester",
@@ -610,7 +750,10 @@
     "website": "https://www.concentra.com/urgent-care-centers/new-hampshire/manchester/manchester-urgent-care/",
     "cost": "",
     "source": "User-provided correction; coordinates retained from NPPES NPI Registry API v2.1",
-    "last_verified": ""
+    "last_verified": "",
+    "services": [
+      "walk_in"
+    ]
   },
   {
     "name": "ClearChoiceMD",
@@ -625,7 +768,10 @@
     "source": "NPPES NPI Registry API v2.1; name/details confirmed 2026-10-24: https://ccmdcenters.com/locations/plaistow-nh",
     "last_verified": "2026-10-24",
     "check_in_url": "https://ccmdcenters.com/locations/plaistow-nh",
-    "check_in_verified": "2026-10-24"
+    "check_in_verified": "2026-10-24",
+    "services": [
+      "walk_in"
+    ]
   },
   {
     "name": "ClearChoiceMD",
@@ -640,7 +786,10 @@
     "source": "NPPES NPI Registry API v2.1; name/details confirmed 2026-10-24: https://ccmdcenters.com/locations/alton-nh",
     "last_verified": "2026-10-24",
     "check_in_url": "https://ccmdcenters.com/locations/alton-nh",
-    "check_in_verified": "2026-10-24"
+    "check_in_verified": "2026-10-24",
+    "services": [
+      "walk_in"
+    ]
   },
   {
     "name": "Urgent Care at Bedford Medical Park",
@@ -653,7 +802,10 @@
     "website": "",
     "cost": "",
     "source": "NPPES NPI Registry API v2.1; name/details confirmed 2026-10-24: HealthOptions 2026 urgent care locations (healthoptions.org/document/1095)",
-    "last_verified": "2026-10-24"
+    "last_verified": "2026-10-24",
+    "services": [
+      "walk_in"
+    ]
   },
   {
     "name": "ELLIOT AFTER HOURS AT RAYMOND",
@@ -666,7 +818,10 @@
     "website": "",
     "cost": "",
     "source": "NPPES NPI Registry API v2.1",
-    "last_verified": ""
+    "last_verified": "",
+    "services": [
+      "walk_in"
+    ]
   },
   {
     "name": "GRANITE STATE UC LLC",
@@ -679,7 +834,10 @@
     "website": "",
     "cost": "",
     "source": "NPPES NPI Registry API v2.1",
-    "last_verified": ""
+    "last_verified": "",
+    "services": [
+      "walk_in"
+    ]
   },
   {
     "name": "HCA HEALTH SERVICES OF NEW HAMPSHIRE, INC.",
@@ -692,7 +850,10 @@
     "website": "",
     "cost": "",
     "source": "NPPES NPI Registry API v2.1",
-    "last_verified": ""
+    "last_verified": "",
+    "services": [
+      "walk_in"
+    ]
   },
   {
     "name": "HEALTHSTOP, INC.",
@@ -705,7 +866,10 @@
     "website": "",
     "cost": "",
     "source": "NPPES NPI Registry API v2.1",
-    "last_verified": ""
+    "last_verified": "",
+    "services": [
+      "walk_in"
+    ]
   },
   {
     "name": "Littleton Urgent Care",
@@ -718,7 +882,10 @@
     "website": "https://littletonhealthcare.org/departments/urgent-care/",
     "cost": "",
     "source": "NPPES NPI Registry API v2.1; name/details confirmed 2026-10-24: HealthOptions 2026 urgent care locations (healthoptions.org/document/1095)",
-    "last_verified": "2026-10-24"
+    "last_verified": "2026-10-24",
+    "services": [
+      "walk_in"
+    ]
   },
   {
     "name": "Lincoln Urgent Care",
@@ -731,7 +898,10 @@
     "website": "https://littletonhealthcare.org/departments/urgent-care/",
     "cost": "",
     "source": "NPPES NPI Registry API v2.1; name/details confirmed 2026-10-24: HealthOptions 2026 urgent care locations (healthoptions.org/document/1095)",
-    "last_verified": "2026-10-24"
+    "last_verified": "2026-10-24",
+    "services": [
+      "walk_in"
+    ]
   },
   {
     "name": "MaineHealth Urgent Care North Conway",
@@ -746,7 +916,10 @@
     "source": "NPPES NPI Registry API v2.1; name/details confirmed 2026-10-24: https://www.mainehealth.org/services/walk-and-urgent-care/mainehealth-urgent-care-north-conway",
     "last_verified": "2026-10-24",
     "check_in_url": "https://www.mainehealth.org/services/walk-and-urgent-care/mainehealth-urgent-care-north-conway",
-    "check_in_verified": "2026-10-24"
+    "check_in_verified": "2026-10-24",
+    "services": [
+      "walk_in"
+    ]
   },
   {
     "name": "NEW FOUND EXPRESS CARE LLC",
@@ -759,7 +932,10 @@
     "website": "",
     "cost": "",
     "source": "NPPES NPI Registry API v2.1",
-    "last_verified": ""
+    "last_verified": "",
+    "services": [
+      "walk_in"
+    ]
   },
   {
     "name": "SACO RIVER MEDICAL GROUP, PC",
@@ -772,7 +948,10 @@
     "website": "",
     "cost": "",
     "source": "NPPES NPI Registry API v2.1",
-    "last_verified": ""
+    "last_verified": "",
+    "services": [
+      "walk_in"
+    ]
   },
   {
     "name": "MedCheck Urgent Care",
@@ -785,7 +964,10 @@
     "website": "https://www.speare.org/",
     "cost": "",
     "source": "NPPES NPI Registry API v2.1; name/details confirmed 2026-10-24: HealthOptions 2026 urgent care locations (healthoptions.org/document/1095)",
-    "last_verified": "2026-10-24"
+    "last_verified": "2026-10-24",
+    "services": [
+      "walk_in"
+    ]
   },
   {
     "name": "MedCheck Urgent Care",
@@ -798,7 +980,10 @@
     "website": "https://www.speare.org/",
     "cost": "",
     "source": "NPPES NPI Registry API v2.1; name/details confirmed 2026-10-24: HealthOptions 2026 urgent care locations (healthoptions.org/document/1095); https://www.plymouth.edu/health-services/important-numbers",
-    "last_verified": "2026-10-24"
+    "last_verified": "2026-10-24",
+    "services": [
+      "walk_in"
+    ]
   },
   {
     "name": "SPEARE MEMORIAL HOSPITAL",
@@ -811,7 +996,10 @@
     "website": "",
     "cost": "",
     "source": "NPPES NPI Registry API v2.1",
-    "last_verified": ""
+    "last_verified": "",
+    "services": [
+      "walk_in"
+    ]
   },
   {
     "name": "St. Joseph Hospital Milford Urgent Care",
@@ -824,7 +1012,10 @@
     "website": "https://stjosephhospital.com/urgent-care/",
     "cost": "",
     "source": "NPPES NPI Registry API v2.1; name/details confirmed 2026-10-24: https://stjosephhospital.com/urgent-care/",
-    "last_verified": "2026-10-24"
+    "last_verified": "2026-10-24",
+    "services": [
+      "walk_in"
+    ]
   },
   {
     "name": "Urgent Care at Valley Regional",
@@ -837,7 +1028,10 @@
     "website": "https://vrh.org/service/urgent-care/",
     "cost": "",
     "source": "NPPES NPI Registry API v2.1; name/details confirmed 2026-10-24: https://vrh.org/service/urgent-care/; HealthOptions 2026 urgent care locations (healthoptions.org/document/1095)",
-    "last_verified": "2026-10-24"
+    "last_verified": "2026-10-24",
+    "services": [
+      "walk_in"
+    ]
   },
   {
     "name": "WALK-IN CLINIC AT CLAREMONT",
@@ -850,7 +1044,10 @@
     "website": "",
     "cost": "",
     "source": "NPPES NPI Registry API v2.1",
-    "last_verified": ""
+    "last_verified": "",
+    "services": [
+      "walk_in"
+    ]
   },
   {
     "name": "Wentworth-Douglass Express Care",
@@ -863,7 +1060,10 @@
     "website": "https://www.massgeneralbrigham.org/en/locations/dover-nh/wentworthdouglass-express-care-dover-loc0000280946",
     "cost": "",
     "source": "User-confirmed as Express Care; coordinates retained from NPPES NPI Registry API v2.1",
-    "last_verified": ""
+    "last_verified": "",
+    "services": [
+      "walk_in"
+    ]
   },
   {
     "name": "Alice Peck Day Express Care",
@@ -876,7 +1076,10 @@
     "website": "https://www.alicepeckday.org/services/express-care",
     "cost": "",
     "source": "https://www.alicepeckday.org/services/express-care",
-    "last_verified": ""
+    "last_verified": "",
+    "services": [
+      "walk_in"
+    ]
   },
   {
     "name": "ExpressMED",
@@ -889,7 +1092,10 @@
     "website": "https://expressmednh.com/",
     "cost": "",
     "source": "https://expressmednh.com/ (hours supplied by user)",
-    "last_verified": ""
+    "last_verified": "",
+    "services": [
+      "walk_in"
+    ]
   },
   {
     "name": "ExpressMED",
@@ -902,7 +1108,10 @@
     "website": "https://expressmednh.com/",
     "cost": "",
     "source": "https://expressmednh.com/ (hours supplied by user)",
-    "last_verified": ""
+    "last_verified": "",
+    "services": [
+      "walk_in"
+    ]
   },
   {
     "name": "ConvenientMD",
@@ -917,7 +1126,10 @@
     "source": "NPPES NPI Registry API v2.1",
     "last_verified": "",
     "check_in_url": "https://convenientmd.com/locations/concord-nh-urgent-care/",
-    "check_in_verified": "2026-10-24"
+    "check_in_verified": "2026-10-24",
+    "services": [
+      "walk_in"
+    ]
   },
   {
     "name": "ConvenientMD",
@@ -932,7 +1144,10 @@
     "source": "NPPES NPI Registry API v2.1",
     "last_verified": "",
     "check_in_url": "https://convenientmd.com/locations/littleton-nh-urgent-care/",
-    "check_in_verified": "2026-10-24"
+    "check_in_verified": "2026-10-24",
+    "services": [
+      "walk_in"
+    ]
   },
   {
     "name": "ConvenientMD",
@@ -947,7 +1162,10 @@
     "source": "NPPES NPI Registry API v2.1",
     "last_verified": "",
     "check_in_url": "https://convenientmd.com/locations/keene-nh-urgent-care/",
-    "check_in_verified": "2026-10-24"
+    "check_in_verified": "2026-10-24",
+    "services": [
+      "walk_in"
+    ]
   },
   {
     "name": "ConvenientMD",
@@ -962,7 +1180,10 @@
     "source": "NPPES NPI Registry API v2.1",
     "last_verified": "",
     "check_in_url": "https://convenientmd.com/locations/manchester-nh-urgent-care/",
-    "check_in_verified": "2026-10-24"
+    "check_in_verified": "2026-10-24",
+    "services": [
+      "walk_in"
+    ]
   },
   {
     "name": "ConvenientMD",
@@ -977,7 +1198,10 @@
     "source": "https://convenientmd.com/locations/windham-nh-urgent-care/; coordinates: official ConvenientMD location page map",
     "last_verified": "",
     "check_in_url": "https://convenientmd.com/locations/windham-nh-urgent-care/",
-    "check_in_verified": "2026-10-24"
+    "check_in_verified": "2026-10-24",
+    "services": [
+      "walk_in"
+    ]
   },
   {
     "name": "ConvenientMD",
@@ -992,7 +1216,10 @@
     "source": "https://convenientmd.com/locations/plaistow-nh-urgent-care/; coordinates: official ConvenientMD location page map",
     "last_verified": "",
     "check_in_url": "https://convenientmd.com/locations/plaistow-nh-urgent-care/",
-    "check_in_verified": "2026-10-24"
+    "check_in_verified": "2026-10-24",
+    "services": [
+      "walk_in"
+    ]
   },
   {
     "name": "ConvenientMD",
@@ -1007,7 +1234,10 @@
     "source": "NPPES NPI Registry API v2.1",
     "last_verified": "",
     "check_in_url": "https://convenientmd.com/locations/nashua-nh-urgent-care/",
-    "check_in_verified": "2026-10-24"
+    "check_in_verified": "2026-10-24",
+    "services": [
+      "walk_in"
+    ]
   },
   {
     "name": "ConvenientMD",
@@ -1022,7 +1252,10 @@
     "source": "NPPES NPI Registry API v2.1",
     "last_verified": "",
     "check_in_url": "https://convenientmd.com/locations/bedford-nh-urgent-care/",
-    "check_in_verified": "2026-10-24"
+    "check_in_verified": "2026-10-24",
+    "services": [
+      "walk_in"
+    ]
   },
   {
     "name": "ConvenientMD",
@@ -1037,7 +1270,10 @@
     "source": "NPPES NPI Registry API v2.1",
     "last_verified": "",
     "check_in_url": "https://convenientmd.com/locations/stratham-nh-urgent-care/",
-    "check_in_verified": "2026-10-24"
+    "check_in_verified": "2026-10-24",
+    "services": [
+      "walk_in"
+    ]
   },
   {
     "name": "ConvenientMD",
@@ -1052,7 +1288,10 @@
     "source": "NPPES NPI Registry API v2.1",
     "last_verified": "",
     "check_in_url": "https://convenientmd.com/locations/belmont-nh-urgent-care/",
-    "check_in_verified": "2026-10-24"
+    "check_in_verified": "2026-10-24",
+    "services": [
+      "walk_in"
+    ]
   },
   {
     "name": "ConvenientMD",
@@ -1067,7 +1306,10 @@
     "source": "NPPES NPI Registry API v2.1",
     "last_verified": "",
     "check_in_url": "https://convenientmd.com/locations/portsmouth-nh-urgent-care/",
-    "check_in_verified": "2026-10-24"
+    "check_in_verified": "2026-10-24",
+    "services": [
+      "walk_in"
+    ]
   },
   {
     "name": "ConvenientMD",
@@ -1082,7 +1324,10 @@
     "source": "https://convenientmd.com/locations/merrimack-nh-urgent-care/; coordinates: official ConvenientMD location page map",
     "last_verified": "",
     "check_in_url": "https://convenientmd.com/locations/merrimack-nh-urgent-care/",
-    "check_in_verified": "2026-10-24"
+    "check_in_verified": "2026-10-24",
+    "services": [
+      "walk_in"
+    ]
   },
   {
     "name": "ConvenientMD",
@@ -1097,7 +1342,10 @@
     "source": "NPPES NPI Registry API v2.1",
     "last_verified": "",
     "check_in_url": "https://convenientmd.com/locations/dover-nh-urgent-care/",
-    "check_in_verified": "2026-10-24"
+    "check_in_verified": "2026-10-24",
+    "services": [
+      "walk_in"
+    ]
   },
   {
     "name": "ConvenientMD",
@@ -1112,7 +1360,10 @@
     "source": "NPPES NPI Registry API v2.1",
     "last_verified": "",
     "check_in_url": "https://convenientmd.com/locations/londonderry-nh-urgent-care/",
-    "check_in_verified": "2026-10-24"
+    "check_in_verified": "2026-10-24",
+    "services": [
+      "walk_in"
+    ]
   },
   {
     "name": "ConvenientMD",
@@ -1127,7 +1378,10 @@
     "source": "https://convenientmd.com/locations/west-lebanon/; coordinates: official ConvenientMD location page map",
     "last_verified": "",
     "check_in_url": "https://convenientmd.com/locations/west-lebanon/",
-    "check_in_verified": "2026-10-24"
+    "check_in_verified": "2026-10-24",
+    "services": [
+      "walk_in"
+    ]
   },
   {
     "name": "ConvenientMD",
@@ -1142,7 +1396,10 @@
     "source": "NPPES NPI Registry API v2.1",
     "last_verified": "",
     "check_in_url": "https://convenientmd.com/locations/windham-nh-urgent-care/",
-    "check_in_verified": "2026-10-24"
+    "check_in_verified": "2026-10-24",
+    "services": [
+      "walk_in"
+    ]
   },
   {
     "name": "Elliot Urgent Care at River's Edge",
@@ -1157,7 +1414,10 @@
     "source": "https://www.elliothospital.org/locations/elliot-urgent-care-rivers-edge; coordinates: U.S. Census Geocoder, Public_AR_Current",
     "last_verified": "",
     "check_in_url": "https://www.elliothospital.org/locations/elliot-urgent-care-rivers-edge",
-    "check_in_verified": "2026-10-24"
+    "check_in_verified": "2026-10-24",
+    "services": [
+      "walk_in"
+    ]
   },
   {
     "name": "Elliot Urgent Care at Bedford",
@@ -1172,7 +1432,10 @@
     "source": "https://www.elliothospital.org/locations/elliot-urgent-care-bedford; coordinates: OpenStreetMap Nominatim building match at the exact 25 Leavy Drive address (way 684694085)",
     "last_verified": "",
     "check_in_url": "https://www.elliothospital.org/locations/elliot-urgent-care-bedford",
-    "check_in_verified": "2026-10-24"
+    "check_in_verified": "2026-10-24",
+    "services": [
+      "walk_in"
+    ]
   },
   {
     "name": "Elliot Urgent Care at Londonderry",
@@ -1187,7 +1450,10 @@
     "source": "https://www.elliothospital.org/locations/elliot-urgent-care-londonderry; coordinates: U.S. Census Geocoder, Public_AR_Current",
     "last_verified": "",
     "check_in_url": "https://www.elliothospital.org/locations/elliot-urgent-care-londonderry",
-    "check_in_verified": "2026-10-24"
+    "check_in_verified": "2026-10-24",
+    "services": [
+      "walk_in"
+    ]
   },
   {
     "name": "Good Neighbor Health Clinic",
@@ -1200,7 +1466,10 @@
     "website": "https://goodnhc.org/apply-for-services/medical/",
     "cost": "Free for eligible patients age 18+ who live within 30 miles and meet the provider's household-income limit; application and approval required.",
     "source": "https://goodnhc.org/apply-for-services/medical/; contact and hours: https://goodnhc.org/contact/; coordinates: U.S. Census Geocoder, Public_AR_Current",
-    "last_verified": "2026-10-06"
+    "last_verified": "2026-10-06",
+    "services": [
+      "primary_care"
+    ]
   },
   {
     "name": "Red Logan Dental Clinic",
@@ -1213,7 +1482,10 @@
     "website": "https://goodnhc.org/red-logan-dental-clinic/",
     "cost": "Free for eligible patients age 18+ who live within 30 miles and meet the provider's household-income limit; dental applications are currently paused.",
     "source": "https://goodnhc.org/red-logan-dental-clinic/; contact and hours: https://goodnhc.org/contact/; coordinates: U.S. Census Geocoder, Public_AR_Current",
-    "last_verified": "2026-10-06"
+    "last_verified": "2026-10-06",
+    "services": [
+      "dental"
+    ]
   },
   {
     "name": "AFC Urgent Care Hudson",
@@ -1228,7 +1500,10 @@
     "source": "https://www.afcurgentcare.com/hudson/; coordinates from its linked Google Maps pin",
     "last_verified": "2026-10-06",
     "check_in_url": "https://www.afcurgentcare.com/hudson/",
-    "check_in_verified": "2026-10-24"
+    "check_in_verified": "2026-10-24",
+    "services": [
+      "walk_in"
+    ]
   },
   {
     "name": "ClearChoiceMD",
@@ -1243,7 +1518,10 @@
     "source": "https://ccmdcenters.com/locations/epping-nh; HealthOptions 2026 urgent care locations (healthoptions.org/document/1095); coordinates: official location page map",
     "last_verified": "2026-10-24",
     "check_in_url": "https://ccmdcenters.com/locations/epping-nh",
-    "check_in_verified": "2026-10-24"
+    "check_in_verified": "2026-10-24",
+    "services": [
+      "walk_in"
+    ]
   },
   {
     "name": "ClearChoiceMD",
@@ -1258,7 +1536,10 @@
     "source": "https://ccmdcenters.com/locations/gilford-nh; HealthOptions 2026 urgent care locations (healthoptions.org/document/1095); coordinates: U.S. Census Geocoder, Public_AR_Current",
     "last_verified": "2026-10-24",
     "check_in_url": "https://ccmdcenters.com/locations/gilford-nh",
-    "check_in_verified": "2026-10-24"
+    "check_in_verified": "2026-10-24",
+    "services": [
+      "walk_in"
+    ]
   },
   {
     "name": "ClearChoiceMD",
@@ -1273,7 +1554,10 @@
     "source": "https://ccmdcenters.com/locations/hooksett-nh; HealthOptions 2026 urgent care locations (healthoptions.org/document/1095); coordinates: official location page map",
     "last_verified": "2026-10-24",
     "check_in_url": "https://ccmdcenters.com/locations/hooksett-nh",
-    "check_in_verified": "2026-10-24"
+    "check_in_verified": "2026-10-24",
+    "services": [
+      "walk_in"
+    ]
   },
   {
     "name": "ClearChoiceMD",
@@ -1288,7 +1572,10 @@
     "source": "https://ccmdcenters.com/locations/lebanon-nh; HealthOptions 2026 urgent care locations (healthoptions.org/document/1095); coordinates: official location page map",
     "last_verified": "2026-10-24",
     "check_in_url": "https://ccmdcenters.com/locations/lebanon-nh",
-    "check_in_verified": "2026-10-24"
+    "check_in_verified": "2026-10-24",
+    "services": [
+      "walk_in"
+    ]
   },
   {
     "name": "ClearChoiceMD",
@@ -1303,7 +1590,10 @@
     "source": "https://ccmdcenters.com/locations/nashua-nh; HealthOptions 2026 urgent care locations (healthoptions.org/document/1095); coordinates: U.S. Census Geocoder, Public_AR_Current",
     "last_verified": "2026-10-24",
     "check_in_url": "https://ccmdcenters.com/locations/nashua-nh",
-    "check_in_verified": "2026-10-24"
+    "check_in_verified": "2026-10-24",
+    "services": [
+      "walk_in"
+    ]
   },
   {
     "name": "ClearChoiceMD",
@@ -1318,7 +1608,10 @@
     "source": "https://ccmdcenters.com/locations/rochester-nh; HealthOptions 2026 urgent care locations (healthoptions.org/document/1095); coordinates: U.S. Census Geocoder, Public_AR_Current",
     "last_verified": "2026-10-24",
     "check_in_url": "https://ccmdcenters.com/locations/rochester-nh",
-    "check_in_verified": "2026-10-24"
+    "check_in_verified": "2026-10-24",
+    "services": [
+      "walk_in"
+    ]
   },
   {
     "name": "ClearChoiceMD",
@@ -1333,7 +1626,10 @@
     "source": "https://ccmdcenters.com/locations/seabrook-nh; HealthOptions 2026 urgent care locations (healthoptions.org/document/1095); coordinates: U.S. Census Geocoder, Public_AR_Current",
     "last_verified": "2026-10-24",
     "check_in_url": "https://ccmdcenters.com/locations/seabrook-nh",
-    "check_in_verified": "2026-10-24"
+    "check_in_verified": "2026-10-24",
+    "services": [
+      "walk_in"
+    ]
   },
   {
     "name": "ClearChoiceMD",
@@ -1348,6 +1644,9 @@
     "source": "https://ccmdcenters.com/locations/tilton-nh; HealthOptions 2026 urgent care locations (healthoptions.org/document/1095); coordinates: U.S. Census Geocoder, Public_AR_Current",
     "last_verified": "2026-10-24",
     "check_in_url": "https://ccmdcenters.com/locations/tilton-nh",
-    "check_in_verified": "2026-10-24"
+    "check_in_verified": "2026-10-24",
+    "services": [
+      "walk_in"
+    ]
   }
 ]

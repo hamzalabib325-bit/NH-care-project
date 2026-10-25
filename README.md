@@ -11,6 +11,7 @@ Built for the 2026 Congressional App Challenge.
 - **Map:** every clinic in the app appears as a color-coded pin on a map of New Hampshire. Tap a pin to see the clinic's address, hours, phone number, website, and a "Get directions" link.
 - **Find care near me:** tap "Near me" to use your location, or search by any New Hampshire ZIP code or town. The map zooms to the closest clinics.
 - **Filters:** show or hide free clinics, health centers, and urgent care.
+- **Services:** each clinic lists the services its source data confirms, such as primary care, dental care, walk-ins, or school-based care.
 - **Cost helper:** answer four quick questions (insurance, household size, income, and location). The app ranks nearby clinics as *Best fit*, *Call to check cost*, or *Likely costly*, explains why, and points out programs you may qualify for, such as NH Medicaid.
 - **More help:** 2-1-1, NH Medicaid sign-up, and mobile health programs.
 - **911 banner:** every page reminds people to call 911 in an emergency.
