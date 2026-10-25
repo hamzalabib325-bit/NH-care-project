@@ -7,7 +7,18 @@
 // - In JavaScript, t("English text") returns the translation of that English text.
 // - Anything that has no translation yet simply stays in English.
 
-const LANGUAGES = { en: "English", es: "Español", fr: "Français" };
+const LANGUAGES = {
+  en: "English",
+  es: "Español",
+  fr: "Français",
+  ar: "العربية",
+  zh: "中文",
+  ur: "اردو",
+  ko: "한국어"
+};
+
+// Arabic and Urdu are written right to left, so the page layout flips for them.
+const RIGHT_TO_LEFT = ["ar", "ur"];
 
 // The chosen language is remembered on this device only (in localStorage), so it stays
 // the same when moving between pages. Some browsers block storage, so this can fail.
@@ -45,7 +56,8 @@ function t(english, values = {}) {
 
 // Swap the page's marked text for the chosen language.
 function translatePage() {
-  document.documentElement.lang = currentLanguage;
+  document.documentElement.lang = currentLanguage === "zh" ? "zh-Hans" : currentLanguage;
+  document.documentElement.dir = RIGHT_TO_LEFT.includes(currentLanguage) ? "rtl" : "ltr";
   const words = TRANSLATIONS[currentLanguage];
   if (!words) {
     return; // English: the page is already written in English.
@@ -85,16 +97,16 @@ function addLanguagePicker() {
   globe.setAttribute("aria-hidden", "true");
   globe.textContent = "🌐";
 
-  // Screen readers hear "Language" in all three languages, so anyone can find it.
+  // Screen readers hear "Language" in every language, so anyone can find it.
   const name = document.createElement("span");
   name.className = "visually-hidden";
-  name.textContent = "Language / Idioma / Langue";
+  name.textContent = "Language / Idioma / Langue / اللغة / 语言 / زبان / 언어";
 
   const select = document.createElement("select");
   for (const [code, label] of Object.entries(LANGUAGES)) {
     const option = document.createElement("option");
     option.value = code;
-    option.lang = code;
+    option.lang = code === "zh" ? "zh-Hans" : code;
     option.textContent = label;
     option.selected = code === currentLanguage;
     select.append(option);

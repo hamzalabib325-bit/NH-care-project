@@ -14,6 +14,7 @@ Built for the 2026 Congressional App Challenge.
 - **Services:** each clinic lists the services its source data confirms, such as primary care, dental care, walk-ins, or school-based care.
 - **Cost helper:** answer four quick questions (insurance, household size, income, and location). The app ranks nearby clinics as *Best fit*, *Call to check cost*, or *Likely costly*, explains why, and points out programs you may qualify for, such as NH Medicaid.
 - **More help:** 2-1-1, NH Medicaid sign-up, and mobile health programs.
+- **Languages:** English, Spanish, French, Arabic, Chinese (Simplified), Urdu, and Korean. Arabic and Urdu pages read right to left.
 - **911 banner:** every page reminds people to call 911 in an emergency.
 
 ## Privacy

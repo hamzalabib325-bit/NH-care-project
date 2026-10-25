@@ -145,7 +145,7 @@ input:focus-visible {
    "sticky" keeps it in view on small phones, even when the bar scrolls sideways. */
 .language-picker {
   position: sticky;
-  right: 0;
+  inset-inline-end: 0;
   display: flex;
   flex: 0 0 auto;
   align-items: center;
@@ -238,7 +238,7 @@ main {
   flex: 0 0 auto;
   width: 0.8rem;
   height: 0.8rem;
-  margin-right: 0.45rem;
+  margin-inline-end: 0.45rem;
   border: 2px solid #fff;
   border-radius: 50%;
   box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.25);
@@ -369,7 +369,7 @@ main {
 
 .steps {
   margin: 0;
-  padding-left: 1.4rem;
+  padding-inline-start: 1.4rem;
 }
 
 .steps li {
@@ -378,7 +378,7 @@ main {
 
 .privacy-note {
   padding: 1rem 1.1rem;
-  border-left: 4px solid var(--good);
+  border-inline-start: 4px solid var(--good);
   border-radius: 8px;
   background: var(--good-soft);
 }
@@ -561,6 +561,22 @@ main {
   line-height: 1.4;
 }
 
+/* Leaflet's map controls expect left-to-right, so only the popup text flips for Arabic and Urdu. */
+[dir="rtl"] .leaflet-container {
+  direction: ltr;
+}
+
+[dir="rtl"] .clinic-popup {
+  direction: rtl;
+  text-align: right;
+}
+
+/* Phone numbers read left to right, even inside Arabic and Urdu text. */
+[dir="rtl"] a[href^="tel:"] {
+  direction: ltr;
+  unicode-bidi: isolate;
+}
+
 .clinic-popup .clinic-name {
   display: block;
   font-size: 1rem;
@@ -580,7 +596,7 @@ main {
 .clinic-popup a {
   display: inline-block;
   min-height: 2.75rem;
-  margin-right: 1rem;
+  margin-inline-end: 1rem;
   padding: 0.6rem 0;
   color: var(--brand);
   font-weight: 600;
@@ -666,7 +682,7 @@ main {
   justify-content: center;
   width: 1.75rem;
   height: 1.75rem;
-  margin-right: 0.6rem;
+  margin-inline-end: 0.6rem;
   border-radius: 50%;
   background: var(--brand);
   color: #fff;
@@ -713,7 +729,7 @@ main {
   display: inline-flex;
   margin-top: 0.5rem;
   border: 0;
-  padding-left: 0;
+  padding-inline-start: 0;
 }
 
 .choice-inline:has(input:checked) {
@@ -818,14 +834,14 @@ main {
 .result-card {
   padding: 0.9rem 1.1rem;
   border: 1px solid var(--line);
-  border-left-width: 6px;
+  border-inline-start-width: 6px;
   border-radius: 12px;
   background: var(--surface);
 }
 
-.result-card.fit-good { border-left-color: var(--good); }
-.result-card.fit-check { border-left-color: var(--check); }
-.result-card.fit-costly { border-left-color: var(--costly); }
+.result-card.fit-good { border-inline-start-color: var(--good); }
+.result-card.fit-check { border-inline-start-color: var(--check); }
+.result-card.fit-costly { border-inline-start-color: var(--costly); }
 
 .result-card p {
   margin: 0 0 0.35rem;
@@ -909,7 +925,7 @@ main {
 
 .tip-list {
   margin: 0;
-  padding-left: 1.2rem;
+  padding-inline-start: 1.2rem;
 }
 
 .tip-list li {
@@ -938,7 +954,7 @@ main {
 
 .about ul {
   margin: 0;
-  padding-left: 1.2rem;
+  padding-inline-start: 1.2rem;
 }
 
 .about li {
@@ -949,7 +965,7 @@ main {
 
 @media (max-width: 30rem) {
   .emergency-banner {
-    text-align: left;
+    text-align: start;
   }
 
   .site-nav {
